@@ -1,22 +1,21 @@
-/* ----------------------------------------------------- */
-/* Reworked Styles for WouldLiker (Light Friendly Theme) */
-/* ----------------------------------------------------- */
+/* ---------------------------------------------------- */
+/* Reworked Styles for a Friendlier, Readable Website   */
+/* ---------------------------------------------------- */
 
 /* Base Variables */
 :root {
-  --header-bg: #121212;         /* Dark header */
-  --header-text: #ffffff;        /* White header text */
-  --accent-color: #ff3b5c;       /* Accent for buttons, links */
-  --accent-secondary: #e62e4d;   /* Secondary accent */
-  --body-bg: #f8f8f8;            /* Light background for content */
-  --text-color: #333333;         /* Dark text for content */
-  --text-muted: #777777;         /* Muted text color */
-  --card-bg: #ffffff;            /* Card background */
+  --header-bg: #121212;          /* Dark header background */
+  --accent-color: #ff3b5c;         /* Accent color */
+  --accent-secondary: #e62e4d;     /* Secondary accent */
+  --body-bg: #f8f8f8;              /* Light background for body */
+  --text-color: #333333;           /* Dark text for content */
+  --text-muted: #777777;           /* Muted text color */
+  --card-bg: #ffffff;              /* Card background */
   --border-radius: 12px;
   --transition: all 0.3s ease;
 }
 
-/* Reset & Base Styles */
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
@@ -30,28 +29,26 @@ body {
   line-height: 1.6;
 }
 
-/* Links */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Headings */
 h1, h2, h3, h4 {
   font-weight: 700;
   line-height: 1.2;
 }
 
-/* Containers */
+/* Container */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* ---------------- */
-/* Header Styles    */
-/* ---------------- */
+/* ----------------- */
+/* Header Styles     */
+/* ----------------- */
 header {
   background-color: var(--header-bg);
   padding: 16px 24px;
@@ -69,7 +66,7 @@ header {
 .logo {
   font-size: 24px;
   font-weight: 700;
-  color: var(--header-text);
+  color: #ffffff;
 }
 
 .logo i {
@@ -79,7 +76,7 @@ header {
 
 .tagline {
   font-size: 14px;
-  color: var(--header-text);
+  color: #ffffff;
   margin-top: 4px;
 }
 
@@ -92,7 +89,7 @@ nav ul {
 nav ul li a {
   padding: 8px 12px;
   border-radius: var(--border-radius);
-  color: var(--header-text);
+  color: #ffffff;
   transition: var(--transition);
 }
 
@@ -102,9 +99,9 @@ nav ul li a.active {
   color: var(--accent-color);
 }
 
-/* ---------------- */
-/* Hero Section     */
-/* ---------------- */
+/* ----------------- */
+/* Hero Section      */
+/* ----------------- */
 .hero {
   background-color: var(--body-bg);
   text-align: center;
@@ -165,9 +162,9 @@ nav ul li a.active {
   background-color: rgba(241, 241, 241, 0.5);
 }
 
-/* ---------------- */
-/* About Section    */
-/* ---------------- */
+/* ----------------- */
+/* About Section     */
+/* ----------------- */
 .about {
   background-color: var(--body-bg);
   padding: 60px 20px;
@@ -216,9 +213,9 @@ nav ul li a.active {
   max-width: 400px;
 }
 
-/* ---------------- */
+/* ----------------- */
 /* Categories Section (Homepage) */
-/* ---------------- */
+/* ----------------- */
 .categories-section {
   background-color: var(--body-bg);
   padding: 60px 20px;
@@ -258,12 +255,12 @@ nav ul li a.active {
   width: 50px;
   height: 50px;
   margin: 0 auto 10px;
-  background-color: var(--secondary-color);
+  background-color: var(--accent-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent-color);
+  color: var(--card-bg);
 }
 
 .category-card h3 {
@@ -277,9 +274,9 @@ nav ul li a.active {
   color: var(--text-muted);
 }
 
-/* ---------------- */
+/* ----------------- */
 /* Blog Page Specific Styles */
-/* ---------------- */
+/* ----------------- */
 .blog-index {
   background-color: var(--body-bg);
   padding: 40px 20px;
@@ -329,7 +326,7 @@ nav ul li a.active {
 
 .read-more {
   display: inline-block;
-  background-color: var(--secondary-color);
+  background-color: var(--accent-color);
   color: #ffffff;
   padding: 10px 20px;
   border-radius: var(--border-radius);
@@ -342,11 +339,11 @@ nav ul li a.active {
   background-color: var(--accent-secondary);
 }
 
-/* ---------------- */
+/* ----------------- */
 /* Footer Section */
-/* ---------------- */
+/* ----------------- */
 footer {
-  background-color: var(--primary-color);
+  background-color: var(--header-bg);
   color: #ffffff;
   padding: 40px 20px;
   text-align: center;
@@ -389,9 +386,9 @@ footer {
   opacity: 0.8;
 }
 
-/* ---------------- */
+/* ----------------- */
 /* Responsive Adjustments */
-/* ---------------- */
+/* ----------------- */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 36px;
