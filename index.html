@@ -4,19 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WouldLiker - Boost Your TikTok Success</title>
+  
+  <!-- Basic SEO Meta -->
+  <meta name="description" content="WouldLiker helps you boost your TikTok success with strategically curated sounds. Explore trending categories, learn our secrets, and more." />
+
+  <!-- Open Graph / Social Meta Tags -->
+  <meta property="og:title" content="WouldLiker - Boost Your TikTok Success" />
+  <meta property="og:description" content="Discover trending sounds and insights to boost your TikTok success." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://wouldliker.com/index.html" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/marrrow/tktk/main/IMG_5067.PNG" />
+
+  <!-- External Styles & Fonts -->
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter&display=swap" rel="stylesheet" />
   <script defer src="app.js"></script>
 </head>
 <body>
+  <!-- Header -->
   <header>
     <div class="container nav-container">
       <a href="index.html" class="logo">WouldLiker</a>
-      <nav>
+      <nav class="main-nav">
         <ul class="nav-links">
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <!-- Add other navigation links as needed -->
+          <!-- Add more navigation links as needed -->
         </ul>
       </nav>
     </div>
@@ -26,49 +40,52 @@
   <section class="hero">
     <div class="container hero-content">
       <h1>Elevate Your TikTok Content</h1>
-      <p>Discover curated sounds that drive views, engagement, and growth.</p>
+      <p>Discover strategically curated sounds that drive views, engagement, and growth.</p>
       <div class="cta-buttons">
-        <button class="btn btn-primary" onclick="scrollToSection('categories')">Explore Sounds</button>
-        <button class="btn btn-outline" onclick="scrollToSection('about')">Learn More</button>
+        <button class="cta-primary" onclick="scrollToSection('categories')">Explore Sounds</button>
+        <button class="cta-secondary" onclick="scrollToSection('about')">Learn More</button>
       </div>
     </div>
   </section>
 
   <!-- About Section -->
   <section id="about" class="about">
-    <div class="container">
-      <h2>Why Our Sounds Get More Views</h2>
-      <div class="about-content">
-        <div class="about-text">
-          <p>
-            Unlike generic trending sounds, WouldLiker offers tracks that are optimized for TikTok success. Our data-driven approach ensures you get the best sound for your content.
-          </p>
-          <h3>The Advantage:</h3>
-          <ul>
-            <li>Proprietary SoundOn Score</li>
-            <li>Niche Targeting</li>
-            <li>Real Analytics</li>
-            <li>Regional Optimization <span class="coming-soon">Coming Soon!</span></li>
-          </ul>
-        </div>
-        <div class="about-image">
-          <!-- Replace with your actual image path -->
-          <img src="images/about-image.jpg" alt="About WouldLiker">
-        </div>
+    <div class="container about-content">
+      <div class="about-text">
+        <h2>Why Our Sounds Get More Views</h2>
+        <p>
+          Unlike generic trending sounds, WouldLiker provides strategically curated tracks with proven engagement. 
+          Our SoundOn Score and niche targeting ensure your content stands out.
+        </p>
+        <h3>The WouldLiker Advantage:</h3>
+        <ul>
+          <li><strong>SoundOn Score:</strong> Predicts viral potential.</li>
+          <li><strong>Niche Targeting:</strong> Tailored for different content styles.</li>
+          <li><strong>Proven Results:</strong> Backed by real analytics.</li>
+          <li><strong>Regional Optimization:</strong> <span class="coming-soon">Coming Soon!</span></li>
+        </ul>
+      </div>
+      <div class="about-image">
+        <!-- You can replace this SVG with a friendly image if desired -->
+        <svg width="300" height="200" viewBox="0 0 300 200">
+          <rect width="300" height="200" fill="#111" rx="10" ry="10"/>
+          <path d="M150,40 C90,40 40,90 40,150 L40,160 L260,160 L260,150 C260,90 210,40 150,40 Z" fill="#fff" opacity="0.05"/>
+          <circle cx="150" cy="80" r="30" fill="#fff"/>
+          <rect x="120" y="120" width="60" height="80" fill="#fff" rx="10" ry="10"/>
+        </svg>
       </div>
     </div>
   </section>
 
-  <!-- Categories Section (Friendly Card Style) -->
+  <!-- Categories Section (Updated, friendly style) -->
   <section id="categories" class="categories-section">
     <div class="container">
       <h2>Explore Trending Categories</h2>
       <div class="categories-grid">
         <div class="category-card">
           <div class="icon">
-            <!-- Example SVG icon -->
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
             </svg>
           </div>
           <h3>Trending in March 2025</h3>
@@ -77,7 +94,7 @@
         <div class="category-card">
           <div class="icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
           </div>
           <h3>Trending Last Week</h3>
@@ -86,7 +103,7 @@
         <div class="category-card">
           <div class="icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              <path d="M13 10V3L4 14h7v7l9-11h-7z"></path>
             </svg>
           </div>
           <h3>Trending This Week</h3>
@@ -96,28 +113,25 @@
     </div>
   </section>
 
+  <!-- (Optional) Additional sections like "Featured Sounds" can be added here -->
+
   <!-- Footer -->
   <footer>
     <div class="container footer-content">
       <div class="footer-logo">
-        <a href="index.html" class="logo">WouldLiker</a>
+        <i class="fab fa-tiktok"></i>
+        <span>WouldLiker</span>
       </div>
-      <p>Unlock your TikTok potential with strategic sound selection</p>
+      <p>Unlock your TikTok potential with strategic sound selection.</p>
       <div class="social-links">
         <a href="https://www.tiktok.com/@wouldliker" target="_blank">
           <i class="fab fa-tiktok"></i> @wouldliker
         </a>
       </div>
     </div>
-    <div class="footer-bottom">
+    <div class="container footer-bottom">
       <p>&copy; 2025 WouldLiker. All rights reserved.</p>
     </div>
   </footer>
-
-  <script>
-    function scrollToSection(id) {
-      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-    }
-  </script>
 </body>
 </html>
