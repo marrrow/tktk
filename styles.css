@@ -904,3 +904,59 @@ footer {
         flex-direction: column;
     }
 }
+/* Blog Page Specific Styles */
+.blog-index {
+    background-color: var(--darker-bg);
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.blog-index h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-light);
+    font-size: 2rem;
+}
+
+.blog-index p {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.blog-preview {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+
+.blog-preview h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--text-light);
+}
+
+.blog-preview p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--text-muted);
+}
+
+.read-more {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.read-more:hover {
+    background-color: var(--accent-secondary);
+}
