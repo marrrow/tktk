@@ -4,43 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WouldLiker - Boost Your TikTok Success</title>
-  
-  <!-- Basic SEO Meta -->
-  <meta name="description" content="WouldLiker helps you boost your TikTok success with strategically curated sounds. Explore trending categories, learn our secrets, and more." />
-
-  <!-- Open Graph / Social Meta Tags -->
-  <meta property="og:title" content="WouldLiker - Boost Your TikTok Success" />
-  <meta property="og:description" content="Discover trending sounds and insights to boost your TikTok success." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://wouldliker.com/index.html" />
-  <meta property="og:image" content="https://raw.githubusercontent.com/marrrow/tktk/main/IMG_5067.PNG" />
-
-  <!-- External Styles & Fonts -->
+  <!-- External Styles -->
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter&display=swap" rel="stylesheet" />
   <script defer src="app.js"></script>
 </head>
 <body>
-  <!-- Header -->
   <header>
-    <div class="container nav-container">
-      <a href="index.html" class="logo">WouldLiker</a>
-      <nav class="main-nav">
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <!-- Add more navigation links as needed -->
-        </ul>
-      </nav>
+    <div class="logo-container">
+      <div class="logo">
+        <i class="fab fa-tiktok"></i>
+        <span>WouldLiker</span>
+      </div>
+      <p class="tagline">Unlock viral TikTok potential with strategic sound selection</p>
     </div>
+    <nav>
+      <ul>
+        <li><a href="#trending-sounds">Top Sounds</a></li>
+        <li><a href="#about">Why It Works</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#next-stars">Next Stars</a></li>
+        <li><a href="#calculator">Calculator</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
   </header>
-
+  
   <!-- Hero Section -->
   <section class="hero">
     <div class="container hero-content">
       <h1>Elevate Your TikTok Content</h1>
-      <p>Discover strategically curated sounds that drive views, engagement, and growth.</p>
+      <p>Discover strategically curated sounds that drive views, engagement, and growth</p>
       <div class="cta-buttons">
         <button class="cta-primary" onclick="scrollToSection('categories')">Explore Sounds</button>
         <button class="cta-secondary" onclick="scrollToSection('about')">Learn More</button>
@@ -53,20 +48,16 @@
     <div class="container about-content">
       <div class="about-text">
         <h2>Why Our Sounds Get More Views</h2>
-        <p>
-          Unlike generic trending sounds, WouldLiker provides strategically curated tracks with proven engagement. 
-          Our SoundOn Score and niche targeting ensure your content stands out.
-        </p>
+        <p>Unlike generic trending sounds that oversaturate your content, WouldLiker provides strategically curated tracks with proven engagement metrics across specific niches.</p>
         <h3>The WouldLiker Advantage:</h3>
         <ul>
-          <li><strong>SoundOn Score:</strong> Predicts viral potential.</li>
-          <li><strong>Niche Targeting:</strong> Tailored for different content styles.</li>
-          <li><strong>Proven Results:</strong> Backed by real analytics.</li>
-          <li><strong>Regional Optimization:</strong> <span class="coming-soon">Coming Soon!</span></li>
+          <li><strong>SoundOn Score</strong> – Our proprietary algorithm predicts a sound's viral potential</li>
+          <li><strong>Niche Targeting</strong> – Categorized sounds for different content styles</li>
+          <li><strong>Proven Results</strong> – Backed by real analytics from successful creator accounts</li>
+          <li><strong>Regional Optimization</strong> – <span class="coming-soon">Coming Soon!</span></li>
         </ul>
       </div>
       <div class="about-image">
-        <!-- You can replace this SVG with a friendly image if desired -->
         <svg width="300" height="200" viewBox="0 0 300 200">
           <rect width="300" height="200" fill="#111" rx="10" ry="10"/>
           <path d="M150,40 C90,40 40,90 40,150 L40,160 L260,160 L260,150 C260,90 210,40 150,40 Z" fill="#fff" opacity="0.05"/>
@@ -77,10 +68,11 @@
     </div>
   </section>
 
-  <!-- Categories Section (Updated, friendly style) -->
+  <!-- Categories Section (Using friendlier card style) -->
   <section id="categories" class="categories-section">
     <div class="container">
-      <h2>Explore Trending Categories</h2>
+      <h2>Sound Categories</h2>
+      <p class="section-intro">Browse sounds by category to find the perfect match for your content</p>
       <div class="categories-grid">
         <div class="category-card">
           <div class="icon">
@@ -88,8 +80,8 @@
               <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
             </svg>
           </div>
-          <h3>Trending in March 2025</h3>
-          <p>This month's hits</p>
+          <h3>All Sounds</h3>
+          <p>Discover everything</p>
         </div>
         <div class="category-card">
           <div class="icon">
@@ -97,8 +89,8 @@
               <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
           </div>
-          <h3>Trending Last Week</h3>
-          <p>Recent popular sounds</p>
+          <h3>Core Sounds</h3>
+          <p>Essential beats</p>
         </div>
         <div class="category-card">
           <div class="icon">
@@ -106,14 +98,79 @@
               <path d="M13 10V3L4 14h7v7l9-11h-7z"></path>
             </svg>
           </div>
-          <h3>Trending This Week</h3>
-          <p>What's hot right now</p>
+          <h3>Presentation</h3>
+          <p>Perfect for pitches</p>
+        </div>
+        <!-- Add additional category cards as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Next Star Sounds Section -->
+  <section id="next-stars" class="next-stars">
+    <div class="container">
+      <h2>Next Star Sounds</h2>
+      <p class="section-intro">Be the first to use these sounds before they explode in popularity</p>
+      <div class="next-star-cards">
+        <div class="next-star-card">
+          <div class="star-preview">
+            <i class="fas fa-play-circle"></i>
+            <div class="glow-effect"></div>
+          </div>
+          <div class="star-info">
+            <h3>Core Sound 2025</h3>
+            <div class="star-metrics">
+              <span class="prediction">Predicted Views: 145K+ in first week</span>
+              <span class="category">Category: Core</span>
+            </div>
+            <div class="prediction-meter">
+              <div class="prediction-bar">
+                <div class="prediction-fill" data-value="97"></div>
+              </div>
+              <div class="prediction-label">97% Viral Potential</div>
+            </div>
+            <a href="https://www.tiktok.com/t/ZT2CQthcY/" class="sound-link" target="_blank">Use This Sound</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- (Optional) Additional sections like "Featured Sounds" can be added here -->
+  <!-- SoundOn Score Calculator Section -->
+  <section id="calculator" class="soundon-calculator">
+    <div class="container">
+      <h2>SoundOn Score Calculator</h2>
+      <p>Our proprietary algorithm measures a sound's viral potential</p>
+      <div class="calculator-container">
+        <div class="calculator-inputs">
+          <div class="slider-group">
+            <label>Average View Time: <span id="view-time-display">15</span> seconds</label>
+            <input type="range" id="avg-view-time" min="1" max="60" value="15" class="slider">
+          </div>
+          <div class="slider-group">
+            <label>Completion Rate: <span id="completion-display">40</span>%</label>
+            <input type="range" id="completion-rate" min="1" max="100" value="40" class="slider">
+          </div>
+          <div class="slider-group">
+            <label>Engagement Rate: <span id="engagement-display">5.5</span>%</label>
+            <input type="range" id="engagement-rate" min="0.1" max="100" value="5.5" step="0.1" class="slider">
+          </div>
+          <div class="slider-group">
+            <label>Trend Growth Factor: <span id="trend-display">3</span>/10</label>
+            <input type="range" id="trend-factor" min="1" max="10" value="3" class="slider">
+          </div>
+          <button id="calculate-score" class="calculate-button">Calculate Score</button>
+        </div>
+        <div class="calculator-result">
+          <div class="score-display">
+            <span id="soundon-score">--</span>
+          </div>
+          <p class="score-label">SoundOn Score</p>
+          <p class="score-explanation">A score above 80 indicates high viral potential</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer>
@@ -122,11 +179,9 @@
         <i class="fab fa-tiktok"></i>
         <span>WouldLiker</span>
       </div>
-      <p>Unlock your TikTok potential with strategic sound selection.</p>
+      <p>Unlock your TikTok potential with strategic sound selection</p>
       <div class="social-links">
-        <a href="https://www.tiktok.com/@wouldliker" target="_blank">
-          <i class="fab fa-tiktok"></i> @wouldliker
-        </a>
+        <a href="https://www.tiktok.com/@wouldliker" target="_blank"><i class="fab fa-tiktok"></i> @wouldliker</a>
       </div>
     </div>
     <div class="container footer-bottom">
