@@ -11,6 +11,7 @@
   <script defer src="app.js"></script>
 </head>
 <body>
+  <!-- Header -->
   <header>
     <div class="logo-container">
       <div class="logo">
@@ -48,7 +49,9 @@
     <div class="container about-content">
       <div class="about-text">
         <h2>Why Our Sounds Get More Views</h2>
-        <p>Unlike generic trending sounds that oversaturate your content, WouldLiker provides strategically curated tracks with proven engagement metrics across specific niches.</p>
+        <p>
+          Unlike generic trending sounds that oversaturate your content, WouldLiker provides strategically curated tracks with proven engagement metrics across specific niches.
+        </p>
         <h3>The WouldLiker Advantage:</h3>
         <ul>
           <li><strong>SoundOn Score</strong> – Our proprietary algorithm predicts a sound's viral potential</li>
@@ -68,45 +71,26 @@
     </div>
   </section>
 
-  <!-- Categories Section (Using friendlier card style) -->
-  <section id="categories" class="categories-section">
+  <!-- Categories Section -->
+  <section id="categories" class="categories">
     <div class="container">
       <h2>Sound Categories</h2>
       <p class="section-intro">Browse sounds by category to find the perfect match for your content</p>
-      <div class="categories-grid">
-        <div class="category-card">
-          <div class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-            </svg>
-          </div>
-          <h3>All Sounds</h3>
-          <p>Discover everything</p>
-        </div>
-        <div class="category-card">
-          <div class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-          </div>
-          <h3>Core Sounds</h3>
-          <p>Essential beats</p>
-        </div>
-        <div class="category-card">
-          <div class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-            </svg>
-          </div>
-          <h3>Presentation</h3>
-          <p>Perfect for pitches</p>
-        </div>
-        <!-- Add additional category cards as needed -->
+      <div class="category-filters">
+        <button class="category-filter active" data-filter="all">All Sounds</button>
+        <button class="category-filter" data-filter="core">Core Sounds</button>
+        <button class="category-filter" data-filter="presentation">Presentation</button>
+        <button class="category-filter" data-filter="sports">Sports</button>
+        <button class="category-filter" data-filter="comedy">Comedy</button>
+        <button class="category-filter" data-filter="romance">Romance</button>
+      </div>
+      <div class="category-sounds">
+        <!-- Sounds will be dynamically populated -->
       </div>
     </div>
   </section>
 
-  <!-- Next Star Sounds Section -->
+  <!-- Next Stars Section -->
   <section id="next-stars" class="next-stars">
     <div class="container">
       <h2>Next Star Sounds</h2>
@@ -136,7 +120,7 @@
     </div>
   </section>
 
-  <!-- SoundOn Score Calculator Section -->
+  <!-- Calculator Section -->
   <section id="calculator" class="soundon-calculator">
     <div class="container">
       <h2>SoundOn Score Calculator</h2>
@@ -172,7 +156,7 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer Section -->
   <footer>
     <div class="container footer-content">
       <div class="footer-logo">
@@ -181,7 +165,9 @@
       </div>
       <p>Unlock your TikTok potential with strategic sound selection</p>
       <div class="social-links">
-        <a href="https://www.tiktok.com/@wouldliker" target="_blank"><i class="fab fa-tiktok"></i> @wouldliker</a>
+        <a href="https://www.tiktok.com/@wouldliker" target="_blank">
+          <i class="fab fa-tiktok"></i> @wouldliker
+        </a>
       </div>
     </div>
     <div class="container footer-bottom">
