@@ -1,24 +1,27 @@
-/* Updated Styles - Authoritative & Explaining Style */
+/* Updated Styles - TikTok Inspired Vibe with Authoritative Elements */
 :root {
-    /* More Authoritative Color Palette */
-    --primary-color: #007bff; /* Strong Blue - Authoritative */
-    --secondary-color: #6610f2; /* Deep Purple -  Accent & Highlight */
-    --bg-body: #f8f9fa; /* Very Light Grey - Clean Background */
-    --bg-card: #ffffff; /* White Cards -  Content Focus */
-    --text-dark: #212529; /* Dark Grey -  Professional Text */
-    --text-muted: #6c757d; /* Muted Grey - Subheadings & Secondary Text */
-    --border-color: #dee2e6; /* Light Grey Border */
-    --border-radius: 0.25rem; /* Slightly Sharper Corners */
+    /* TikTok-Inspired Color Palette - More Vibrant Accents */
+    --primary-color: #00f2ea; /* TikTok Blue */
+    --secondary-color: #ff0050; /* TikTok Pink/Red */
+    --accent-color: #f5be1c; /* TikTok Yellow */
+    --bg-body: #fefefe; /* Almost White Body Background */
+    --bg-card: #ffffff; /* White Cards - Clean and Bright */
+    --text-dark: #1e1e1e; /* Very Dark Grey - Close to Black for TikTok Contrast */
+    --text-muted: #555555; /* Muted Grey - Secondary Text */
+    --border-color: #e0e0e0; /* Light Grey Border */
+    --border-radius: 12px; /* More Rounded Corners - TikTok Style */
     --transition-speed: 0.2s; /* Faster Transitions */
-    --accent-color: #ffc107; /* Yellow Accent -  For "Hot" labels */
+    --hot-color: #ff4d4d; /* Hot Label Color - Brighter Red */
 }
 
 body {
-    font-family: 'Poppins', sans-serif; /* Keeping Poppins for now */
+    font-family: 'Poppins', sans-serif; /* Keeping Poppins - Still Clean & Readable */
     color: var(--text-dark);
     background-color: var(--bg-body);
-    line-height: 1.7; /* Improved Line Height for Readability */
-    font-size: 1rem; /* Base Font Size */
+    line-height: 1.7;
+    font-size: 1rem;
+    -webkit-font-smoothing: antialiased; /* Improve font rendering */
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -27,24 +30,24 @@ body {
     padding: 0 20px;
 }
 
-/* Typography -  Clear and Authoritative */
+/* Typography - Slightly Bolder, TikTok Vibe */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
+    font-weight: 700; /* Keep strong headings */
     line-height: 1.3;
     margin-bottom: 0.75rem;
     color: var(--text-dark);
 }
 
 h1 {
-    font-size: 2.75rem;
+    font-size: 2.8rem; /* Slightly smaller for balance */
 }
 
 h2 {
-    font-size: 2.25rem;
+    font-size: 2.3rem;
 }
 
 h3 {
-    font-size: 1.75rem;
+    font-size: 1.8rem;
 }
 
 h4 {
@@ -53,7 +56,7 @@ h4 {
 
 p {
     margin-bottom: 1rem;
-    color: var(--text-muted); /* Muted paragraph text */
+    color: var(--text-muted);
 }
 
 a {
@@ -67,17 +70,17 @@ a:hover {
 }
 
 strong {
-    font-weight: 600; /* Slightly bolder strong text */
+    font-weight: 600;
 }
 
-/* Header & Navigation -  Clean and Professional */
+/* Header & Navigation -  TikTok Inspired Colors */
 header {
-    background-color: var(--bg-card); /* White Header */
+    background-color: var(--bg-card);
     position: sticky;
     top: 0;
     z-index: 1000;
     padding: 1rem 0;
-    border-bottom: 1px solid var(--border-color); /* Light Border */
+    border-bottom: 1px solid var(--border-color);
 }
 
 .logo-container {
@@ -88,16 +91,22 @@ header {
 }
 
 .logo {
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: var(--primary-color); /* Primary color logo */
+    font-size: 1.8rem;
+    font-weight: 800; /* Bolder Logo */
+    color: var(--text-dark); /* Dark Logo Text */
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
+.logo i.fab.fa-tiktok {
+    color: var(--primary-color); /* TikTok Blue Logo Icon */
+    font-size: 1.3em;
+}
+
+
 .tagline {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--text-muted);
     margin-left: 1.2rem;
 }
@@ -112,7 +121,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: var(--text-dark); /* Dark nav links */
+    color: var(--text-dark);
     font-weight: 500;
     padding: 0.5rem 0;
     position: relative;
@@ -126,35 +135,37 @@ nav ul li a.active::after {
     content: '';
     position: absolute;
     width: 100%;
-    height: 2px;
+    height: 3px; /* Thicker active underline */
     background-color: var(--primary-color);
-    bottom: 0;
+    bottom: -2px; /* Slightly lower underline */
     left: 0;
+    border-radius: 2px; /* Rounded underline */
 }
 
-/* Hero Section -  Authoritative and Explaining */
+/* Hero Section - TikTok Gradient Background, Vibrant CTA */
 .hero {
-    background-color: var(--bg-body); /* Light background */
+    background: linear-gradient(135deg, var(--bg-body) 0%, rgba(var(--primary-color-rgb), 0.05) 100%); /* Light gradient */
     padding: 5rem 0;
     text-align: center;
 }
 
 .hero-content {
-    max-width: 900px; /* Wider Hero Content */
+    max-width: 900px;
     margin: 0 auto;
 }
 
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1.2rem;
-    color: var(--text-dark); /* Dark Hero Heading */
+    color: var(--text-dark);
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.03); /* Subtle text shadow */
 }
 
 .hero p {
     font-size: 1.15rem;
     margin-bottom: 2rem;
     color: var(--text-muted);
-    max-width: 750px; /* Restrict paragraph width */
+    max-width: 750px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -162,42 +173,45 @@ nav ul li a.active::after {
 .cta-buttons {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.2rem; /* Slightly wider button gap */
     margin-top: 1.5rem;
 }
 
 .cta-primary, .cta-secondary {
-    padding: 0.75rem 1.75rem;
+    padding: 0.8rem 2rem; /* Slightly larger buttons */
     border-radius: var(--border-radius);
-    font-weight: 500;
-    font-size: 1rem;
+    font-weight: 600; /* Bolder button text */
+    font-size: 1.1rem;
     cursor: pointer;
-    transition: background-color var(--transition-speed), color var(--transition-speed), border-color var(--transition-speed);
+    transition: background-color var(--transition-speed), color var(--transition-speed), border-color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Slight button shadow */
 }
 
 .cta-primary {
     background-color: var(--primary-color);
-    color: white;
-    border: 1px solid var(--primary-color);
+    color: var(--text-dark); /* Dark text on primary */
+    border: 2px solid var(--primary-color);
 }
 
 .cta-secondary {
-    background-color: transparent;
+    background-color: var(--bg-card); /* White secondary button */
     color: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    border: 2px solid var(--primary-color);
 }
 
 .cta-primary:hover, .cta-secondary:hover {
-    background-color: var(--secondary-color); /* Secondary color on hover */
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--bg-card); /* White text on secondary hover */
     border-color: var(--secondary-color);
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1); /* Stronger shadow on hover */
 }
 
 
 /* About Section -  Clean and Structured */
 .about {
     padding: 4rem 0;
-    background-color: var(--bg-card); /* White Section Background */
+    background-color: var(--bg-card);
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -208,7 +222,7 @@ nav ul li a.active::after {
 }
 
 .about-text {
-    flex: 1.2; /* Slightly wider text area */
+    flex: 1.2;
 }
 
 .about-image {
@@ -224,38 +238,84 @@ nav ul li a.active::after {
 
 .about h3 {
     margin-top: 1.2rem;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: var(--text-dark);
     font-weight: 600;
 }
 
+.about p {
+    color: var(--text-muted);
+    margin-bottom: 1.2rem; /* More spacing for definitions */
+    line-height: 1.8; /* Increased line height for definitions */
+}
+
+.engagement-definitions {
+    margin-top: 2rem; /* Spacing for engagement definitions block */
+    padding: 1.2rem;
+    background-color: rgba(var(--primary-color-rgb), 0.03); /* Very light blue background for definitions */
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+}
+
+.engagement-definitions h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--primary-color); /* Highlight definition title */
+}
+
+.engagement-definitions ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.5rem;
+}
+
+.engagement-definitions li {
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: baseline; /* Align icons and text */
+}
+
+.engagement-definitions li::before {
+    content: '⭐'; /* Star Icon for Engagement Levels */
+    color: var(--accent-color); /* Yellow Star */
+    margin-right: 0.6rem;
+    font-size: 0.9rem;
+}
+
+.engagement-definitions strong {
+    color: var(--secondary-color); /* Highlight rating names */
+    font-weight: 700;
+    margin-right: 0.3rem;
+}
+
+
 .about ul {
     list-style: none;
-    padding-left: 0; /* Remove default list padding */
+    padding-left: 0;
     margin-top: 0.8rem;
 }
 
 .about ul li {
     margin-bottom: 0.7rem;
     display: flex;
-    align-items: flex-start; /* Align items to start for better text wrapping */
-    padding-left: 1.2rem; /* Indent list items */
+    align-items: flex-start;
+    padding-left: 1.2rem;
     position: relative;
 }
 
 .about ul li::before {
-    content: '✓'; /* Checkmark bullet */
+    content: '✅'; /* Checkmark bullet */
     color: var(--primary-color);
     position: absolute;
     left: 0;
-    top: 0; /* Align checkmark to top of text */
+    top: 0;
     font-weight: bold;
     margin-right: 0.5rem;
 }
 
 .coming-soon {
-    background-color: var(--accent-color); /* Yellow "Coming Soon" */
-    color: var(--text-dark); /* Dark text on yellow */
+    background-color: var(--accent-color);
+    color: var(--text-dark);
     padding: 0.2rem 0.4rem;
     border-radius: var(--border-radius);
     font-size: 0.75rem;
@@ -267,7 +327,7 @@ nav ul li a.active::after {
 /* Categories Section -  Organized and Clear */
 .categories-section {
     padding: 4rem 0;
-    background-color: var(--bg-body); /* Light Grey Background */
+    background-color: var(--bg-body);
 }
 
 .section-intro {
@@ -287,67 +347,70 @@ nav ul li a.active::after {
 }
 
 .category-filter {
-    background-color: var(--bg-card); /* White Filter Buttons */
+    background-color: var(--bg-card);
     color: var(--text-dark);
     border: 1px solid var(--border-color);
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem; /* Slightly larger filter buttons */
     border-radius: var(--border-radius);
     cursor: pointer;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    font-weight: 500;
     transition: background-color var(--transition-speed), color var(--transition-speed), border-color var(--transition-speed);
 }
 
 .category-filter.active, .category-filter:hover {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--bg-card); /* White text on active/hover */
     border-color: var(--primary-color);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08); /* Slight shadow on active/hover */
 }
 
 
 .categories-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Slightly Wider Cards */
-    gap: 1.2rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem; /* Increased card gap */
     margin-top: 1.5rem;
 }
 
 .category-card {
-    background-color: var(--bg-card); /* White Cards */
+    background-color: var(--bg-card);
     border-radius: var(--border-radius);
-    padding: 1.2rem;
+    padding: 1.4rem; /* Increased card padding */
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
     cursor: pointer;
-    border: 1px solid var(--border-color); /* Light Card Border */
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04); /* Very subtle card shadow */
 }
 
 .category-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Subtle Card Shadow */
+    transform: translateY(-4px); /* More pronounced lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08); /* Slightly stronger shadow on hover */
 }
 
 .category-card .icon {
-    width: 55px;
-    height: 55px;
+    width: 65px; /* Larger icon */
+    height: 65px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background-color: var(--primary-color);
-    margin-bottom: 0.8rem;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); /* TikTok gradient icons */
+    margin-bottom: 1rem;
 }
 
 .category-card .icon svg {
-    width: 28px;
-    height: 28px;
-    color: white;
+    width: 32px; /* Larger icon SVG */
+    height: 32px;
+    color: var(--bg-card); /* White icon color */
 }
 
 .category-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.4rem;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
     color: var(--text-dark);
     font-weight: 600;
     text-align: center;
@@ -356,65 +419,66 @@ nav ul li a.active::after {
 .category-card p {
     color: var(--text-muted);
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
 
 /* Next Star Sounds -  Highlighted "Hot" Label */
 .next-stars {
     padding: 4rem 0;
-    background-color: var(--bg-card); /* White Section Background */
+    background-color: var(--bg-card);
     border-bottom: 1px solid var(--border-color);
 }
 
 .next-stars .section-intro {
-    margin-bottom: 2rem; /* Less margin for Next Stars intro */
+    margin-bottom: 2rem;
 }
 
 .next-star-cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.2rem;
+    gap: 1.5rem; /* Increased card gap */
     margin-top: 1.5rem;
-    justify-content: center; /* Center cards on larger screens */
+    justify-content: center;
 }
 
 .next-star-card {
-    flex: 0 1 calc(33% - 1.2rem); /* Three columns on larger screens */
-    min-width: 280px;
-    max-width: 380px;
-    background-color: var(--bg-card); /* White Card */
+    flex: 0 1 calc(33% - 1.5rem);
+    min-width: 300px;
+    max-width: 400px; /* Slightly wider max width */
+    background-color: var(--bg-card);
     border-radius: var(--border-radius);
     overflow: hidden;
     display: flex;
     flex-direction: column;
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-    border: 1px solid var(--border-color); /* Light Card Border */
-    margin-bottom: 1.5rem; /* Add margin between cards */
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04); /* Very subtle card shadow */
+    margin-bottom: 1.5rem;
 }
 
 @media (max-width: 992px) {
     .next-star-card {
-        flex-basis: calc(50% - 1.2rem); /* Two columns on medium screens */
+        flex-basis: calc(50% - 1.5rem);
     }
 }
 
 @media (max-width: 768px) {
     .next-star-card {
-        flex-basis: 100%; /* One column on small screens */
+        flex-basis: 100%;
     }
 }
 
 
 .next-star-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow on hover */
+    transform: translateY(-4px); /* More pronounced lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08); /* Slightly stronger shadow on hover */
 }
 
 .star-preview {
     position: relative;
-    height: 160px; /* Slightly smaller preview */
-    background-color: #f0f0f0; /* Light Grey Preview Background */
+    height: 170px; /* Slightly taller preview */
+    background-color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -422,8 +486,8 @@ nav ul li a.active::after {
 }
 
 .star-preview .fa-play-circle {
-    font-size: 3rem; /* Smaller play icon */
-    color: var(--text-muted); /* Muted play icon color */
+    font-size: 3.2rem; /* Slightly larger play icon */
+    color: var(--text-muted);
     position: relative;
     z-index: 2;
     transition: transform var(--transition-speed), color var(--transition-speed);
@@ -431,56 +495,73 @@ nav ul li a.active::after {
 
 .next-star-card:hover .star-preview .fa-play-circle {
     transform: scale(1.1);
-    color: var(--primary-color); /* Primary color on hover */
+    color: var(--primary-color);
 }
 
 .glow-effect {
-    display: none; /* Remove glow effect for cleaner look */
+    display: none; /* Removed glow for cleaner look */
 }
 
 
 .star-info {
-    padding: 1.2rem;
+    padding: 1.4rem; /* Increased star info padding */
 }
 
 .star-info h3 {
-    margin-bottom: 0.6rem;
-    font-size: 1.15rem;
+    margin-bottom: 0.7rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: var(--text-dark);
+    display: flex; /* For inline "Hot" label */
+    align-items: center;
+    justify-content: space-between; /* Space between title and label */
 }
 
+
 .hot-sound-label {
-    background-color: var(--accent-color); /* Yellow "Hot" Label */
-    color: var(--text-dark);
-    padding: 0.2rem 0.5rem;
+    background-color: var(--hot-color); /* Brighter "Hot" Label */
+    color: var(--bg-card); /* White text on hot label */
+    padding: 0.3rem 0.6rem;
     border-radius: var(--border-radius);
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 600;
     margin-left: 0.5rem;
-    vertical-align: middle; /* Align with heading */
+    vertical-align: middle;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15); /* Slight shadow for hot label */
+}
+
+.gaining-popularity-label {
+    background-color: var(--accent-color); /* Accent color for "Gaining Popularity" */
+    color: var(--text-dark);
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--border-radius);
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15); /* Slight shadow for label */
 }
 
 
 .star-metrics {
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
-    margin-bottom: 0.9rem;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .star-metrics span {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--text-muted);
 }
 
 .prediction-meter {
-    margin: 1rem 0;
+    margin: 1.1rem 0;
 }
 
 .prediction-bar {
-    height: 8px; /* Smaller prediction bar */
-    background-color: var(--border-color); /* Light Grey Bar Background */
+    height: 9px; /* Slightly taller prediction bar */
+    background-color: var(--border-color);
     border-radius: var(--border-radius);
     overflow: hidden;
     margin-bottom: 0.4rem;
@@ -489,41 +570,45 @@ nav ul li a.active::after {
 .prediction-fill {
     height: 100%;
     width: 0;
-    background-color: var(--primary-color); /* Primary color fill */
+    background-color: var(--primary-color);
     border-radius: var(--border-radius);
-    transition: width 1s ease-out; /* Faster, smoother transition */
+    transition: width 1s ease-out;
 }
 
 .prediction-label {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     text-align: right;
     color: var(--text-muted);
 }
 
 
 .sound-link {
-    display: block; /* Full width button */
-    margin-top: 0.8rem;
-    padding: 0.75rem 1.2rem;
+    display: block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.4rem; /* Slightly larger sound link button */
     border-radius: var(--border-radius);
     background-color: var(--primary-color);
-    color: white;
-    font-weight: 500;
+    color: var(--bg-card); /* White text on sound link */
+    font-weight: 600;
     text-align: center;
-    transition: background-color var(--transition-speed), transform var(--transition-speed);
+    transition: background-color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* Slight button shadow */
 }
 
 .sound-link:hover {
     background-color: var(--secondary-color);
-    transform: translateY(-2px); /* Less pronounced hover effect */
-    color: white;
+    color: var(--bg-card);
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Stronger shadow on hover */
 }
 
 
 /* SoundOn Calculator -  Clean and Functional */
 .soundon-calculator {
     padding: 4rem 0;
-    background-color: var(--bg-body); /* Light Grey Background */
+    background-color: var(--bg-body);
 }
 
 .calculator-container {
@@ -531,7 +616,7 @@ nav ul li a.active::after {
     flex-wrap: wrap;
     gap: 2rem;
     margin-top: 1.5rem;
-    align-items: flex-start; /* Align items to top */
+    align-items: flex-start;
 }
 
 .calculator-inputs {
@@ -540,43 +625,45 @@ nav ul li a.active::after {
 }
 
 .slider-group {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.4rem; /* Increased slider group margin */
 }
 
 .slider-group label {
     display: block;
-    margin-bottom: 0.4rem;
-    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
     color: var(--text-dark);
+    font-size: 1.05rem; /* Slightly larger label */
 }
 
 .slider-display {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--primary-color);
-    font-weight: 500;
-    margin-left: 0.5rem;
+    font-weight: 600;
+    margin-left: 0.6rem;
 }
 
 
 .slider {
     width: 100%;
-    height: 8px; /* Smaller slider height */
+    height: 10px; /* Slightly taller slider */
     -webkit-appearance: none;
-    background-color: var(--border-color); /* Light Grey Slider Track */
-    border-radius: 4px;
+    background-color: var(--border-color);
+    border-radius: 5px;
     outline: none;
     cursor: pointer;
 }
 
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 18px;
-    height: 18px;
+    width: 22px; /* Larger thumb */
+    height: 22px;
     border-radius: 50%;
     background-color: var(--primary-color);
     cursor: pointer;
-    border: none; /* Remove thumb border */
+    border: none;
     transition: transform var(--transition-speed);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15); /* Slight thumb shadow */
 }
 
 .slider::-webkit-slider-thumb:hover {
@@ -591,49 +678,53 @@ nav ul li a.active::after {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: var(--bg-card); /* White Result Card */
-    padding: 1.5rem;
+    background-color: var(--bg-card);
+    padding: 1.8rem; /* Increased calculator result padding */
     border-radius: var(--border-radius);
-    border: 1px solid var(--border-color); /* Light Border */
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04); /* Very subtle card shadow */
 }
 
 .score-display {
-    width: 160px; /* Smaller Score Circle */
-    height: 160px;
-    background-color: var(--primary-color);
+    width: 180px; /* Larger score circle */
+    height: 180px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); /* TikTok gradient score */
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Slight score shadow */
 }
 
 #soundon-score {
-    font-size: 3rem; /* Smaller Score Font */
-    font-weight: 700;
-    color: white;
+    font-size: 3.5rem; /* Larger score font */
+    font-weight: 800; /* Bolder score font */
+    color: var(--bg-card); /* White score text */
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.1); /* Subtle score text shadow */
 }
 
 .score-label {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: var(--text-dark);
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.4rem;
 }
 
 .score-explanation {
     color: var(--text-muted);
-    max-width: 300px;
-    font-size: 0.9rem;
+    max-width: 320px; /* Slightly wider explanation */
+    font-size: 0.95rem;
+    line-height: 1.7; /* Improved explanation line height */
 }
 
 
 /* Blog Section -  Standard Blog Layout */
 .blog-index {
-    max-width: 850px; /* Wider Blog Width */
+    max-width: 850px;
     margin: 0 auto;
     padding: 3rem 1.5rem;
-    background-color: var(--bg-body); /* Light Grey Background */
+    background-color: var(--bg-body);
 }
 
 .blog-index h1 {
@@ -649,17 +740,18 @@ nav ul li a.active::after {
 }
 
 .blog-preview {
-    background-color: var(--bg-card); /* White Blog Preview Card */
+    background-color: var(--bg-card);
     border-radius: var(--border-radius);
-    padding: 1.5rem;
+    padding: 1.6rem; /* Increased blog preview padding */
     margin-bottom: 1.5rem;
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-    border: 1px solid var(--border-color); /* Light Border */
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04); /* Very subtle card shadow */
 }
 
 .blog-preview:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05); /* Very Subtle Shadow */
+    transform: translateY(-3px); /* More pronounced lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* Slightly stronger shadow on hover */
 }
 
 .blog-preview h2 {
@@ -698,7 +790,7 @@ nav ul li a.active::after {
     max-width: 800px;
     margin: 0 auto;
     padding: 3rem 1.5rem;
-    background-color: var(--bg-body); /* Light Grey Background */
+    background-color: var(--bg-body);
 }
 
 .blog-post h1 {
@@ -731,6 +823,7 @@ nav ul li a.active::after {
     background-color: var(--primary-color);
     bottom: 0;
     left: 0;
+    border-radius: 1px; /* Rounded section heading underline */
 }
 
 .blog-post p {
@@ -757,69 +850,70 @@ nav ul li a.active::after {
 
 /* Sound Item Styling -  List Style for Categories */
 .category-sounds {
-    display: flex; /* Use flexbox for list layout */
-    flex-direction: column; /* Stack sounds vertically */
-    gap: 0.8rem; /* Spacing between sound items */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Increased sound item gap */
     margin-top: 1.5rem;
 }
 
 .sound-item {
-    background-color: var(--bg-card); /* White Sound Item */
+    background-color: var(--bg-card);
     border-radius: var(--border-radius);
     display: flex;
-    align-items: center; /* Center content vertically */
+    align-items: center;
     overflow: hidden;
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
     cursor: pointer;
-    border: 1px solid var(--border-color); /* Light Border */
-    padding: 0.8rem; /* Padding inside sound item */
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04); /* Very subtle card shadow */
+    padding: 1rem; /* Increased sound item padding */
 }
 
 .sound-item:hover {
     transform: translateY(-2px);
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05); /* Subtle Shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* Slightly stronger shadow on hover */
 }
 
 .sound-icon {
-    width: 60px; /* Smaller Icon */
-    height: 60px;
+    width: 70px; /* Larger sound icon */
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f0f0f0; /* Light Grey Icon Background */
+    background-color: #f0f0f0;
     border-radius: var(--border-radius);
-    margin-right: 1rem; /* Spacing between icon and text */
+    margin-right: 1.2rem; /* Increased icon spacing */
 }
 
 .sound-icon i {
-    font-size: 1.5rem;
-    color: var(--text-muted); /* Muted Icon Color */
+    font-size: 1.6rem; /* Larger icon font */
+    color: var(--text-muted);
 }
 
 
 .sound-details {
-    padding: 0; /* Remove padding */
+    padding: 0;
     flex: 1;
 }
 
 .sound-details h3 {
-    margin-bottom: 0.2rem;
-    font-size: 1rem; /* Smaller sound title */
+    margin-bottom: 0.3rem;
+    font-size: 1.1rem; /* Slightly larger sound title */
     font-weight: 600;
     color: var(--text-dark);
 }
 
 .sound-stat, .sound-category {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: var(--text-muted);
-    margin-bottom: 0; /* Remove margin */
+    margin-bottom: 0;
 }
 
 
 /* Footer -  Clean and Simple */
 footer {
-    background-color: var(--bg-card); /* White Footer */
-    padding: 2.5rem 0 1.2rem;
+    background-color: var(--bg-card);
+    padding: 2.8rem 0 1.4rem; /* Increased footer padding */
     border-top: 1px solid var(--border-color);
 }
 
@@ -832,14 +926,20 @@ footer {
 }
 
 .footer-logo {
-    font-size: 1.75rem;
-    font-weight: 700;
+    font-size: 1.8rem;
+    font-weight: 800; /* Bolder footer logo */
     margin-bottom: 0.8rem;
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    color: var(--primary-color); /* Primary color logo */
+    color: var(--text-dark); /* Dark footer logo text */
 }
+
+.footer-logo i.fab.fa-tiktok {
+    color: var(--primary-color); /* TikTok Blue logo icon in footer */
+    font-size: 1.3em;
+}
+
 
 .social-links {
     margin-top: 1rem;
@@ -848,7 +948,7 @@ footer {
 .social-links a {
     color: var(--text-dark);
     font-size: 1rem;
-    margin: 0 0.4rem;
+    margin: 0 0.5rem;
     transition: color var(--transition-speed);
 }
 
@@ -870,8 +970,8 @@ footer {
 
 /* Stats Section - Placeholder Styling */
 .stats-section {
-    background-color: var(--bg-body); /* Light Grey Background */
-    padding: 1.5rem 0;
+    background-color: var(--bg-body);
+    padding: 3rem 0; /* Increased stats section padding */
     text-align: center;
     border-bottom: 1px solid var(--border-color);
 }
@@ -883,35 +983,55 @@ footer {
 }
 
 .stats-section h2 {
-    margin-bottom: 0.8rem;
-    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-size: 2rem; /* Slightly larger stats heading */
     color: var(--text-dark);
 }
 
 .stats-section p {
     color: var(--text-muted);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem; /* Increased stats paragraph margin */
     font-size: 1.1rem;
+    line-height: 1.8; /* Improved stats paragraph line height */
 }
 
+.view-counter-area {
+    position: relative; /* For graph positioning */
+}
 
-/* View Counter Styling */
 .view-counter {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--secondary-color); /* Highlight view count */
+    font-size: 1.2rem; /* Slightly larger view counter */
+    font-weight: 700;
+    color: var(--secondary-color); /* Highlight view count with secondary color */
     margin-left: 0.5rem;
+}
+
+.view-start-date {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    display: block; /* Display date below counter */
+    margin-top: 0.3rem;
+}
+
+.view-growth-graph {
+    width: 100%;
+    height: 60px; /* Small graph height */
+    background-color: rgba(var(--primary-color-rgb), 0.1); /* Very light blue graph background */
+    border-radius: var(--border-radius);
+    margin-top: 1rem;
+    border: 1px solid var(--border-color);
+    /* Placeholder styling - replace with actual graph implementation */
 }
 
 
 /* Responsive Design - Adjusted for New Layout */
 @media (max-width: 992px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.6rem;
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 2.1rem;
     }
 
     .hero h1 {
@@ -920,20 +1040,20 @@ footer {
 
     .about-content {
         flex-direction: column;
-        text-align: center; /* Center text in about section on smaller screens */
+        text-align: center;
     }
 
     .about-image {
-        margin-top: 2rem; /* Add margin for image below text */
+        margin-top: 2rem;
     }
 
     .calculator-container {
-        flex-direction: column; /* Stack calculator sections */
+        flex-direction: column;
         align-items: center;
     }
 
     .calculator-result {
-        margin-top: 2rem; /* Add margin for result below inputs */
+        margin-top: 2rem;
     }
 }
 
@@ -941,7 +1061,7 @@ footer {
     .logo-container {
         flex-direction: column;
         padding: 0.8rem;
-        text-align: center; /* Center logo and tagline */
+        text-align: center;
     }
 
     .tagline {
@@ -960,7 +1080,7 @@ footer {
     }
 
     .hero h1 {
-        font-size: 2.3rem;
+        font-size: 2.4rem;
     }
 
     .hero p {
@@ -973,46 +1093,46 @@ footer {
     }
 
     .about-image {
-        display: none; /* Hide about image on very small screens */
+        display: none;
     }
 }
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     h2 {
-        font-size: 1.8rem;
+        font-size: 1.9rem;
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     .categories-grid {
-        grid-template-columns: 1fr; /* Single column categories */
+        grid-template-columns: 1fr;
     }
 
     .next-star-card {
-        min-width: 100%; /* Full width next star cards */
+        min-width: 100%;
     }
 
     .star-preview {
-        height: 140px; /* Smaller preview on mobile */
+        height: 150px;
     }
 
     .sound-icon {
-        width: 50px; /* Even smaller sound icon */
-        height: 50px;
+        width: 60px;
+        height: 60px;
     }
 
     .score-display {
-        width: 140px; /* Smaller score display */
-        height: 140px;
+        width: 150px;
+        height: 150px;
     }
 
     #soundon-score {
-        font-size: 2.5rem; /* Smaller score font on mobile */
+        font-size: 2.8rem;
     }
 }
