@@ -1,1142 +1,427 @@
-/* Updated Styles - UX-Friendly, TikTok Vibe, Cleaner Layout */
-:root {
-    /* Refined Color Palette - Softer Whites, More Contrast Accents */
-    --primary-color: #00f2ea; /* TikTok Blue */
-    --secondary-color: #ff0050; /* TikTok Pink/Red */
-    --accent-color: #f5be1c; /* TikTok Yellow */
-    --bg-body: #f9f9f9; /* Softer Off-White Body */
-    --bg-card: #ffffff; /* White Cards - Keep Bright but cleaner */
-    --bg-card-light: #fefefe; /* Lighter shade for subtle card backgrounds */
-    --text-dark: #222222; /* Dark Grey - Readable and less harsh than black */
-    --text-muted: #666666; /* Muted Grey - Softer secondary text */
-    --border-color: #e5e5e5; /* Lighter Grey Border */
-    --border-radius: 14px; /* Even More Rounded - Softer TikTok Feel */
-    --transition-speed: 0.2s;
-    --hot-color: #ff4d4d;
-    --shadow-color: rgba(0, 0, 0, 0.06); /* Subtle shadow definition */
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    color: var(--text-dark);
-    background-color: var(--bg-body);
-    line-height: 1.7;
-    font-size: 1rem;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Typography - Improved Readability, Spacing */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    line-height: 1.2; /* Tighter line height for headings */
-    margin-bottom: 0.6rem; /* Reduced margin below headings */
-    color: var(--text-dark);
-}
-
-h1 {
-    font-size: 2.6rem; /* Slightly smaller h1 */
-}
-
-h2 {
-    font-size: 2.1rem;
-}
-
-h3 {
-    font-size: 1.7rem;
-}
-
-h4 {
-    font-size: 1.4rem;
-}
-
-p {
-    margin-bottom: 0.9rem; /* Reduced paragraph margin */
-    color: var(--text-muted);
-    letter-spacing: 0.01em; /* Subtle letter-spacing for cleaner text */
-}
-
-a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color var(--transition-speed);
-}
-
-a:hover {
-    color: var(--secondary-color);
-}
-
-strong {
-    font-weight: 600;
-}
-
-/* Header & Navigation - Cleaner, Less Obtrusive */
-header {
-    background-color: var(--bg-card-light); /* Lighter header background */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 0.8rem 0; /* Reduced header padding */
-    border-bottom: 1px solid var(--border-color);
-}
-
-.logo-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1.5rem;
-}
-
-.logo {
-    font-size: 1.7rem; /* Slightly smaller logo font */
-    font-weight: 700;
-    color: var(--text-dark);
-    display: flex;
-    align-items: center;
-    gap: 0.4rem; /* Reduced logo icon spacing */
-}
-
-.logo i.fab.fa-tiktok {
-    color: var(--primary-color);
-    font-size: 1.2em; /* Slightly smaller logo icon */
-}
-
-.tagline {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    margin-left: 1rem; /* Reduced tagline margin */
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 1rem; /* Reduced nav item margin */
-}
-
-nav ul li a {
-    color: var(--text-dark);
-    font-weight: 500;
-    padding: 0.4rem 0; /* Reduced nav link padding */
-    position: relative;
-}
-
-nav ul li a:hover, nav ul li a.active {
-    color: var(--primary-color);
-}
-
-nav ul li a.active::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: var(--primary-color);
-    bottom: -2px;
-    left: 0;
-    border-radius: 1px;
-}
-
-/* Hero Section - Softer Background, Clearer Message */
-.hero {
-    background-color: var(--bg-body); /* Solid off-white hero background */
-    padding: 4rem 0; /* Reduced hero padding */
-    text-align: center;
-}
-
-.hero-content {
-    max-width: 850px; /* Slightly narrower hero content */
-    margin: 0 auto;
-}
-
-.hero h1 {
-    font-size: 2.7rem; /* Slightly smaller hero h1 */
-    margin-bottom: 1rem; /* Reduced hero h1 margin */
-    color: var(--text-dark);
-}
-
-.hero p {
-    font-size: 1.1rem;
-    margin-bottom: 1.8rem; /* Reduced hero paragraph margin */
-    color: var(--text-muted);
-    max-width: 700px; /* Narrower hero paragraph */
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.cta-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1.2rem; /* Reduced cta button margin */
-}
-
-.cta-primary, .cta-secondary {
-    padding: 0.7rem 1.8rem; /* Slightly smaller cta buttons */
-    border-radius: var(--border-radius);
-    font-weight: 500;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color var(--transition-speed), color var(--transition-speed), border-color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
-    box-shadow: 0 2px 4px var(--shadow-color); /* Subtle button shadow */
-}
-
-.cta-primary {
-    background-color: var(--primary-color);
-    color: var(--bg-card);
-    border: 1px solid var(--primary-color); /* Thinner border */
-}
-
-.cta-secondary {
-    background-color: var(--bg-card);
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color); /* Thinner border */
-}
-
-.cta-primary:hover, .cta-secondary:hover {
-    background-color: var(--secondary-color);
-    color: var(--bg-card);
-    border-color: var(--secondary-color);
-    transform: translateY(-1px); /* Less hover lift */
-    box-shadow: 0 4px 8px var(--shadow-color); /* Slightly stronger shadow on hover */
-}
-
-
-/* About Section - Cleaner, More Concise */
-.about {
-    padding: 3.5rem 0; /* Reduced about section padding */
-    background-color: var(--bg-card-light); /* Lighter about background */
-    border-bottom: 1px solid var(--border-color);
-}
-
-.about-content {
-    display: flex;
-    align-items: flex-start; /* Align items to top */
-    gap: 2rem; /* Reduced about content gap */
-}
-
-.about-text {
-    flex: 1.3; /* Slightly wider text area */
-}
-
-.about-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0.9; /* Slightly faded image */
-}
-
-.about h2 {
-    margin-bottom: 1.2rem; /* Reduced about h2 margin */
-    font-size: 2rem; /* Slightly smaller about h2 */
-}
-
-.about h3 {
-    margin-top: 1rem; /* Reduced about h3 margin */
-    font-size: 1.3rem;
-    color: var(--primary-color); /* Primary color for advantage titles */
-    font-weight: 600;
-}
-
-.about p {
-    color: var(--text-muted);
-    margin-bottom: 1rem; /* Reduced about p margin */
-    line-height: 1.7;
-}
-
-.engagement-definitions {
-    margin-top: 1.5rem; /* Reduced definitions margin */
-    padding: 1rem; /* Reduced definitions padding */
-    background-color: var(--bg-card); /* Solid white definitions background */
-    border-radius: var(--border-radius);
-    border: 1px solid var(--border-color);
-    box-shadow: 0 2px 4px var(--shadow-color); /* Subtle shadow for definitions */
-}
-
-.engagement-definitions h4 {
-    font-size: 1.1rem; /* Smaller definition h4 */
-    margin-bottom: 0.7rem; /* Reduced definition h4 margin */
-    color: var(--primary-color);
-}
-
-.engagement-definitions ul {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0.4rem; /* Reduced definition ul margin */
-}
-
-.engagement-definitions li {
-    margin-bottom: 0.5rem; /* Reduced definition li margin */
-    display: flex;
-    align-items: baseline;
-}
-
-.engagement-definitions li::before {
-    content: '📊'; /* Bar Chart Icon for Engagement */
-    color: var(--accent-color);
-    margin-right: 0.5rem;
-    font-size: 0.8rem;
-}
-
-.engagement-definitions strong {
-    color: var(--secondary-color);
-    font-weight: 600;
-    margin-right: 0.2rem;
-}
-
-.about ul {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0.6rem; /* Reduced about ul margin */
-}
-
-.about ul li {
-    margin-bottom: 0.6rem; /* Reduced about li margin */
-    display: flex;
-    align-items: flex-start;
-    padding-left: 1rem; /* Reduced about li padding */
-    position: relative;
-}
-
-.about ul li::before {
-    content: '✨'; /* Sparkle Icon for Advantage */
-    color: var(--primary-color);
-    position: absolute;
-    left: 0;
-    top: 2px; /* Slightly adjusted icon position */
-    font-weight: bold;
-    margin-right: 0.4rem;
-}
-
-.coming-soon {
-    background-color: var(--accent-color);
-    color: var(--text-dark);
-    padding: 0.15rem 0.3rem; /* Smaller coming soon label */
-    border-radius: var(--border-radius);
-    font-size: 0.7rem;
-    font-weight: 500;
-    margin-left: 0.3rem;
-}
-
-
-/* Categories Section - More Compact, Cleaner Filters */
-.categories-section {
-    padding: 3.5rem 0; /* Reduced categories section padding */
-    background-color: var(--bg-body);
-}
-
-.section-intro {
-    text-align: center;
-    margin-bottom: 2rem; /* Reduced section intro margin */
-    color: var(--text-muted);
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 0.95rem; /* Slightly smaller section intro font */
-}
-
-.category-filters {
-    display: flex;
-    justify-content: center;
-    gap: 0.6rem; /* Reduced category filter gap */
-    margin-bottom: 1.2rem; /* Reduced category filter margin */
-}
-
-.category-filter {
-    background-color: var(--bg-card);
-    color: var(--text-dark);
-    border: 1px solid var(--border-color);
-    padding: 0.5rem 1rem; /* Smaller filter buttons */
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    font-size: 0.9rem; /* Smaller filter button font */
-    font-weight: 500;
-    transition: background-color var(--transition-speed), color var(--transition-speed), border-color var(--transition-speed), box-shadow var(--transition-speed);
-    box-shadow: 0 1px 2px var(--shadow-color); /* More subtle filter shadow */
-}
-
-.category-filter.active, .category-filter:hover {
-    background-color: var(--primary-color);
-    color: var(--bg-card);
-    border-color: var(--primary-color);
-    box-shadow: 0 2px 4px var(--shadow-color); /* Slightly stronger shadow on hover/active */
-}
-
-
-.categories-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); /* Slightly narrower category cards */
-    gap: 1.2rem; /* Reduced category grid gap */
-    margin-top: 1.2rem; /* Reduced category grid margin */
-}
-
-.category-card {
-    background-color: var(--bg-card);
-    border-radius: var(--border-radius);
-    padding: 1.2rem; /* Reduced category card padding */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-    cursor: pointer;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 1px 2px var(--shadow-color); /* More subtle card shadow */
-}
-
-.category-card:hover {
-    transform: translateY(-2px); /* Less hover lift */
-    box-shadow: 0 4px 8px var(--shadow-color); /* Slightly stronger shadow on hover */
-}
-
-.category-card .icon {
-    width: 55px; /* Smaller category icon */
-    height: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    margin-bottom: 0.8rem; /* Reduced category icon margin */
-}
-
-.category-card .icon svg {
-    width: 28px; /* Smaller category icon svg */
-    height: 28px;
-    color: var(--bg-card);
-}
-
-.category-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.4rem; /* Reduced category card h3 margin */
-    color: var(--text-dark);
-    font-weight: 600;
-    text-align: center;
-}
-
-.category-card p {
-    color: var(--text-muted);
-    text-align: center;
-    font-size: 0.85rem; /* Smaller category card p font */
-}
-
-
-/* Next Star Sounds -  More Compact Cards */
-.next-stars {
-    padding: 3.5rem 0; /* Reduced next stars section padding */
-    background-color: var(--bg-card-light); /* Lighter next stars background */
-    border-bottom: 1px solid var(--border-color);
-}
-
-.next-stars .section-intro {
-    margin-bottom: 1.6rem; /* Reduced next stars intro margin */
-    font-size: 0.95rem; /* Smaller next stars intro font */
-}
-
-.next-star-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.2rem; /* Reduced next star cards gap */
-    margin-top: 1.2rem; /* Reduced next star cards margin */
-    justify-content: center;
-}
-
-.next-star-card {
-    flex: 0 1 calc(33% - 1.2rem);
-    min-width: 240px; /* Narrower next star cards */
-    max-width: 340px; /* Narrower max width */
-    background-color: var(--bg-card);
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-    border: 1px solid var(--border-color);
-    box-shadow: 0 1px 2px var(--shadow-color); /* More subtle card shadow */
-    margin-bottom: 1.2rem; /* Reduced next star card margin */
-}
-
-@media (max-width: 992px) {
-    .next-star-card {
-        flex-basis: calc(50% - 1.2rem);
-    }
-}
-
-@media (max-width: 768px) {
-    .next-star-card {
-        flex-basis: 100%;
-    }
-}
-
-
-.next-star-card:hover {
-    transform: translateY(-2px); /* Less hover lift */
-    box-shadow: 0 4px 8px var(--shadow-color); /* Slightly stronger shadow on hover */
-}
-
-.star-preview {
-    position: relative;
-    height: 150px; /* Smaller next star preview */
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.star-preview .fa-play-circle {
-    font-size: 2.8rem; /* Smaller next star play icon */
-    color: var(--text-muted);
-    position: relative;
-    z-index: 2;
-    transition: transform var(--transition-speed), color var(--transition-speed);
-}
-
-.next-star-card:hover .star-preview .fa-play-circle {
-    transform: scale(1.1);
-    color: var(--primary-color);
-}
-
-.glow-effect {
-    display: none;
-}
-
-.star-info {
-    padding: 1.2rem; /* Reduced star info padding */
-}
-
-.star-info h3 {
-    margin-bottom: 0.5rem; /* Reduced star info h3 margin */
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--text-dark);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.hot-sound-label, .gaining-popularity-label {
-    padding: 0.25rem 0.5rem; /* Smaller hot/gaining popularity labels */
-    border-radius: var(--border-radius);
-    font-size: 0.7rem; /* Smaller hot/gaining popularity label font */
-    font-weight: 600;
-    margin-left: 0.4rem; /* Reduced label margin */
-    vertical-align: middle;
-    box-shadow: 0 1px 2px var(--shadow-color); /* More subtle label shadow */
-}
-.hot-sound-label {
-    background-color: var(--hot-color);
-    color: var(--bg-card);
-}
-.gaining-popularity-label {
-    background-color: var(--accent-color);
-    color: var(--text-dark);
-}
-
-
-.star-metrics {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem; /* Reduced star metrics gap */
-    margin-bottom: 0.8rem; /* Reduced star metrics margin */
-}
-
-.star-metrics span {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-}
-
-.prediction-meter {
-    margin: 0.9rem 0; /* Reduced prediction meter margin */
-}
-
-.prediction-bar {
-    height: 7px; /* Smaller prediction bar height */
-    background-color: var(--border-color);
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    margin-bottom: 0.3rem; /* Reduced prediction bar margin */
-}
-
-.prediction-fill {
-    height: 100%;
-    width: 0;
-    background-color: var(--primary-color);
-    border-radius: var(--border-radius);
-    transition: width 1s ease-out;
-}
-
-.prediction-label {
-    font-size: 0.8rem;
-    text-align: right;
-    color: var(--text-muted);
-}
-
-
-.sound-link {
-    display: block;
-    margin-top: 0.8rem; /* Reduced sound link margin */
-    padding: 0.7rem 1.3rem; /* Smaller sound link button */
-    border-radius: var(--border-radius);
-    background-color: var(--primary-color);
-    color: var(--bg-card);
-    font-weight: 500;
-    text-align: center;
-    transition: background-color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
-    border: 1px solid var(--primary-color); /* Thinner border */
-    box-shadow: 0 2px 4px var(--shadow-color); /* More subtle button shadow */
-    font-size: 0.95rem; /* Smaller sound link button font */
-}
-
-.sound-link:hover {
-    background-color: var(--secondary-color);
-    color: var(--bg-card);
-    border-color: var(--secondary-color);
-    transform: translateY(-1px); /* Less hover lift */
-    box-shadow: 0 4px 8px var(--shadow-color); /* Slightly stronger shadow on hover */
-}
-
-
-/* SoundOn Calculator -  Cleaner, Less Gradient */
-.soundon-calculator {
-    padding: 3.5rem 0; /* Reduced calculator section padding */
-    background-color: var(--bg-body);
-}
-
-.calculator-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.8rem; /* Reduced calculator container gap */
-    margin-top: 1.2rem; /* Reduced calculator container margin */
-    align-items: flex-start;
-}
-
-.calculator-inputs {
-    flex: 1;
-    min-width: 280px; /* Narrower calculator inputs */
-}
-
-.slider-group {
-    margin-bottom: 1.2rem; /* Reduced slider group margin */
-}
-
-.slider-group label {
-    display: block;
-    margin-bottom: 0.4rem;
-    font-weight: 500;
-    color: var(--text-dark);
-    font-size: 1rem; /* Smaller slider label font */
-}
-
-.slider-display {
-    font-size: 0.9rem;
-    color: var(--primary-color);
-    font-weight: 500;
-    margin-left: 0.5rem;
-}
-
-
-.slider {
-    width: 100%;
-    height: 8px; /* Smaller slider height */
-    -webkit-appearance: none;
-    background-color: var(--border-color);
-    border-radius: 4px;
-    outline: none;
-    cursor: pointer;
-}
-
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 18px; /* Smaller slider thumb */
-    height: 18px;
-    border-radius: 50%;
-    background-color: var(--primary-color);
-    cursor: pointer;
-    border: none;
-    transition: transform var(--transition-speed);
-    box-shadow: 0 1px 2px var(--shadow-color); /* More subtle thumb shadow */
-}
-
-.slider::-webkit-slider-thumb:hover {
-    transform: scale(1.1);
-}
-
-
-.calculator-result {
-    flex: 1;
-    min-width: 260px; /* Narrower calculator result */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: var(--bg-card);
-    padding: 1.5rem; /* Reduced calculator result padding */
-    border-radius: var(--border-radius);
-    border: 1px solid var(--border-color);
-    box-shadow: 0 1px 2px var(--shadow-color); /* More subtle card shadow */
-}
-
-.score-display {
-    width: 150px; /* Smaller score display */
-    height: 150px;
-    background-color: var(--bg-card-light); /* Light solid background for score */
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1rem; /* Reduced score display margin */
-    border: 2px solid var(--primary-color); /* Solid border, no gradient */
-}
-
-#soundon-score {
-    font-size: 3rem; /* Smaller score font */
-    font-weight: 700; /* Slightly lighter score font weight */
-    color: var(--primary-color); /* Primary color score text */
-    text-shadow: none; /* Removed score text shadow */
-}
-
-.score-label {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--text-dark);
-    margin-bottom: 0.3rem; /* Reduced score label margin */
-}
-
-.score-explanation {
-    color: var(--text-muted);
-    max-width: 280px; /* Narrower score explanation */
-    font-size: 0.9rem;
-    line-height: 1.6;
-}
-
-
-/* Blog Section - More Compact Previews */
-.blog-index {
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 2.8rem 1.5rem; /* Reduced blog index padding */
-    background-color: var(--bg-body);
-}
-
-.blog-index h1 {
-    margin-bottom: 0.8rem; /* Reduced blog index h1 margin */
-    text-align: center;
-    color: var(--text-dark);
-    font-size: 2rem; /* Smaller blog index h1 */
-}
-
-.blog-index > p {
-    text-align: center;
-    color: var(--text-muted);
-    margin-bottom: 2rem; /* Reduced blog index p margin */
-    font-size: 0.95rem; /* Smaller blog index p font */
-}
-
-.blog-preview {
-    background-color: var(--bg-card);
-    border-radius: var(--border-radius);
-    padding: 1.4rem; /* Reduced blog preview padding */
-    margin-bottom: 1.2rem; /* Reduced blog preview margin */
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-    border: 1px solid var(--border-color);
-    box-shadow: 0 1px 2px var(--shadow-color); /* More subtle card shadow */
-}
-
-.blog-preview:hover {
-    transform: translateY(-1px); /* Less hover lift */
-    box-shadow: 0 3px 6px var(--shadow-color); /* Slightly stronger shadow on hover */
-}
-
-.blog-preview h2 {
-    margin-bottom: 0.6rem; /* Reduced blog preview h2 margin */
-    line-height: 1.3;
-    font-size: 1.4rem; /* Smaller blog preview h2 font */
-}
-
-.blog-preview h2 a {
-    color: var(--text-dark);
-    transition: color var(--transition-speed);
-}
-
-.blog-preview h2 a:hover {
-    color: var(--primary-color);
-}
-
-.blog-preview p {
-    color: var(--text-muted);
-    margin-bottom: 0.9rem; /* Reduced blog preview p margin */
-    font-size: 0.9rem; /* Smaller blog preview p font */
-}
-
-.read-more {
-    display: inline-block;
-    margin-top: 0.7rem; /* Reduced read more margin */
-    color: var(--primary-color);
-    font-weight: 500;
-    font-size: 0.9rem; /* Smaller read more font */
-}
-
-.read-more:hover {
-    color: var(--secondary-color);
-}
-
-
-/* Blog Post - No Major Changes */
-.blog-post {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 3rem 1.5rem;
-    background-color: var(--bg-body);
-}
-
-.blog-post h1 {
-    margin-bottom: 1.2rem;
-    color: var(--text-dark);
-}
-
-.post-meta {
-    color: var(--text-muted);
-    margin-bottom: 1.8rem;
-    font-size: 0.9rem;
-}
-
-.blog-post section {
-    margin-bottom: 2rem;
-}
-
-.blog-post h2 {
-    margin-bottom: 0.9rem;
-    position: relative;
-    padding-bottom: 0.4rem;
-    color: var(--text-dark);
-}
-
-.blog-post h2::after {
-    content: '';
-    position: absolute;
-    width: 40px;
-    height: 2px;
-    background-color: var(--primary-color);
-    bottom: 0;
-    left: 0;
-    border-radius: 1px;
-}
-
-.blog-post p {
-    color: var(--text-muted);
-    margin-bottom: 1.2rem;
-}
-
-.blog-post ul, .blog-post ol {
-    margin-left: 1.8rem;
-    margin-bottom: 1.3rem;
-}
-
-.blog-post li {
-    margin-bottom: 0.4rem;
-    color: var(--text-muted);
-}
-
-.post-navigation {
-    margin-top: 2.5rem;
-    padding-top: 1.2rem;
-    border-top: 1px solid var(--border-color);
-}
-
-
-/* Sound Item Styling - More Compact List */
-.category-sounds {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem; /* Reduced sound item gap */
-    margin-top: 1.2rem; /* Reduced sound items margin */
-}
-
-.sound-item {
-    background-color: var(--bg-card);
-    border-radius: var(--border-radius);
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-    cursor: pointer;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 1px 2px var(--shadow-color); /* More subtle card shadow */
-    padding: 0.9rem; /* Reduced sound item padding */
-}
-
-.sound-item:hover {
-    transform: translateY(-1px); /* Less hover lift */
-    box-shadow: 0 3px 6px var(--shadow-color); /* Slightly stronger shadow on hover */
-}
-
-.sound-icon {
-    width: 60px; /* Smaller sound icon */
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f0f0f0;
-    border-radius: var(--border-radius);
-    margin-right: 1rem; /* Reduced sound icon margin */
-}
-
-.sound-icon i {
-    font-size: 1.4rem; /* Smaller sound icon i font */
-    color: var(--text-muted);
-}
-
-
-.sound-details {
-    padding: 0;
-    flex: 1;
-}
-
-.sound-details h3 {
-    margin-bottom: 0.2rem; /* Reduced sound details h3 margin */
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--text-dark);
-}
-
-.sound-stat, .sound-category {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    margin-bottom: 0;
-}
-
-
-/* Footer - More Compact Footer */
-footer {
-    background-color: var(--bg-card-light); /* Lighter footer background */
-    padding: 2.4rem 0 1rem; /* Reduced footer padding */
-    border-top: 1px solid var(--border-color);
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 1.2rem; /* Reduced footer content margin */
-}
-
-.footer-logo {
-    font-size: 1.7rem; /* Smaller footer logo font */
-    font-weight: 700;
-    margin-bottom: 0.7rem; /* Reduced footer logo margin */
-    display: flex;
-    align-items: center;
-    gap: 0.3rem; /* Reduced footer logo gap */
-    color: var(--text-dark);
-}
-
-.footer-logo i.fab.fa-tiktok {
-    color: var(--primary-color);
-    font-size: 1.1em; /* Smaller footer logo i font */
-}
-
-
-.social-links {
-    margin-top: 0.8rem; /* Reduced social links margin */
-}
-
-.social-links a {
-    color: var(--text-dark);
-    font-size: 0.95rem; /* Smaller social links a font */
-    margin: 0 0.4rem;
-    transition: color var(--transition-speed);
-}
-
-.social-links a:hover {
-    color: var(--primary-color);
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 0.8rem; /* Reduced footer bottom padding */
-    border-top: 1px solid var(--border-color);
-}
-
-.footer-bottom p {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-}
-
-
-/* Stats Section - More Compact Stats */
-.stats-section {
-    padding: 2.8rem 0; /* Reduced stats section padding */
-    background-color: var(--bg-body);
-    text-align: center;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.stats-container {
-    max-width: 850px; /* Narrower stats container */
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.stats-section h2 {
-    margin-bottom: 0.7rem; /* Reduced stats h2 margin */
-    font-size: 1.9rem; /* Smaller stats h2 font */
-    color: var(--text-dark);
-}
-
-.stats-section p {
-    color: var(--text-muted);
-    margin-bottom: 1.5rem; /* Reduced stats p margin */
-    font-size: 1rem; /* Smaller stats p font */
-    line-height: 1.6;
-}
-
-.view-counter-area {
-    position: relative;
-}
-
-.view-counter {
-    font-size: 1.1rem; /* Smaller view counter font */
-    font-weight: 600;
-    color: var(--secondary-color);
-    margin-left: 0.4rem; /* Reduced view counter margin */
-}
-
-.view-start-date {
-    font-size: 0.85rem; /* Smaller view start date font */
-    color: var(--text-muted);
-    display: block;
-    margin-top: 0.2rem; /* Reduced view start date margin */
-}
-
-.view-growth-graph {
-    width: 100%;
-    height: 50px; /* Smaller graph height */
-    background-color: rgba(var(--primary-color-rgb), 0.08);
-    border-radius: var(--border-radius);
-    margin-top: 0.8rem; /* Reduced graph margin */
-    border: 1px solid var(--border-color);
-}
-
-
-/* Responsive Design - Adjusted for Compact Layout */
-@media (max-width: 992px) {
-    h1 {
-        font-size: 2.4rem;
-    }
-
-    h2 {
-        font-size: 1.9rem;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-image {
-        margin-top: 1.8rem; /* Reduced about image margin */
-        max-height: 250px; /* Limit image height on medium screens */
-    }
-
-    .calculator-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .calculator-result {
-        margin-top: 1.8rem; /* Reduced calculator result margin */
-    }
-}
-
-@media (max-width: 768px) {
-    .logo-container {
-        flex-direction: column;
-        padding: 0.6rem; /* Reduced logo container padding */
-        text-align: center;
-    }
-
-    .tagline {
-        margin-left: 0;
-        margin-top: 0.3rem; /* Reduced tagline margin */
-    }
-
-    nav ul {
-        margin-top: 0.6rem; /* Reduced nav ul margin */
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    nav ul li {
-        margin: 0 0.5rem; /* Reduced nav li margin */
-    }
-
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .cta-buttons {
-        flex-direction: column;
-        gap: 0.6rem;
-    }
-
-    .about-image {
-        display: none; /* Hide about image on small screens */
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .categories-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .next-star-card {
-        min-width: 100%;
-    }
-
-    .star-preview {
-        height: 130px; /* Smaller preview on mobile */
-    }
-
-    .sound-icon {
-        width: 50px;
-        height: 50px;
-    }
-
-    .score-display {
-        width: 130px; /* Smaller score display */
-        height: 130px;
-    }
-
-    #soundon-score {
-        font-size: 2.6rem;
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WouldLiker - Boost Your TikTok Success</title>
+    <!-- External Styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter&display=swap" rel="stylesheet" />
+    <script defer src="app.js"></script>
+</head>
+<body>
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats-section">
+        <div class="stats-container">
+            <h2>Impressive Track Record</h2>
+            <p>Trusted by thousands of TikTok creators. Join the community leveraging data-driven sound selection to amplify their TikTok impact.</p>
+            <!-- Stats Screenshots - Horizontal Layout -->
+            <div style="display: flex; justify-content: space-around; margin-bottom: 1.8rem; flex-wrap: wrap; align-items: center;">
+                <img src="https://raw.githubusercontent.com/marrrow/tktk/main/stats-screenshot-1.png" alt="Total Views Stats" style="max-width: 48%; max-height: 280px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                <img src="https://raw.githubusercontent.com/marrrow/tktk/main/stats-screenshot-2.png" alt="Engagement Stats" style="max-width: 48%; max-height: 280px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            </div>
+            <div class="view-counter-area">
+                <p>Currently tracking <span id="view-counter" class="view-counter">150,000,000+</span> views</p>
+                <span class="view-start-date">Since August 2024 - and counting!</span>
+                <div class="view-growth-graph">
+                    <!-- Placeholder for view growth graph -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- SoundOn Calculator Section -->
+     <section id="calculator" class="soundon-calculator">
+        <div class="container">
+            <h2>SoundOn Score™ Calculator</h2>
+            <p>Unlock data-driven sound selection. Estimate a sound's viral potential with our proprietary SoundOn Score™ calculator. Real-time feedback – adjust sliders, see the score.</p>
+            <div class="calculator-container">
+                <div class="calculator-inputs">
+                    <div class="slider-group">
+                        <label for="avg-view-time">Average View Time: <span id="view-time-display" class="slider-display">15 seconds</span></label>
+                        <input type="range" id="avg-view-time" min="1" max="60" value="15" class="slider">
+                    </div>
+                    <div class="slider-group">
+                        <label for="completion-rate">Completion Rate: <span id="completion-display" class="slider-display">40%</span></label>
+                        <input type="range" id="completion-rate" min="1" max="100" value="40" class="slider">
+                    </div>
+                    <div class="slider-group">
+                        <label for="engagement-rate">Engagement Rate: <span id="engagement-display" class="slider-display">5.5%</span></label>
+                        <input type="range" id="engagement-rate" min="0.1" max="100" value="5.5" step="0.1" class="slider">
+                    </div>
+                    <div class="slider-group">
+                        <label for="trend-factor">Trend Growth Factor: <span id="trend-display" class="slider-display">3/10</span></label>
+                        <input type="range" id="trend-factor" min="1" max="10" value="3" class="slider">
+                    </div>
+                </div>
+                <div class="calculator-result">
+                    <div class="score-display">
+                        <span id="soundon-score">--</span>
+                    </div>
+                    <p class="score-label">SoundOn Score™</p>
+                    <p class="score-explanation">Score above 80 = high viral potential. 90+ = exceptional sound performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <i class="fab fa-tiktok"></i>
+                <span>WouldLiker</span>
+            </div>
+            <p class="tagline">Data-Driven TikTok Sound Curation for Viral Growth</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#trending-sounds">Top Sounds</a></li>
+                <li><a href="#about">Why It Works</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#next-stars">Next Stars</a></li>
+                <li><a href="#calculator">SoundOn Score</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Stop Guessing, Start Going Viral</h1>
+            <p>WouldLiker: Data-backed sound picks for TikTok views, engagement & growth. Elevate your content now.</p>
+            <div class="cta-buttons">
+                <button class="cta-primary" onclick="scrollToSection('categories')">Explore Sounds</button>
+                <button class="cta-secondary" onclick="scrollToSection('about')">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container about-content">
+            <div class="about-text">
+                <h2>WouldLiker: Your Data-Driven TikTok Sound Advantage</h2>
+                <p>Tired of generic trends? WouldLiker provides <strong>curated, high-potential sounds</strong>, boosting engagement in specific niches. Data-backed, not guesswork.  Get the strategic edge.</p>
+
+                <h3>WouldLiker: The Smart Choice for TikTok Growth</h3>
+                <ul>
+                    <li><strong><strong>SoundOn Score™</strong></strong> – Algorithm-predicted viral potential. Data-driven insights, not hunches.</li>
+                    <li><strong>Niche Sound Categories</strong> –  Targeted sounds for YOUR content. Stop wasting time on irrelevant trends.</li>
+                    <li><strong>Analytics-Validated</strong> –  Proven strategies from successful creators. Real-world data, guaranteed effectiveness.</li>
+                    <li><strong>First-Mover Advantage</strong> -  Use "Next Star Sounds" FIRST. TikTok rewards originality. Boost initial traction.</li>
+                    <li><strong>Regional Trend Optimization</strong> – <span class="coming-soon">Coming Soon!</span> – Local & global reach maximized. Tap into regional trends.</li>
+                </ul>
+
+                <div class="engagement-definitions">
+                    <h4>Understanding Sound Engagement</h4>
+                    <p>WouldLiker uses key metrics for informed sound choices:</p>
+                    <ul>
+                        <li><strong>Track Engagement:</strong>  <strong>(Likes + Shares + Comments + Favorites) / Views</strong>. Overall audience interaction.</li>
+                        <li><strong>SoundOn Engagement:</strong> Percentile ranking vs. tracks with <strong>> 5k views</strong>. Relative performance ratings:
+                            <ul>
+                                <li><strong>Excellent:</strong> Top 10%</li>
+                                <li><strong>Great:</strong> Top 20%</li>
+                                <li><strong>Good:</strong> Top 30%</li>
+                                <li><strong>OK:</strong> Top 50%</li>
+                                <li><strong>Fair:</strong> Bottom 50%</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>SoundOn Score™ algorithm: intelligent, predictive, powerful.</p>
+                </div>
+
+            </div>
+            <div class="about-image">
+                <svg width="300" height="200" viewBox="0 0 300 200">
+                    <rect width="300" height="200" fill="#f0f0f0" rx="12" ry="12"/>
+                    <path d="M150,40 C90,40 40,90 40,150 L40,160 L260,160 L260,150 C260,90 210,40 150,40 Z" fill="#ddd" opacity="0.5"/>
+                    <circle cx="150" cy="80" r="35" fill="url(#iconGradient)"/>
+                    <rect x="120" y="120" width="60" height="80" fill="url(#iconGradient)" rx="10" ry="10"/>
+                     <defs>
+                        <linearGradient id="iconGradient" gradientUnits="userSpaceOnUse" x1="120" y1="80" x2="180" y2="80">
+                          <stop offset="0%" stop-color="#00f2ea"/>
+                          <stop offset="100%" stop-color="#ff0050"/>
+                        </linearGradient>
+                      </defs>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories-section">
+        <div class="container">
+            <h2>Explore Sound Categories</h2>
+            <p class="section-intro">Find YOUR sound. Curated categories for video styles & niches. Stop scrolling, start creating.</p>
+            <div class="category-filters">
+                <button class="category-filter active" data-filter="all">All Sounds</button>
+                <button class="category-filter" data-filter="core">Core Sounds</button>
+                <button class="category-filter" data-filter="presentation">Presentation</button>
+                <button class="category-filter" data-filter="sports">Sports</button>
+                <button class="category-filter" data-filter="comedy">Comedy</button>
+                <button class="category-filter" data-filter="romance">Romance</button>
+            </div>
+            <div class="category-sounds">
+                <!-- Sound items will be dynamically populated here by JavaScript -->
+                <div class="sound-item" data-category="core">
+                    <div class="sound-icon"><i class="fas fa-music"></i></div>
+                    <div class="sound-details">
+                        <h3>Core Sound 2025</h3>
+                        <p class="sound-stat">Predicted Views: 145K+ in first week</p>
+                        <p class="sound-category">Category: Core</p>
+                    </div>
+                </div>
+                <div class="sound-item" data-category="transition">
+                    <div class="sound-icon"><i class="fas fa-music"></i></div>
+                    <div class="sound-details">
+                        <h3>Transition <span class="hot-sound-label">Hot</span> <span class="gaining-popularity-label">Trending</span></h3>
+                        <p class="sound-stat">SoundOn Score: 95</p>
+                        <p class="sound-category">Category: Transition</p>
+                    </div>
+                </div>
+                <div class="sound-item" data-category="future">
+                    <div class="sound-icon"><i class="fas fa-music"></i></div>
+                    <div class="sound-details">
+                        <h3>Future <span class="hot-sound-label">Hot</span> <span class="gaining-popularity-label">Trending</span></h3>
+                        <p class="sound-stat">SoundOn Score: 94</p>
+                        <p class="sound-category">Category: Future</p>
+                    </div>
+                </div>
+                 <div class="sound-item" data-category="taste">
+                    <div class="sound-icon"><i class="fas fa-music"></i></div>
+                    <div class="sound-details">
+                        <h3>Taste <span class="hot-sound-label">Hot</span> <span class="gaining-popularity-label">Trending</span></h3>
+                        <p class="sound-stat">SoundOn Score: 92</p>
+                        <p class="sound-category">Category: Taste</p>
+                    </div>
+                </div>
+                <!-- Add more sound items here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Stars Section -->
+    <section id="next-stars" class="next-stars">
+        <div class="container">
+            <h2>"Next Star" Sounds: Be First, Go Viral</h2>
+            <p class="section-intro">Trendsetter alert! "Next Star" sounds: early viral indicators.  First to use = first to trend. Capitalize NOW.</p>
+            <div class="next-star-cards">
+                <div class="next-star-card">
+                    <div class="star-preview">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="star-info">
+                        <h3>Transition <span class="hot-sound-label">Hot</span></h3>
+                        <div class="star-metrics">
+                            <span class="prediction">Predicted Views: 200K+ in week 1</span>
+                            <span class="category">Category: Transition</span>
+                        </div>
+                        <div class="prediction-meter">
+                            <div class="prediction-bar">
+                                <div class="prediction-fill" data-value="95"></div>
+                            </div>
+                            <div class="prediction-label">95% Viral Potential</div>
+                        </div>
+                        <a href="https://www.tiktok.com/t/ZT2pqWXvE/" class="sound-link" target="_blank">Use This Sound</a>
+                    </div>
+                </div>
+                <div class="next-star-card">
+                    <div class="star-preview">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="star-info">
+                        <h3>Future <span class="hot-sound-label">Hot</span></h3>
+                        <div class="star-metrics">
+                            <span class="prediction">Predicted Views: 190K+ in week 1</span>
+                            <span class="category">Category: Future</span>
+                        </div>
+                        <div class="prediction-meter">
+                            <div class="prediction-bar">
+                                <div class="prediction-fill" data-value="94"></div>
+                            </div>
+                            <div class="prediction-label">94% Viral Potential</div>
+                        </div>
+                        <a href="https://www.tiktok.com/t/ZT2pqERLS/" class="sound-link" target="_blank">Use This Sound</a>
+                    </div>
+                </div>
+                 <div class="next-star-card">
+                    <div class="star-preview">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="star-info">
+                        <h3>Taste <span class="hot-sound-label">Hot</span></h3>
+                        <div class="star-metrics">
+                            <span class="prediction">Predicted Views: 180K+ in week 1</span>
+                            <span class="category">Category: Taste</span>
+                        </div>
+                        <div class="prediction-meter">
+                            <div class="prediction-bar">
+                                <div class="prediction-fill" data-value="92"></div>
+                            </div>
+                            <div class="prediction-label">92% Viral Potential</div>
+                        </div>
+                        <a href="https://www.tiktok.com/t/ZT2pbMbKJ/" class="sound-link" target="_blank">Use This Sound</a>
+                    </div>
+                </div>
+                <!-- Add more Next Star Sound cards here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <i class="fab fa-tiktok"></i>
+                <span>WouldLiker</span>
+            </div>
+            <p>Unlock your TikTok potential with data-driven sound selection.</p>
+            <div class="social-links">
+                <a href="https://www.tiktok.com/@wouldliker" target="_blank">
+                    <i class="fab fa-tiktok"></i> @wouldliker
+                </a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>© 2025 WouldLiker. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Persistent View Counter Animation ---
+            const viewCounterElement = document.getElementById('view-counter');
+            let currentViews = localStorage.getItem('currentViews');
+            let lastUpdateTime = localStorage.getItem('lastUpdateTime');
+            const weeklyViewIncrease = 10000000;
+            const targetViews = 150000000 + (weeklyViewIncrease * 52); // Target for animation
+
+            if (!currentViews) {
+                currentViews = 150000000; // Initial view count if not in localStorage
+            } else {
+                currentViews = parseInt(currentViews, 10);
+            }
+
+            if (!lastUpdateTime) {
+                lastUpdateTime = Date.now();
+            } else {
+                lastUpdateTime = parseInt(lastUpdateTime, 10);
+            }
+
+            const timeDiff = Date.now() - lastUpdateTime;
+            const viewsToAddBasedOnTime = Math.floor((timeDiff / (7 * 24 * 3600 * 1000)) * weeklyViewIncrease); // Views to add since last visit
+            currentViews += viewsToAddBasedOnTime;
+
+
+            const minIncrement = 1000;
+            const maxIncrement = 5000;
+            const updateInterval = 75;
+
+            function updateViewCount() {
+                if (currentViews < targetViews) {
+                    const randomIncrement = Math.floor(Math.random() * (maxIncrement - minIncrement + 1)) + minIncrement;
+                    currentViews += randomIncrement;
+                    viewCounterElement.textContent = currentViews.toLocaleString() + "+";
+                    localStorage.setItem('currentViews', currentViews); // Store updated view count
+                    localStorage.setItem('lastUpdateTime', Date.now()); // Store update time
+                    setTimeout(updateViewCount, updateInterval);
+                } else {
+                    viewCounterElement.textContent = targetViews.toLocaleString() + "+";
+                    localStorage.removeItem('lastUpdateTime'); // Stop persistent updates after target reached (optional)
+                }
+            }
+
+            updateViewCount();
+
+
+            // --- SoundOn Score Calculator ---
+            const avgViewTimeSlider = document.getElementById('avg-view-time');
+            const completionRateSlider = document.getElementById('completion-rate');
+            const engagementRateSlider = document.getElementById('engagement-rate');
+            const trendFactorSlider = document.getElementById('trend-factor');
+
+            const viewTimeDisplay = document.getElementById('view-time-display');
+            const completionDisplay = document.getElementById('completion-display');
+            const engagementDisplay = document.getElementById('engagement-display');
+            const trendDisplay = document.getElementById('trend-display');
+            const soundonScoreDisplay = document.getElementById('soundon-score');
+
+
+            function calculateSoundOnScore() {
+                const viewTime = parseInt(avgViewTimeSlider.value);
+                const completion = parseInt(completionRateSlider.value);
+                const engagement = parseFloat(engagementRateSlider.value);
+                const trend = parseInt(trendFactorSlider.value);
+
+                let score = (viewTime * 0.15) + (completion * 0.25) + (engagement * 0.3) + (trend * 0.3);
+                score = Math.max(0, Math.min(100, Math.round(score)));
+
+                soundonScoreDisplay.textContent = isNaN(score) ? "--" : score;
+            }
+
+
+            avgViewTimeSlider.addEventListener('input', function() {
+                viewTimeDisplay.textContent = this.value + " seconds";
+                calculateSoundOnScore();
+            });
+
+            completionRateSlider.addEventListener('input', function() {
+                completionDisplay.textContent = this.value + "%";
+                calculateSoundOnScore();
+            });
+
+            engagementRateSlider.addEventListener('input', function() {
+                engagementDisplay.textContent = this.value + "%";
+                calculateSoundOnScore();
+            });
+
+            trendFactorSlider.addEventListener('input', function() {
+                trendDisplay.textContent = this.value + "/10";
+                calculateSoundOnScore();
+            });
+
+            calculateSoundOnScore();
+
+
+             // --- Smooth Scrolling for Navigation Links ---
+             document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    let targetElement = document.querySelector(this.getAttribute('href'));
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - (document.querySelector('header').offsetHeight),
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // --- Scroll to Section Function for CTA Buttons ---
+            window.scrollToSection = function(sectionId) {
+                let targetSection = document.getElementById(sectionId);
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - (document.querySelector('header').offsetHeight),
+                        behavior: 'smooth'
+                    });
+                }
+            };
+
+            // --- Prediction Bar Animation on Load ---
+            const predictionFills = document.querySelectorAll('.prediction-fill');
+            predictionFills.forEach(fill => {
+                const value = fill.getAttribute('data-value');
+                fill.style.width = value + '%';
+            });
+
+
+        });
+    </script>
+</body>
+</html>
