@@ -1,11 +1,12 @@
-/* Base Styles */
+/* Updated Styles - Lighter Theme Inspired by Tokchart */
 :root {
-  --primary-color: #25F4EE;
-  --secondary-color: #FE2C55;
-  --bg-dark: #121212;
-  --bg-card: #1f1f1f;
-  --text-light: #ffffff;
-  --text-dim: #aaaaaa;
+  /* Lighter Background Colors -  More like Tokchart */
+  --primary-color: #3498db; /* Tokchart-like Blue */
+  --secondary-color: #9b59b6; /* Tokchart-like Purple */
+  --bg-body: #f0f2f5; /* Light Grey Body Background - Tokchart-like */
+  --bg-card: #ffffff; /* White Card Backgrounds -  Clean and Bright */
+  --text-dark: #333333; /* Dark Text for better readability on light backgrounds */
+  --text-dim: #777777; /* Dimmed Text - Still readable but muted */
   --border-radius: 8px;
   --transition-speed: 0.3s;
 }
@@ -18,8 +19,8 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  color: var(--text-light);
-  background-color: var(--bg-dark);
+  color: var(--text-dark); /* Using dark text color */
+  background-color: var(--bg-body); /* Using light grey body background */
   line-height: 1.6;
 }
 
@@ -29,11 +30,12 @@ body {
   padding: 0 20px;
 }
 
-/* Typography */
+/* Typography - Mostly unchanged, adjusted for new text color */
 h1, h2, h3, h4 {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
+  color: var(--text-dark); /* Ensure headings are dark */
 }
 
 h1 {
@@ -50,6 +52,7 @@ h3 {
 
 p {
   margin-bottom: 1rem;
+    color: var(--text-dim); /* Using dimmed text for paragraphs */
 }
 
 a {
@@ -62,15 +65,15 @@ a:hover {
   color: var(--secondary-color);
 }
 
-/* Header & Navigation */
+/* Header & Navigation - Lighter Header Background */
 header {
-  background-color: rgba(18, 18, 18, 0.9);
+  background-color: rgba(255, 255, 255, 0.9); /* White header with slight transparency */
   backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
   z-index: 1000;
   padding: 1rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Darker border for contrast */
 }
 
 .logo-container {
@@ -83,7 +86,7 @@ header {
 .logo {
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--text-light);
+  color: var(--text-dark); /* Dark logo text */
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -91,7 +94,7 @@ header {
 
 .tagline {
   font-size: 0.9rem;
-  color: var(--text-dim);
+  color: var(--text-dim); /* Dimmed tagline text */
   margin-left: 1rem;
 }
 
@@ -105,7 +108,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: var(--text-light);
+  color: var(--text-dark); /* Darker nav links */
   font-weight: 600;
   position: relative;
   padding-bottom: 5px;
@@ -125,9 +128,9 @@ nav ul li a.active::after {
   left: 0;
 }
 
-/* Hero Section */
+/* Hero Section - Lighter Background, Adjusted Text Colors */
 .hero {
-  background: linear-gradient(135deg, #1a1a1a 0%, #0D0D0D 100%);
+  background: linear-gradient(135deg, #e0e7ff 0%, #d1d5db 100%); /* Very light grey/blue gradient */
   padding: 6rem 0;
   text-align: center;
 }
@@ -143,6 +146,7 @@ nav ul li a.active::after {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+    color: var(--text-dark); /* Fallback if gradient doesn't work as intended */
 }
 
 .hero p {
@@ -175,19 +179,19 @@ nav ul li a.active::after {
 
 .cta-secondary {
   background: transparent;
-  color: white;
+  color: var(--text-dark); /* Dark text for secondary button */
   border: 2px solid var(--primary-color);
 }
 
 .cta-primary:hover, .cta-secondary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Reduced shadow intensity */
 }
 
-/* About Section */
+/* About Section - White Background */
 .about {
   padding: 5rem 0;
-  background-color: var(--bg-dark);
+  background-color: var(--bg-body); /* Light grey background */
 }
 
 .about-content {
@@ -210,6 +214,7 @@ nav ul li a.active::after {
 .about h3 {
   margin-top: 1.5rem;
   font-size: 1.4rem;
+    color: var(--text-dark); /* Dark heading */
 }
 
 .about ul {
@@ -221,6 +226,7 @@ nav ul li a.active::after {
   margin-bottom: 0.8rem;
   display: flex;
   align-items: center;
+    color: var(--text-dim); /* Dimmed list text */
 }
 
 .about ul li::before {
@@ -240,10 +246,10 @@ nav ul li a.active::after {
   margin-left: 0.5rem;
 }
 
-/* Categories Section */
+/* Categories Section - Lighter Background */
 .categories-section {
   padding: 5rem 0;
-  background-color: #0a0a0a;
+  background-color: var(--bg-body); /* Light grey background */
 }
 
 .section-intro {
@@ -263,7 +269,7 @@ nav ul li a.active::after {
 }
 
 .category-card {
-  background-color: var(--bg-card);
+  background-color: var(--bg-card); /* White card background */
   border-radius: var(--border-radius);
   padding: 1.5rem;
   display: flex;
@@ -275,7 +281,7 @@ nav ul li a.active::after {
 
 .category-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); /* Very subtle shadow */
 }
 
 .category-card .icon {
@@ -298,6 +304,7 @@ nav ul li a.active::after {
 .category-card h3 {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
+    color: var(--text-dark); /* Dark heading */
 }
 
 .category-card p {
@@ -306,10 +313,10 @@ nav ul li a.active::after {
   font-size: 0.9rem;
 }
 
-/* Next Star Sounds */
+/* Next Star Sounds - Lighter Background */
 .next-stars {
   padding: 5rem 0;
-  background-color: var(--bg-dark);
+  background-color: var(--bg-body); /* Light grey background */
 }
 
 .next-star-cards {
@@ -323,7 +330,7 @@ nav ul li a.active::after {
   flex: 1;
   min-width: 300px;
   max-width: 500px;
-  background-color: var(--bg-card);
+  background-color: var(--bg-card); /* White card background */
   border-radius: var(--border-radius);
   overflow: hidden;
   display: flex;
@@ -333,13 +340,13 @@ nav ul li a.active::after {
 
 .next-star-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05); /* Very subtle shadow */
 }
 
 .star-preview {
   position: relative;
   height: 180px;
-  background: linear-gradient(135deg, #25F4EE20 0%, #FE2C5520 100%);
+  background: linear-gradient(135deg, #25F4EE20 0%, #FE2C5520 100%); /* Keep glow effect background */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -362,7 +369,7 @@ nav ul li a.active::after {
   position: absolute;
   width: 120%;
   height: 120%;
-  background: radial-gradient(circle, rgba(37, 244, 238, 0.3) 0%, rgba(254, 44, 85, 0.1) 70%, transparent 100%);
+  background: radial-gradient(circle, rgba(37, 244, 238, 0.3) 0%, rgba(254, 44, 85, 0.1) 70%, transparent 100%); /* Keep glow effect */
   border-radius: 50%;
   animation: glow 3s ease-in-out infinite;
 }
@@ -400,7 +407,7 @@ nav ul li a.active::after {
 
 .prediction-bar {
   height: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.1); /* Darker prediction bar background for contrast */
   border-radius: 5px;
   overflow: hidden;
   margin-bottom: 0.5rem;
@@ -434,14 +441,14 @@ nav ul li a.active::after {
 
 .sound-link:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Reduced shadow intensity */
   color: white;
 }
 
-/* SoundOn Calculator */
+/* SoundOn Calculator - Lighter Background */
 .soundon-calculator {
   padding: 5rem 0;
-  background-color: #0a0a0a;
+  background-color: var(--bg-body); /* Light grey background */
 }
 
 .calculator-container {
@@ -464,13 +471,14 @@ nav ul li a.active::after {
 .slider-group label {
   display: block;
   margin-bottom: 0.5rem;
+    color: var(--text-dark); /* Dark label text */
 }
 
 .slider {
   width: 100%;
   height: 10px;
   -webkit-appearance: none;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.1); /* Darker slider background for contrast */
   border-radius: 5px;
   outline: none;
 }
@@ -501,7 +509,7 @@ nav ul li a.active::after {
 
 .calculate-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Reduced shadow intensity */
 }
 
 .calculator-result {
@@ -522,17 +530,21 @@ nav ul li a.active::after {
   justify-content: center;
   align-items: center;
   margin-bottom: 1.5rem;
-  box-shadow: 0 0 30px rgba(37, 244, 238, 0.3);
+  box-shadow: 0 0 30px rgba(37, 244, 238, 0.1); /* Reduced shadow intensity */
 }
 
 #soundon-score {
   font-size: 4rem;
   font-weight: 700;
+  color: var(--bg-body); /* Score text to match body background for contrast */
+    -webkit-text-stroke: 2px var(--text-dark); /* Add outline for better visibility */
+    color: transparent; /* Make text transparent to show outline */
 }
 
 .score-label {
   font-size: 1.2rem;
   font-weight: 600;
+    color: var(--text-dark); /* Dark label text */
   margin-bottom: 0.5rem;
 }
 
@@ -541,16 +553,18 @@ nav ul li a.active::after {
   max-width: 300px;
 }
 
-/* Blog Section */
+/* Blog Section - Lighter Background */
 .blog-index {
   max-width: 800px;
   margin: 0 auto;
   padding: 3rem 1.5rem;
+  background-color: var(--bg-body); /* Light grey background */
 }
 
 .blog-index h1 {
   margin-bottom: 1rem;
   text-align: center;
+    color: var(--text-dark); /* Dark heading */
 }
 
 .blog-index > p {
@@ -560,7 +574,7 @@ nav ul li a.active::after {
 }
 
 .blog-preview {
-  background-color: var(--bg-card);
+  background-color: var(--bg-card); /* White card background */
   border-radius: var(--border-radius);
   padding: 2rem;
   margin-bottom: 2rem;
@@ -569,20 +583,25 @@ nav ul li a.active::after {
 
 .blog-preview:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); /* Very subtle shadow */
 }
 
 .blog-preview h2 {
   margin-bottom: 1rem;
+    color: var(--text-dark); /* Dark heading */
 }
 
 .blog-preview h2 a {
-  color: var(--text-light);
+  color: var(--primary-color);
   transition: color var(--transition-speed);
 }
 
 .blog-preview h2 a:hover {
-  color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.blog-preview p {
+    color: var(--text-dim); /* Dimmed paragraph text */
 }
 
 .read-more {
@@ -596,11 +615,12 @@ nav ul li a.active::after {
   color: var(--secondary-color);
 }
 
-/* Blog Post */
+/* Blog Post - Lighter Background */
 .blog-post {
   max-width: 800px;
   margin: 0 auto;
   padding: 3rem 1.5rem;
+  background-color: var(--bg-body); /* Light grey background */
 }
 
 .post-meta {
@@ -617,6 +637,7 @@ nav ul li a.active::after {
   margin-bottom: 1rem;
   position: relative;
   padding-bottom: 0.5rem;
+    color: var(--text-dark); /* Dark heading */
 }
 
 .blog-post h2::after {
@@ -629,6 +650,10 @@ nav ul li a.active::after {
   left: 0;
 }
 
+.blog-post p {
+    color: var(--text-dim); /* Dimmed paragraph text */
+}
+
 .blog-post ul, .blog-post ol {
   margin-left: 2rem;
   margin-bottom: 1.5rem;
@@ -636,17 +661,18 @@ nav ul li a.active::after {
 
 .blog-post li {
   margin-bottom: 0.5rem;
+    color: var(--text-dim); /* Dimmed list item text */
 }
 
 .post-navigation {
   margin-top: 3rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1); /* Darker border for contrast */
 }
 
-/* Sound Item Styling */
+/* Sound Item Styling - Lighter Background */
 .sound-item {
-  background-color: var(--bg-card);
+  background-color: var(--bg-card); /* White card background */
   border-radius: var(--border-radius);
   display: flex;
   overflow: hidden;
@@ -657,7 +683,7 @@ nav ul li a.active::after {
 
 .sound-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); /* Very subtle shadow */
 }
 
 .sound-icon {
@@ -666,7 +692,7 @@ nav ul li a.active::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #25F4EE20 0%, #FE2C5520 100%);
+  background: linear-gradient(135deg, #25F4EE20 0%, #FE2C5520 100%); /* Keep glow effect background */
 }
 
 .sound-details {
@@ -676,6 +702,7 @@ nav ul li a.active::after {
 
 .sound-details h3 {
   margin-bottom: 0.5rem;
+    color: var(--text-dark); /* Dark heading */
 }
 
 .sound-stat, .sound-category {
@@ -691,10 +718,11 @@ nav ul li a.active::after {
   margin-top: 2rem;
 }
 
-/* Footer */
+/* Footer - Lighter Footer Background */
 footer {
-  background-color: #0a0a0a;
+  background-color: #ffffff; /* White footer background */
   padding: 3rem 0 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1); /* Darker border for contrast */
 }
 
 .footer-content {
@@ -712,6 +740,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+    color: var(--text-dark); /* Dark logo text */
 }
 
 .social-links {
@@ -719,7 +748,7 @@ footer {
 }
 
 .social-links a {
-  color: var(--text-light);
+  color: var(--text-dark); /* Dark social links */
   font-size: 1.1rem;
   margin: 0 0.5rem;
   transition: color var(--transition-speed);
@@ -732,7 +761,7 @@ footer {
 .footer-bottom {
   text-align: center;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1); /* Darker border for contrast */
 }
 
 .footer-bottom p {
@@ -740,24 +769,24 @@ footer {
   color: var(--text-dim);
 }
 
-/* Responsive Design */
+/* Responsive Design - Unchanged, should adapt to new colors */
 @media (max-width: 992px) {
   h1 {
     font-size: 2.5rem;
   }
-  
+
   h2 {
     font-size: 2rem;
   }
-  
+
   .hero h1 {
     font-size: 3rem;
   }
-  
+
   .about-content {
     flex-direction: column;
   }
-  
+
   .calculator-result {
     margin-top: 2rem;
   }
@@ -768,35 +797,35 @@ footer {
     flex-direction: column;
     padding: 1rem;
   }
-  
+
   .tagline {
     margin-left: 0;
     margin-top: 0.5rem;
   }
-  
+
   nav ul {
     margin-top: 1rem;
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+
   nav ul li {
     margin: 0 0.75rem;
   }
-  
+
   .hero h1 {
     font-size: 2.5rem;
   }
-  
+
   .hero p {
     font-size: 1.1rem;
   }
-  
+
   .cta-buttons {
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   .about-image {
     display: none;
   }
@@ -806,37 +835,37 @@ footer {
   h1 {
     font-size: 2rem;
   }
-  
+
   h2 {
     font-size: 1.75rem;
   }
-  
+
   .hero h1 {
     font-size: 2rem;
   }
-  
+
   .categories-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .next-star-card {
     min-width: 100%;
   }
-  
+
   .star-preview {
     height: 150px;
   }
-  
+
   .sound-icon {
     width: 80px;
     height: 80px;
   }
-  
+
   .score-display {
     width: 150px;
     height: 150px;
   }
-  
+
   #soundon-score {
     font-size: 3rem;
   }
