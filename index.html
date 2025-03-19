@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Inter&display=swap" rel="stylesheet" />
-    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="wouldliker" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script> <!-- Buy Me a Coffee Widget - ADDED HERE -->
-    <script defer src="app.js"></script>
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="wouldliker" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+    <script defer src="app.js"></script> <!-- Kept app.js for view counter animation -->
 </head>
 <body>
 
@@ -33,54 +33,14 @@
         </div>
     </section>
 
-     <!-- SoundOn Calculator Modal - Hidden by Default -->
-     <div id="calculatorModal" class="calculator-modal">
-        <div class="modal-content">
-            <span class="close-button" onclick="closeCalculatorModal()">×</span>
-            <section id="calculator" class="soundon-calculator">
-                <div class="container">
-                    <h2>SoundOn Score™ Calculator - Viral Sound Predictor</h2>
-                    <p>Estimate a sound's viral potential with our proprietary SoundOn Score™ calculator. See real-time feedback – adjust sliders, see score. Maximize YOUR TikTok impact, NOW.</p>
-                    <div class="calculator-container">
-                        <div class="calculator-inputs">
-                            <div class="slider-group">
-                                <label for="avg-view-time">Average View Time: <span id="view-time-display" class="slider-display">15 SECONDS</span></label>
-                                <input type="range" id="avg-view-time" min="1" max="60" value="15" class="slider">
-                            </div>
-                            <div class="slider-group">
-                                <label for="completion-rate">Completion Rate: <span id="completion-display" class="slider-display">40%</span></label>
-                                <input type="range" id="completion-rate" min="1" max="100" value="40" class="slider">
-                            </div>
-                            <div class="slider-group">
-                                <label for="engagement-rate">Engagement Rate: <span id="engagement-display" class="slider-display">5.5%</span></label>
-                                <input type="range" id="engagement-rate" min="0.1" max="100" value="5.5" step="0.1" class="slider">
-                            </div>
-                            <div class="slider-group">
-                                <label for="trend-factor">Trend Growth Factor: <span id="trend-display" class="slider-display">3/10</span></label>
-                                <input type="range" id="trend-factor" min="1" max="10" value="3" class="slider">
-                            </div>
-                        </div>
-                        <div class="calculator-result">
-                            <div class="score-display">
-                                <span id="soundon-score">--</span>
-                            </div>
-                            <p class="score-label">SoundOn Score™</p>
-                            <p class="score-explanation">Score 80+ = Viral Alert. 90+ = Exploding Sound. Don't Miss Out.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
-
 
     <!-- Header -->
     <header>
         <div class="logo-container">
-            <div class="logo">
+            <a href="index.html" class="logo">
                 <i class="fab fa-tiktok"></i> <i class="fas fa-heart" style="color: var(--primary-color); font-size: 0.8em; vertical-align: middle;"></i>
                 <span>WouldLiker</span>
-            </div>
+            </a>
             <p class="tagline">TIKTOK VIRAL SOUND DOMINATION</p>
         </div>
         <nav>
@@ -89,7 +49,7 @@
                 <li><a href="#categories">Categories</a></li> <!-- Categories Moved Up in Nav -->
                 <li><a href="#next-stars">Next Stars</a></li>
                 <li><a href="#about">Why It Works</a></li>
-                <li><a href="#" onclick="openCalculatorModal()">Score Calculator</a></li> <!-- Calculator Pop-up Trigger -->
+                <li><a href="calculator.html">Score Calculator</a></li> <!-- Link to separate calculator page -->
                 <li><a href="blog.html">Blog</a></li>
             </ul>
         </nav>
@@ -167,7 +127,7 @@
             <div class="next-star-cards">
                 <div class="next-star-card">
                     <div class="star-preview">
-                        <i class="fas fa-play-circle"></i>
+                        <i class="fas fa-music"></i> <!-- Replaced play-circle with music icon -->
                     </div>
                     <div class="star-info">
                         <h3>TRANSITION <span class="hot-sound-label">HOT</span></h3>
@@ -186,7 +146,7 @@
                 </div>
                 <div class="next-star-card">
                     <div class="star-preview">
-                        <i class="fas fa-play-circle"></i>
+                        <i class="fas fa-music"></i> <!-- Replaced play-circle with music icon -->
                     </div>
                     <div class="star-info">
                         <h3>FUTURE <span class="hot-sound-label">HOT</span></h3>
@@ -205,10 +165,10 @@
                 </div>
                  <div class="next-star-card">
                     <div class="star-preview">
-                        <i class="fas fa-play-circle"></i>
+                        <i class="fas fa-music"></i> <!-- Replaced play-circle with music icon -->
                     </div>
                     <div class="star-info">
-                        <h3>Taste <span class="hot-sound-label">Hot</span></h3>
+                        <h3>Taste <span class="hot-sound-label">HOT</span></h3>
                         <div class="star-metrics">
                             <span class="prediction">Predicted Views: 180K+ WEEK 1</span>
                             <span class="category">Category: TASTE</span>
@@ -243,23 +203,6 @@
                     <li><strong>REGIONAL TRENDS - GLOBAL REACH, LOCAL IMPACT</strong> <span class="coming-soon">COMING SOON!</span> Dominate local & global TikTok. Tap into regional viral waves.</li>
                 </ul>
 
-                <div class="engagement-definitions">
-                    <h4>UNDERSTAND SOUND ENGAGEMENT: DATA THAT DRIVES VIRALITY</h4>
-                    <p>WouldLiker uses KEY metrics for informed sound choices:</p>
-                    <ul>
-                        <li><strong>TRACK ENGAGEMENT:</strong>  <strong>(LIKES + SHARES + COMMENTS + FAVORITES) / VIEWS</strong>.  Total audience interaction. The ULTIMATE engagement metric.</li>
-                        <li><strong>SOUNDON ENGAGEMENT:</strong>  Percentile ranking vs. <strong>5K+ VIEW TRACKS</strong>.  Relative power ratings.  Know the VIRAL potential:
-                            <ul>
-                                <li><strong>EXCELLENT:</strong> TOP 10% - VIRAL EXPLOSION</li>
-                                <li><strong>GREAT:</strong> TOP 20% - MASSIVE REACH</li>
-                                <li><strong>GOOD:</strong> TOP 30% - HIGH ENGAGEMENT</li>
-                                <li><strong>OK:</strong> TOP 50% - SOLID PERFORMANCE</li>
-                                <li><strong>FAIR:</strong> BOTTOM 50% - AVOID</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <p>SOUNDON SCORE™ ALGORITHM: INTELLIGENT. PREDICTIVE. YOUR SECRET WEAPON.</p>
-                </div>
 
             </div>
             <div class="about-image">
@@ -299,154 +242,6 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // --- Persistent View Counter Animation --- (No changes needed for counter persistence)
-            const viewCounterElement = document.getElementById('view-counter');
-            let currentViews = localStorage.getItem('currentViews');
-            let lastUpdateTime = localStorage.getItem('lastUpdateTime');
-            const weeklyViewIncrease = 12000000; // UPDATED to 12 Million Weekly Increase
-            const targetViews = 150000000 + (weeklyViewIncrease * 52);
-
-            if (!currentViews) {
-                currentViews = 150000000;
-            } else {
-                currentViews = parseInt(currentViews, 10);
-            }
-
-            if (!lastUpdateTime) {
-                lastUpdateTime = Date.now();
-            } else {
-                lastUpdateTime = parseInt(lastUpdateTime, 10);
-            }
-
-            const timeDiff = Date.now() - lastUpdateTime;
-            const viewsToAddBasedOnTime = Math.floor((timeDiff / (7 * 24 * 3600 * 1000)) * weeklyViewIncrease);
-            currentViews += viewsToAddBasedOnTime;
-
-
-            const minIncrement = 2000; // Increased Min Increment for Faster Count
-            const maxIncrement = 7000; // Increased Max Increment for Faster Count
-            const updateInterval = 50; // Kept Interval Frequent
-
-            function updateViewCount() {
-                if (currentViews < targetViews) {
-                    const randomIncrement = Math.floor(Math.random() * (maxIncrement - minIncrement + 1)) + minIncrement;
-                    currentViews += randomIncrement;
-                    viewCounterElement.textContent = currentViews.toLocaleString() + "+";
-                    localStorage.setItem('currentViews', currentViews);
-                    localStorage.setItem('lastUpdateTime', Date.now());
-                    setTimeout(updateViewCount, updateInterval);
-                } else {
-                    viewCounterElement.textContent = targetViews.toLocaleString() + "+";
-                    localStorage.removeItem('lastUpdateTime');
-                }
-            }
-
-            updateViewCount();
-
-
-            // --- SoundOn Score Calculator - Pop-up Modal Functionality --- (No changes needed for modal)
-            const calculatorModal = document.getElementById('calculatorModal');
-
-            window.openCalculatorModal = function() {
-                calculatorModal.style.display = "block";
-            }
-
-            window.closeCalculatorModal = function() {
-                calculatorModal.style.display = "none";
-            }
-
-            window.onclick = function(event) {
-                if (event.target == calculatorModal) {
-                    closeCalculatorModal();
-                }
-            }
-
-
-            const avgViewTimeSlider = document.getElementById('avg-view-time');
-            const completionRateSlider = document.getElementById('completion-rate');
-            const engagementRateSlider = document.getElementById('engagement-rate');
-            const trendFactorSlider = document.getElementById('trend-factor');
-
-            const viewTimeDisplay = document.getElementById('view-time-display');
-            const completionDisplay = document.getElementById('completion-display');
-            const engagementDisplay = document.getElementById('engagement-display');
-            const trendDisplay = document.getElementById('trend-display');
-            const soundonScoreDisplay = document.getElementById('soundon-score');
-
-
-            function calculateSoundOnScore() {
-                const viewTime = parseInt(avgViewTimeSlider.value);
-                const completion = parseInt(completionRateSlider.value);
-                const engagement = parseFloat(engagementRateSlider.value);
-                const trend = parseInt(trendFactorSlider.value);
-
-                let score = (viewTime * 0.15) + (completion * 0.25) + (engagement * 0.3) + (trend * 0.3);
-                score = Math.max(0, Math.min(100, Math.round(score)));
-
-                soundonScoreDisplay.textContent = isNaN(score) ? "--" : score;
-            }
-
-
-            avgViewTimeSlider.addEventListener('input', function() {
-                viewTimeDisplay.textContent = this.value + " SECONDS";
-                calculateSoundOnScore();
-            });
-
-            completionRateSlider.addEventListener('input', function() {
-                completionDisplay.textContent = this.value + "%";
-                calculateSoundOnScore();
-            });
-
-            engagementRateSlider.addEventListener('input', function() {
-                engagementDisplay.textContent = this.value + "%";
-                calculateSoundOnScore();
-            });
-
-            trendFactorSlider.addEventListener('input', function() {
-                trendDisplay.textContent = this.value + "/10";
-                calculateSoundOnScore();
-            });
-
-            calculateSoundOnScore();
-
-
-             // --- Smooth Scrolling for Navigation Links --- (No changes needed for smooth scrolling)
-             document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-
-                    let targetElement = document.querySelector(this.getAttribute('href'));
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - (document.querySelector('header').offsetHeight),
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-
-            // --- Scroll to Section Function for CTA Buttons --- (No changes needed for scroll to section)
-            window.scrollToSection = function(sectionId) {
-                let targetSection = document.getElementById(sectionId);
-                if (targetSection) {
-                    window.scrollTo({
-                        top: targetSection.offsetTop - (document.querySelector('header').offsetHeight),
-                        behavior: 'smooth'
-                    });
-                }
-            };
-
-            // --- Prediction Bar Animation on Load --- (No changes needed for prediction bar animation)
-            const predictionFills = document.querySelectorAll('.prediction-fill');
-            predictionFills.forEach(fill => {
-                const value = fill.getAttribute('data-value');
-                fill.style.width = value + '%';
-            });
-
-
-        });
-    </script>
+    <script src="app.js"></script> <!-- Kept app.js for view counter animation -->
 </body>
 </html>
