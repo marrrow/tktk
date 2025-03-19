@@ -1,20 +1,20 @@
-/* Updated Styles - UX-Focused, Cleaner, Bolder, Pop-up Calculator - Header Overlap Fix */
+/* Corrected Styles - UX-Focused, Cleaner, Bolder, Pop-up Calculator - Header Overlap Fix -  *UPDATED* */
 :root {
-    /* (Color variables - no changes) */
-    --primary-color: #ff0050;
-    --secondary-color: #f5be1c;
-    --accent-color: #00f2ea;
-    --bg-body: #181818;
-    --bg-card: #222222;
-    --bg-card-light: #2a2a2a;
-    --text-light: #ffffff;
-    --text-muted: #aaaaaa;
+    /* Refined Color Palette - Cleaner, More Deliberate Accents */
+    --primary-color: #ff0050; /* TikTok Pink/Red - Primary Action Color */
+    --secondary-color: #f5be1c; /* TikTok Yellow - Highlight & Accent */
+    --accent-color: #00f2ea; /* TikTok Blue - Subtler Accent */
+    --bg-body: #181818; /* Darker Body Background - Deeper Dark Theme */
+    --bg-card: #222222; /* Slightly Lighter Card Background */
+    --bg-card-light: #2a2a2a; /* Even Lighter Card Background - Subtle Layers */
+    --text-light: #ffffff; /* White Text - Clear & Readable */
+    --text-muted: #aaaaaa; /* Muted Grey Text - Secondary Info */
     --border-color: #333333;
     --border-radius: 14px;
     --transition-speed: 0.2s;
     --hot-color: #ff4d4d;
-    --shadow-color: rgba(255, 255, 255, 0.05);
-    --modal-bg: rgba(0, 0, 0, 0.8);
+    --shadow-color: rgba(255, 255, 255, 0.05); /* Even Subtler Shadow */
+    --modal-bg: rgba(0, 0, 0, 0.8); /* Modal Background - Dark Overlay */
 }
 
 body {
@@ -27,43 +27,56 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* (Rest of the base styles - no changes) */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-h1, h2, h3, h4, h5, h6 { /* (Typography - no changes) */
-    font-weight: 800;
+/* Typography - Cleaner, Less Overpowering Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700; /* Reduced from 800 to 700 - Less Oversaturated */
     line-height: 1.2;
     margin-bottom: 0.4rem;
     color: var(--text-light);
     text-transform: uppercase;
     letter-spacing: 0.02em;
 }
-h1 { font-size: 2.8rem; }
-h2 { font-size: 2.2rem; }
-h3 { font-size: 1.8rem; }
-h4 { font-size: 1.5rem; }
-p { /* (Typography - no changes) */
+
+h1 {
+    font-size: 2.6rem; /* Slightly smaller h1 */
+}
+
+h2 {
+    font-size: 2rem; /* Slightly smaller h2 */
+}
+
+h3 {
+    font-size: 1.7rem; /* Slightly smaller h3 */
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+
+p {
     margin-bottom: 0.7rem;
     color: var(--text-muted);
-    font-size: 1.02rem;
+    font-size: 1rem;
     letter-spacing: 0.01em;
 }
-a { /* (Typography - no changes) */
+
+a {
     color: var(--primary-color);
     text-decoration: none;
     transition: color var(--transition-speed);
 }
-a:hover { color: var(--secondary-color); }
-strong { /* (Typography - no changes) */
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+strong {
     font-weight: 700;
     color: var(--text-light);
 }
 
-/* (Header & Navigation Styles - no changes) */
-header { /* (Header & Navigation Styles - no changes) */
+/* Header & Navigation - Streamlined Header */
+header {
     background-color: var(--bg-body);
     position: sticky;
     top: 0;
@@ -71,13 +84,15 @@ header { /* (Header & Navigation Styles - no changes) */
     padding: 0.6rem 0;
     border-bottom: 1px solid var(--border-color);
 }
-.logo-container { /* (Header & Navigation Styles - no changes) */
+
+.logo-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 1.5rem;
 }
-.logo { /* (Header & Navigation Styles - no changes) */
+
+.logo {
     font-size: 1.8rem;
     font-weight: 900;
     color: var(--text-light);
@@ -85,30 +100,39 @@ header { /* (Header & Navigation Styles - no changes) */
     align-items: center;
     gap: 0.2rem;
 }
-.logo i.fab.fa-tiktok { /* (Header & Navigation Styles - no changes) */
+
+.logo i.fab.fa-tiktok {
     color: var(--primary-color);
     font-size: 1.2em;
     margin-right: 0.2rem;
 }
-.tagline { display: none; } /* (Header & Navigation Styles - no changes) */
-nav ul { /* (Header & Navigation Styles - no changes) */
+
+.tagline {
+    display: none;
+}
+
+nav ul {
     display: flex;
     list-style: none;
 }
-nav ul li { /* (Header & Navigation Styles - no changes) */
+
+nav ul li {
     margin-left: 0.9rem;
 }
-nav ul li a { /* (Header & Navigation Styles - no changes) */
+
+nav ul li a {
     color: var(--text-light);
     font-weight: 600;
     padding: 0.3rem 0;
     position: relative;
     font-size: 1rem;
 }
-nav ul li a:hover, nav ul li a.active { /* (Header & Navigation Styles - no changes) */
+
+nav ul li a:hover, nav ul li a.active {
     color: var(--secondary-color);
 }
-nav ul li a.active::after { /* (Header & Navigation Styles - no changes) */
+
+nav ul li a.active::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -119,24 +143,27 @@ nav ul li a.active::after { /* (Header & Navigation Styles - no changes) */
     border-radius: 1px;
 }
 
-/* (Hero Section Styles - no changes) */
-.hero { /* (Hero Section Styles - no changes) */
+/* Hero Section - Cleaner, Less "Screaming" Vibe */
+.hero {
     background-color: var(--bg-body);
     padding: 3.5rem 0;
     text-align: center;
     border-bottom: 1px solid var(--border-color);
 }
-.hero-content { /* (Hero Section Styles - no changes) */
+
+.hero-content {
     max-width: 800px;
     margin: 0 auto;
 }
-.hero h1 { /* (Hero Section Styles - no changes) */
+
+.hero h1 {
     font-size: 2.8rem;
     margin-bottom: 0.8rem;
     color: var(--text-light);
     text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
 }
-.hero p { /* (Hero Section Styles - no changes) */
+
+.hero p {
     font-size: 1.1rem;
     margin-bottom: 1.6rem;
     color: var(--text-muted);
@@ -144,13 +171,15 @@ nav ul li a.active::after { /* (Header & Navigation Styles - no changes) */
     margin-left: auto;
     margin-right: auto;
 }
-.cta-buttons { /* (Hero Section Styles - no changes) */
+
+.cta-buttons {
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
 }
-.cta-primary, .cta-secondary { /* (Hero Section Styles - no changes) */
+
+.cta-primary, .cta-secondary {
     padding: 0.8rem 2rem;
     border-radius: var(--border-radius);
     font-weight: 600;
@@ -161,17 +190,20 @@ nav ul li a.active::after { /* (Header & Navigation Styles - no changes) */
     text-transform: uppercase;
     letter-spacing: 0.03em;
 }
-.cta-primary { /* (Hero Section Styles - no changes) */
+
+.cta-primary {
     background-color: var(--primary-color);
     color: var(--bg-card);
     border: 1px solid var(--primary-color);
 }
-.cta-secondary { /* (Hero Section Styles - no changes) */
+
+.cta-secondary {
     background-color: transparent;
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
 }
-.cta-primary:hover, .cta-secondary:hover { /* (Hero Section Styles - no changes) */
+
+.cta-primary:hover, .cta-secondary:hover {
     background-color: var(--secondary-color);
     color: var(--bg-card);
     border-color: var(--secondary-color);
@@ -179,45 +211,53 @@ nav ul li a.active::after { /* (Header & Navigation Styles - no changes) */
     box-shadow: 0 3px 6px var(--shadow-color);
 }
 
-/* (About Section Styles - no changes) */
-.about { /* (About Section Styles - no changes) */
+
+/* About Section - Cleaner, More UX Focused */
+.about {
     padding: 3rem 0;
     background-color: var(--bg-card);
     border-bottom: 1px solid var(--border-color);
 }
-.about-content { /* (About Section Styles - no changes) */
+
+.about-content {
     display: flex;
     align-items: flex-start;
     gap: 1.8rem;
 }
-.about-text { /* (About Section Styles - no changes) */
+
+.about-text {
     flex: 1.3;
 }
-.about-image { /* (About Section Styles - no changes) */
+
+.about-image {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0.7;
 }
-.about h2 { /* (About Section Styles - no changes) */
+
+.about h2 {
     margin-bottom: 0.9rem;
     font-size: 2rem;
     color: var(--secondary-color);
     text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
 }
-.about h3 { /* (About Section Styles - no changes) */
+
+.about h3 {
     margin-top: 0.7rem;
     font-size: 1.4rem;
     color: var(--primary-color);
     font-weight: 700;
 }
-.about p { /* (About Section Styles - no changes) */
+
+.about p {
     color: var(--text-muted);
     margin-bottom: 0.8rem;
     line-height: 1.6;
 }
-.engagement-definitions { /* (About Section Styles - no changes) */
+
+.engagement-definitions {
     margin-top: 1.1rem;
     padding: 0.9rem;
     background-color: var(--bg-card-light);
@@ -225,47 +265,55 @@ nav ul li a.active::after { /* (Header & Navigation Styles - no changes) */
     border: 1px solid var(--border-color);
     box-shadow: 0 2px 4px var(--shadow-color);
 }
-.engagement-definitions h4 { /* (About Section Styles - no changes) */
+
+.engagement-definitions h4 {
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
     color: var(--secondary-color);
     text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
 }
-.engagement-definitions ul { /* (About Section Styles - no changes) */
+
+.engagement-definitions ul {
     list-style: none;
     padding-left: 0;
     margin-top: 0.3rem;
 }
-.engagement-definitions li { /* (About Section Styles - no changes) */
+
+.engagement-definitions li {
     margin-bottom: 0.4rem;
     display: flex;
     align-items: baseline;
 }
-.engagement-definitions li::before { /* (About Section Styles - no changes) */
+
+.engagement-definitions li::before {
     content: '📊';
     color: var(--accent-color);
     margin-right: 0.4rem;
     font-size: 0.8rem;
     opacity: 0.8;
 }
-.engagement-definitions strong { /* (About Section Styles - no changes) */
+
+.engagement-definitions strong {
     color: var(--primary-color);
     font-weight: 700;
     margin-right: 0.2rem;
 }
-.about ul { /* (About Section Styles - no changes) */
+
+.about ul {
     list-style: none;
     padding-left: 0;
     margin-top: 0.5rem;
 }
-.about ul li { /* (About Section Styles - no changes) */
+
+.about ul li {
     margin-bottom: 0.5rem;
     display: flex;
     align-items: flex-start;
     padding-left: 0;
     position: relative;
 }
-.coming-soon { /* (About Section Styles - no changes) */
+
+.coming-soon {
     background-color: var(--accent-color);
     color: var(--text-dark);
     padding: 0.15rem 0.3rem;
@@ -275,13 +323,14 @@ nav ul li a.active::after { /* (Header & Navigation Styles - no changes) */
     margin-left: 0.3rem;
 }
 
-/* (Categories Section Styles - no changes) */
-.categories-section { /* (Categories Section Styles - no changes) */
+/* Categories Section - Cleaner, More Focused Cards */
+.categories-section {
     padding: 3rem 0;
     background-color: var(--bg-body);
     border-bottom: 1px solid var(--border-color);
 }
-.section-intro { /* (Categories Section Styles - no changes) */
+
+.section-intro {
     text-align: center;
     margin-bottom: 1.6rem;
     color: var(--text-muted);
@@ -290,13 +339,15 @@ nav ul li a.active::after { /* (Header & Navigation Styles - no changes) */
     margin-right: auto;
     font-size: 0.9rem;
 }
-.category-filters { /* (Categories Section Styles - no changes) */
+
+.category-filters {
     display: flex;
     justify-content: center;
     gap: 0.4rem;
     margin-bottom: 1rem;
 }
-.category-filter { /* (Categories Section Styles - no changes) */
+
+.category-filter {
     background-color: var(--bg-card);
     color: var(--text-light);
     border: 1px solid var(--primary-color);
@@ -310,19 +361,22 @@ nav ul li a.active::after { /* (Header & Navigation Styles - no changes) */
     text-transform: uppercase;
     letter-spacing: 0.02em;
 }
-.category-filter.active, .category-filter:hover { /* (Categories Section Styles - no changes) */
+
+.category-filter.active, .category-filter:hover {
     background-color: var(--primary-color);
     color: var(--bg-card);
     border-color: var(--primary-color);
     box-shadow: 0 2px 4px var(--shadow-color);
 }
-.categories-grid { /* (Categories Section Styles - no changes) */
+
+.categories-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 0.9rem;
     margin-top: 1rem;
 }
-.category-card { /* (Categories Section Styles - no changes) */
+
+.category-card {
     background-color: var(--bg-card);
     border-radius: var(--border-radius);
     padding: 1rem;
@@ -334,11 +388,13 @@ nav ul li a.active::after { /* (Header & Navigation Styles - no changes) */
     border: 1px solid var(--border-color);
     box-shadow: 0 1px 2px var(--shadow-color);
 }
-.category-card:hover { /* (Categories Section Styles - no changes) */
+
+.category-card:hover {
     transform: translateY(-1px);
     box-shadow: 0 3px 6px var(--shadow-color);
 }
-.category-card .icon { /* (Categories Section Styles - no changes) */
+
+.category-card .icon {
     width: 50px;
     height: 50px;
     display: flex;
@@ -348,12 +404,14 @@ nav ul li a.active::after { /* (Header & Navigation Styles - no changes) */
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     margin-bottom: 0.6rem;
 }
-.category-card .icon svg { /* (Categories Section Styles - no changes) */
+
+.category-card .icon svg {
     width: 26px;
     height: 26px;
     color: var(--bg-card);
 }
-.category-card h3 { /* (Categories Section Styles - no changes) */
+
+.category-card h3 {
     font-size: 1.1rem;
     margin-bottom: 0.2rem;
     color: var(--text-light);
@@ -362,32 +420,36 @@ nav ul li a.active::after { /* (Header & Navigation Styles - no changes) */
     text-transform: uppercase;
     letter-spacing: 0.02em;
 }
-.category-card p { /* (Categories Section Styles - no changes) */
+
+.category-card p {
     color: var(--text-muted);
     text-align: center;
     font-size: 0.8rem;
 }
 
-/* (Next Star Sounds Styles - no changes) */
-.next-stars { /* (Next Star Sounds Styles - no changes) */
+/* Next Star Sounds - More Compact, Cleaner Cards, *REMOVED PLAY BUTTON* */
+.next-stars {
     padding: 3rem 0;
     background-color: var(--bg-card-light);
     border-bottom: 1px solid var(--border-color);
 }
-.next-stars .section-intro { /* (Next Star Sounds Styles - no changes) */
+
+.next-stars .section-intro {
     margin-bottom: 1.4rem;
     font-size: 0.9rem;
     color: var(--text-muted);
     text-align: center;
 }
-.next-star-cards { /* (Next Star Sounds Styles - no changes) */
+
+.next-star-cards {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     margin-top: 1rem;
     justify-content: center;
 }
-.next-star-card { /* (Next Star Sounds Styles - no changes) */
+
+.next-star-card {
     flex: 0 1 calc(33% - 1rem);
     min-width: 240px;
     max-width: 340px;
@@ -401,11 +463,13 @@ nav ul li a.active::after { /* (Header & Navigation Styles - no changes) */
     box-shadow: 0 1px 2px var(--shadow-color);
     margin-bottom: 1rem;
 }
-.next-star-card:hover { /* (Next Star Sounds Styles - no changes) */
+
+.next-star-card:hover {
     transform: translateY(-1px);
     box-shadow: 0 3px 6px var(--shadow-color);
 }
-.star-preview { /* (Next Star Sounds Styles - no changes) */
+
+.star-preview {
     position: relative;
     height: 140px;
     background-color: #333333;
@@ -413,8 +477,10 @@ nav ul li a.active::after { /* (Header & Navigation Styles - no changes) */
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    /* REMOVED PLAY BUTTON - No more play button in preview */
 }
-.star-preview .fa-play-circle { /* (Next Star Sounds Styles - no changes) */
+
+.star-preview .fa-music { /* Fallback in case you want music icon */
     font-size: 2.6rem;
     color: var(--text-muted);
     position: relative;
@@ -422,16 +488,13 @@ nav ul li a.active::after { /* (Header & Navigation Styles - no changes) */
     transition: transform var(--transition-speed), color var(--transition-speed);
     opacity: 0.6;
 }
-.next-star-card:hover .star-preview .fa-play-circle { /* (Next Star Sounds Styles - no changes) */
-    transform: scale(1.1);
-    color: var(--secondary-color);
-    opacity: 1;
-}
-.glow-effect { display: none; } /* (Next Star Sounds Styles - no changes) */
-.star-info { /* (Next Star Sounds Styles - no changes) */
+
+
+.star-info {
     padding: 1.1rem;
 }
-.star-info h3 { /* (Next Star Sounds Styles - no changes) */
+
+.star-info h3 {
     margin-bottom: 0.3rem;
     font-size: 1.1rem;
     font-weight: 700;
@@ -442,7 +505,8 @@ nav ul li a.active::after { /* (Header & Navigation Styles - no changes) */
     text-transform: uppercase;
     letter-spacing: 0.02em;
 }
-.hot-sound-label, .gaining-popularity-label { /* (Next Star Sounds Styles - no changes) */
+
+.hot-sound-label, .gaining-popularity-label {
     padding: 0.2rem 0.5rem;
     border-radius: var(--border-radius);
     font-size: 0.65rem;
@@ -453,45 +517,77 @@ nav ul li a.active::after { /* (Header & Navigation Styles - no changes) */
     text-transform: uppercase;
     letter-spacing: 0.02em;
 }
-.hot-sound-label { /* (Next Star Sounds Styles - no changes) */
+.hot-sound-label {
     background-color: var(--hot-color);
     color: var(--text-light);
 }
-.gaining-popularity-label { /* (Next Star Sounds Styles - no changes) */
+.gaining-popularity-label {
     background-color: var(--secondary-color);
     color: var(--bg-card);
 }
-.star-metrics { /* (Next Star Sounds Styles - no changes) */
+
+.star-metrics {
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
     margin-bottom: 0.6rem;
 }
-.star-metrics span { /* (Next Star Sounds Styles - no changes) */
+
+.star-metrics span {
     font-size: 0.85rem;
     color: var(--text-muted);
 }
-.prediction-meter { /* (Next Star Sounds Styles - no changes) */
+
+.prediction-meter {
     margin: 0.7rem 0;
 }
-.prediction-bar { /* (Next Star Sounds Styles - no changes) */
+
+.prediction-bar {
     height: 6px;
     background-color: var(--border-color);
     border-radius: var(--border-radius);
     overflow: hidden;
     margin-bottom: 0.2rem;
 }
-.prediction-fill { /* (Next Star Sounds Styles - no changes) */
+
+.prediction-fill {
     height: 100%;
     width: 0;
     background-color: var(--primary-color);
     border-radius: var(--border-radius);
     transition: width 1s ease-out;
 }
-.prediction-label { /* (Next Star Sounds Styles - no changes) */
+
+.prediction-label {
     font-size: 0.75rem;
     text-align: right;
     color: var(--text-muted);
+}
+
+
+.sound-link {
+    display: block;
+    margin-top: 0.6rem;
+    padding: 0.7rem 1.4rem;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    color: var(--bg-card);
+    font-weight: 600;
+    text-align: center;
+    transition: background-color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 2px 4px var(--shadow-color);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.sound-link:hover {
+    background-color: var(--secondary-color);
+    color: var(--bg-card);
+    border-color: var(--secondary-color);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px var(--shadow-color);
 }
 
 /* (SoundOn Calculator Styles - no changes) */
@@ -541,7 +637,7 @@ nav ul li a.active::after { /* (Header & Navigation Styles - no changes) */
     -webkit-appearance: none;
     width: 16px;
     height: 16px;
-    border-radius: 50%;
+    border-radius: var(--border-radius);
     background-color: var(--primary-color);
     cursor: pointer;
     border: none;
@@ -567,7 +663,7 @@ nav ul li a.active::after { /* (Header & Navigation Styles - no changes) */
 .score-display { /* (SoundOn Calculator Styles - no changes) */
     width: 140px;
     height: 140px;
-    background-color: var(--bg-body);
+    background-color: var(--bg-body); /* Solid Background - No Gradient */
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -865,7 +961,7 @@ footer { /* (Footer Styles - no changes) */
     background-color: var(--border-color);
     border-radius: var(--border-radius);
     margin-top: 0.7rem;
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--border-color);
     opacity: 0.6;
 }
 
@@ -910,84 +1006,84 @@ footer { /* (Footer Styles - no changes) */
 }
 
 /* Responsive Design - Header Overlap Fix & Minor Adjustments */
-@media (max-width: 992px) {
-    h1 { font-size: 2.3rem; } /* (Responsive Design - no changes) */
-    h2 { font-size: 1.8rem; } /* (Responsive Design - no changes) */
-    .hero h1 { font-size: 2.5rem; } /* (Responsive Design - no changes) */
-    .about-content { /* (Responsive Design - no changes) */
+@media (max-width: 992px) { /* (Responsive Design - no changes) */
+    h1 { font-size: 2.3rem; }
+    h2 { font-size: 1.8rem; }
+    .hero h1 { font-size: 2.5rem; }
+    .about-content {
         flex-direction: column;
         text-align: center;
     }
-    .about-image { /* (Responsive Design - no changes) */
+    .about-image {
         margin-top: 1.5rem;
         max-height: 200px;
     }
-    .calculator-container { /* (Responsive Design - no changes) */
+    .calculator-container {
         flex-direction: column;
         align-items: center;
     }
-    .calculator-result { /* (Responsive Design - no changes) */
+    .calculator-result {
         margin-top: 1.5rem;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* (Responsive Design - no changes) */
     body {
         padding-top: 60px; /* FIX HEADER OVERLAP - Add padding below header */
     }
-    header { /* (Responsive Design - no changes) */
-        padding: 0.5rem 0; /* Slightly Reduced Header Padding on Mobile */
+    header {
+        padding: 0.5rem 0;
     }
-    .logo-container { /* (Responsive Design - no changes) */
+    .logo-container {
         flex-direction: column;
         padding: 0.4rem;
         text-align: center;
     }
-    .tagline { /* (Responsive Design - no changes) */
+    .tagline {
         margin-left: 0;
         margin-top: 0.2rem;
     }
-    nav ul { /* (Responsive Design - no changes) */
+    nav ul {
         margin-top: 0.5rem;
         flex-wrap: wrap;
         justify-content: center;
     }
-    nav ul li { /* (Responsive Design - no changes) */
+    nav ul li {
         margin: 0 0.3rem;
     }
-    .hero h1 { /* (Responsive Design - no changes) */
+    .hero h1 {
         font-size: 2.1rem;
     }
-    .hero p { /* (Responsive Design - no changes) */
+    .hero p {
         font-size: 0.95rem;
     }
-    .cta-buttons { /* (Responsive Design - no changes) */
+    .cta-buttons {
         flex-direction: column;
         gap: 0.4rem;
     }
-    .about-image { display: none; } /* (Responsive Design - no changes) */
+    .about-image { display: none; }
 }
 
-@media (max-width: 480px) {
-    h1 { font-size: 1.9rem; } /* (Responsive Design - no changes) */
-    h2 { font-size: 1.7rem; } /* (Responsive Design - no changes) */
-    .hero h1 { font-size: 1.9rem; } /* (Responsive Design - no changes) */
-    .categories-grid { /* (Responsive Design - no changes) */
+@media (max-width: 480px) { /* (Responsive Design - no changes) */
+    h1 { font-size: 1.9rem; }
+    h2 { font-size: 1.7rem; }
+    .hero h1 { font-size: 1.9rem; }
+    .categories-grid {
         grid-template-columns: 1fr;
     }
-    .next-star-card { /* (Responsive Design - no changes) */
+    .next-star-card {
         min-width: 100%;
     }
-    .star-preview { /* (Responsive Design - no changes) */
+    .star-preview {
         height: 130px;
     }
-    .sound-icon { /* (Responsive Design - no changes) */
+    .sound-icon {
         width: 45px;
         height: 45px;
     }
-    .score-display { /* (Responsive Design - no changes) */
+    .score-display {
         width: 130px;
         height: 130px;
     }
-    #soundon-score { font-size: 2.6rem; } /* (Responsive Design - no changes) */
+    #soundon-score { font-size: 2.6rem; }
 }
