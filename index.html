@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Inter&display=swap" rel="stylesheet" />
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="wouldliker" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script> <!-- Buy Me a Coffee Widget - ADDED HERE -->
     <script defer src="app.js"></script>
 </head>
 <body>
@@ -32,8 +33,8 @@
         </div>
     </section>
 
-    <!-- SoundOn Calculator Modal - Hidden by Default -->
-    <div id="calculatorModal" class="calculator-modal">
+     <!-- SoundOn Calculator Modal - Hidden by Default -->
+     <div id="calculatorModal" class="calculator-modal">
         <div class="modal-content">
             <span class="close-button" onclick="closeCalculatorModal()">×</span>
             <section id="calculator" class="soundon-calculator">
@@ -207,7 +208,7 @@
                         <i class="fas fa-play-circle"></i>
                     </div>
                     <div class="star-info">
-                        <h3>Taste <span class="hot-sound-label">HOT</span></h3>
+                        <h3>Taste <span class="hot-sound-label">Hot</span></h3>
                         <div class="star-metrics">
                             <span class="prediction">Predicted Views: 180K+ WEEK 1</span>
                             <span class="category">Category: TASTE</span>
@@ -304,7 +305,7 @@
             const viewCounterElement = document.getElementById('view-counter');
             let currentViews = localStorage.getItem('currentViews');
             let lastUpdateTime = localStorage.getItem('lastUpdateTime');
-            const weeklyViewIncrease = 10000000;
+            const weeklyViewIncrease = 12000000; // UPDATED to 12 Million Weekly Increase
             const targetViews = 150000000 + (weeklyViewIncrease * 52);
 
             if (!currentViews) {
@@ -324,9 +325,9 @@
             currentViews += viewsToAddBasedOnTime;
 
 
-            const minIncrement = 1000;
-            const maxIncrement = 5000;
-            const updateInterval = 75;
+            const minIncrement = 2000; // Increased Min Increment for Faster Count
+            const maxIncrement = 7000; // Increased Max Increment for Faster Count
+            const updateInterval = 50; // Kept Interval Frequent
 
             function updateViewCount() {
                 if (currentViews < targetViews) {
@@ -345,18 +346,17 @@
             updateViewCount();
 
 
-            // --- SoundOn Score Calculator - Pop-up Modal Functionality ---
+            // --- SoundOn Score Calculator - Pop-up Modal Functionality --- (No changes needed for modal)
             const calculatorModal = document.getElementById('calculatorModal');
 
             window.openCalculatorModal = function() {
-                calculatorModal.style.display = "block"; // Show modal
+                calculatorModal.style.display = "block";
             }
 
             window.closeCalculatorModal = function() {
-                calculatorModal.style.display = "none"; // Hide modal
+                calculatorModal.style.display = "none";
             }
 
-            // Close modal if user clicks outside of it
             window.onclick = function(event) {
                 if (event.target == calculatorModal) {
                     closeCalculatorModal();
@@ -409,7 +409,7 @@
                 calculateSoundOnScore();
             });
 
-            calculateSoundOnScore(); // Initial score calculation
+            calculateSoundOnScore();
 
 
              // --- Smooth Scrolling for Navigation Links --- (No changes needed for smooth scrolling)
