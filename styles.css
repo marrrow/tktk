@@ -451,24 +451,27 @@ nav ul li a.active::after {
   box-shadow: 0 3px 6px var(--shadow-color);
 }
 
-/* Style for the QR Code Container */
+/* Style for the QR Code Container -  REMOVED BLACK BACKGROUND & HEIGHT*/
 .star-preview {
     position: relative;
-    height: 140px; /* Smaller height */
-    background-color: #333; /* Dark background for QR contrast */
+    /* height: 140px;  REMOVED FIXED HEIGHT */
+    background-color: transparent; /* REMOVED BLACK BACKGROUND */
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    padding: 1rem; /* Added padding to contain QR code nicely */
 }
 
 /* Style for the QR Code Image */
 .star-preview img {
-    max-width: 95%; /* QR code fills the container */
-    max-height: 95%; /*  QR code fills the container */
+    max-width: 100%; /* QR code fills the container */
+    max-height: 100%; /*  QR code fills the container */
     object-fit: contain; /*  Fit the QR code */
     display: block; /* Block display for consistent sizing */
     margin: 0 auto;   /* Center the QR Code */
+    border-radius: var(--border-radius); /* Rounded corners for QR code image */
+    box-shadow: 0 2px 4px var(--shadow-color); /* Subtle shadow for QR code */
 }
 
 .star-info {
@@ -545,9 +548,12 @@ nav ul li a.active::after {
     color: var(--text-muted);
 }
 
-/* Style for the "Use This Sound" Link/Button */
+/* Style for the "Use This Sound" Button - QR CODE INTEGRATION */
 .sound-link {
-  display: block; /* Full width button */
+  display: flex; /* Use flexbox for button content */
+  align-items: center; /* Vertically align items */
+  justify-content: center; /* Center text and QR code horizontally */
+  gap: 0.5rem; /* Spacing between QR code and text */
   margin-top: 0.6rem;
   padding: 0.7rem 1.4rem;
   border-radius: var(--border-radius);
@@ -570,6 +576,21 @@ nav ul li a.active::after {
     transform: translateY(-1px);
     box-shadow: 0 4px 8px var(--shadow-color);
 }
+
+/* Style for QR code inside the button */
+.sound-link .button-qr-code {
+    display: inline-block; /* Ensure it behaves like inline content in flexbox */
+    height: 1.3em; /* Adjust size as needed relative to font size */
+    width: 1.3em;  /* Make it square */
+}
+
+.sound-link .button-qr-code img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    vertical-align: middle; /* Align with text */
+}
+
 
 /* (Rest of your CSS - calculator, blog, footer, etc.) */
 /* (Rest of your CSS - calculator, blog, footer, etc.) */
