@@ -3,11 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const viewCounterElement = document.getElementById('view-counter');
     let currentViews = localStorage.getItem('currentViews');
     let lastUpdateTime = localStorage.getItem('lastUpdateTime');
-    const weeklyViewIncrease = 12000000; // 12 Million Weekly Increase
-    const targetViews = 150000000 + (weeklyViewIncrease * 52);
+    const weeklyViewIncrease = 11000000; // 11 Million Weekly Increase (Adjusted)
+    const targetViews = 151000000 + (weeklyViewIncrease * 52);
 
     if (!currentViews) {
-        currentViews = 150000000;
+        currentViews = 151000000; // Start at 151 Million (Adjusted)
     } else {
         currentViews = parseInt(currentViews, 10);
     }
