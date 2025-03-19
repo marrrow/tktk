@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // --- SoundOn Score Calculator --- (JavaScript for calculator - moved to separate file)
+    // --- SoundOn Score Calculator ---
     const avgViewTimeSlider = document.getElementById('avg-view-time');
     const completionRateSlider = document.getElementById('completion-rate');
     const engagementRateSlider = document.getElementById('engagement-rate');
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const engagementDisplay = document.getElementById('engagement-display');
     const trendDisplay = document.getElementById('trend-display');
     const soundonScoreDisplay = document.getElementById('soundon-score');
-
+    const engagementPopup = document.getElementById('engagementPopup'); // Get engagement popup element
 
     function calculateSoundOnScore() {
         const viewTime = parseInt(avgViewTimeSlider.value);
@@ -46,4 +46,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     calculateSoundOnScore(); // Initial score calculation
+
+     // --- Engagement Pop-up Functions ---
+     window.openEngagementPopup = function() {
+        engagementPopup.style.display = "block"; // Show pop-up
+    }
+
+    window.closeEngagementPopup = function() {
+        engagementPopup.style.display = "none"; // Hide pop-up
+    }
+
+    // Close pop-up if user clicks outside of it
+    window.onclick = function(event) {
+        if (event.target == engagementPopup) {
+            closeEngagementPopup();
+        }
+    }
 });
