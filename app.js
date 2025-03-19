@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // --- Persistent View Counter Animation --- (No changes needed for counter persistence)
+    // --- Persistent View Counter Animation ---
     const viewCounterElement = document.getElementById('view-counter');
     let currentViews = localStorage.getItem('currentViews');
     let lastUpdateTime = localStorage.getItem('lastUpdateTime');
-    const weeklyViewIncrease = 12000000; // UPDATED to 12 Million Weekly Increase
+    const weeklyViewIncrease = 12000000; // 12 Million Weekly Increase
     const targetViews = 150000000 + (weeklyViewIncrease * 52);
 
     if (!currentViews) {
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     updateViewCount();
 
 
-    // --- Smooth Scrolling for Navigation Links --- (No changes needed for smooth scrolling)
+    // --- Smooth Scrolling for Navigation Links ---
     document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // --- Scroll to Section Function for CTA Buttons --- (No changes needed for scroll to section)
+    // --- Scroll to Section Function for CTA Buttons ---
     window.scrollToSection = function(sectionId) {
         let targetSection = document.getElementById(sectionId);
         if (targetSection) {
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    // --- Prediction Bar Animation on Load --- (No changes needed for prediction bar animation)
+    // --- Prediction Bar Animation on Load ---
     const predictionFills = document.querySelectorAll('.prediction-fill');
     predictionFills.forEach(fill => {
         const value = fill.getAttribute('data-value');
