@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             viewCounterElement.textContent = currentViews.toLocaleString() + "+";
             localStorage.setItem('currentViews', currentViews);
             localStorage.setItem('lastUpdateTime', Date.now());
-            setTimeout(updateViewCount, updateInterval);
+            setTimeout(updateViewCount, updateViewCount, updateInterval); // Corrected typo here - function name was duplicated
         } else {
             viewCounterElement.textContent = targetViews.toLocaleString() + "+";
             localStorage.removeItem('lastUpdateTime');
