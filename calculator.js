@@ -12,17 +12,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const soundonScoreDisplay = document.getElementById('soundon-score');
     const engagementPopup = document.getElementById('engagementPopup');
 
-    function calculateSoundOnScore() {
-        const viewTime = parseInt(avgViewTimeSlider.value);
-        const completion = parseInt(completionRateSlider.value);
-        const engagement = parseFloat(engagementRateSlider.value);
-        const trend = parseInt(trendFactorSlider.value);
+   function calculateSoundOnScore() {
+    const viewTime = parseInt(avgViewTimeSlider.value);
+    const completion = parseInt(completionRateSlider.value);
+    const engagement = parseFloat(engagementRateSlider.value);
+    const trend = parseInt(trendFactorSlider.value);
 
-        let score = (viewTime * 0.15) + (completion * 0.25) + (engagement * 0.3) + (trend * 0.3);
-        score = Math.max(0, Math.min(100, Math.round(score)));
+    let score = (viewTime * 0.15) + (completion * 0.25) + (engagement * 0.3) + (trend * 0.3);
+    score = Math.max(0, Math.min(100, Math.round(score))); // Ensure score is within 0-100
 
-        soundonScoreDisplay.textContent = isNaN(score) ? "--" : score;
-    }
+    soundonScoreDisplay.textContent = isNaN(score) ? "--" : score;
+}
 
     avgViewTimeSlider.addEventListener('input', function() {
         viewTimeDisplay.textContent = this.value + " SECONDS";
