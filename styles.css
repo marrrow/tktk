@@ -574,6 +574,32 @@ nav ul li a.active::after {
     box-shadow: 0 4px 8px var(--shadow-color);
 }
 
+/* Style for the "Use This Sound" Link/Button in Categories Section */
+.sound-link-category {
+  display: inline-block; /* Inline button for category sounds */
+  margin-top: 0.6rem;
+  padding: 0.5rem 1rem; /* Smaller padding */
+  border-radius: var(--border-radius);
+  background-color: var(--primary-color);
+  color: var(--bg-card);
+  font-weight: 600;
+  text-align: center;
+  transition: background-color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 2px 4px var(--shadow-color);
+  font-size: 0.8rem; /* Smaller Font */
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.sound-link-category:hover {
+    background-color: var(--secondary-color);
+    color: var(--bg-card);
+    border-color: var(--secondary-color);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
 
 /* (Rest of your CSS - calculator, blog, footer, etc.) */
 /* (Rest of your CSS - calculator, blog, footer, etc.) */
