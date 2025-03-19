@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const engagementDisplay = document.getElementById('engagement-display');
     const trendDisplay = document.getElementById('trend-display');
     const soundonScoreDisplay = document.getElementById('soundon-score');
-    const engagementPopup = document.getElementById('engagementPopup'); // Get engagement popup element
+    const engagementPopup = document.getElementById('engagementPopup');
 
     function calculateSoundOnScore() {
         const viewTime = parseInt(avgViewTimeSlider.value);
@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         soundonScoreDisplay.textContent = isNaN(score) ? "--" : score;
     }
-
 
     avgViewTimeSlider.addEventListener('input', function() {
         viewTimeDisplay.textContent = this.value + " SECONDS";
@@ -45,15 +44,15 @@ document.addEventListener('DOMContentLoaded', function() {
         calculateSoundOnScore();
     });
 
-    calculateSoundOnScore(); // Initial score calculation
+    calculateSoundOnScore();
 
      // --- Engagement Pop-up Functions ---
      window.openEngagementPopup = function() {
-        engagementPopup.style.display = "block"; // Show pop-up
+        engagementPopup.style.display = "block";
     }
 
     window.closeEngagementPopup = function() {
-        engagementPopup.style.display = "none"; // Hide pop-up
+        engagementPopup.style.display = "none";
     }
 
     // Close pop-up if user clicks outside of it
