@@ -43,4 +43,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
     updateViewCount();
 
+
+    // --- Smooth Scrolling for Navigation Links --- (No changes needed for smooth scrolling)
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            let targetElement = document.querySelector(this.getAttribute('href'));
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - (document.querySelector('header').offsetHeight),
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // --- Scroll to Section Function for CTA Buttons --- (No changes needed for scroll to section)
+    window.scrollToSection = function(sectionId) {
+        let targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+            window.scrollTo({
+                top: targetSection.offsetTop - (document.querySelector('header').offsetHeight),
+                behavior: 'smooth'
+            });
+        }
+    };
+
+    // --- Prediction Bar Animation on Load --- (No changes needed for prediction bar animation)
+    const predictionFills = document.querySelectorAll('.prediction-fill');
+    predictionFills.forEach(fill => {
+        const value = fill.getAttribute('data-value');
+        fill.style.width = value + '%';
+    });
+
+
 });
