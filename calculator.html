@@ -37,7 +37,12 @@
      <!-- SoundOn Calculator Section - Now on Separate Page -->
      <section id="calculator" class="soundon-calculator">
         <div class="container">
-            <h2>SoundOn Score™ Calculator - Viral Sound Predictor</h2>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>SoundOn Score™ Calculator - Viral Sound Predictor</h2>
+                <button onclick="openEngagementPopup()" style="background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 0.9em;">
+                    <i class="fas fa-question-circle"></i> Engagement Metrics Explained
+                </button>
+            </div>
             <p>Estimate a sound's viral potential with our proprietary SoundOn Score™ calculator. See real-time feedback – adjust sliders, see score. Maximize YOUR TikTok impact, NOW.</p>
             <div class="calculator-container">
                 <div class="calculator-inputs">
@@ -68,6 +73,30 @@
             </div>
         </div>
     </section>
+
+    <!-- Engagement Pop-up - MOVED TO CALCULATOR.HTML -->
+    <div id="engagementPopup" class="engagement-popup">
+        <div class="engagement-popup-content">
+            <span class="engagement-close-button" onclick="closeEngagementPopup()">×</span>
+            <h4>Understanding Sound Engagement Metrics</h4>
+            <p>WouldLiker uses key metrics for informed sound choices:</p>
+            <div class="engagement-definitions">
+                <ul>
+                    <li><strong>Track Engagement:</strong>  <strong>(Likes + Shares + Comments + Favorites) / Views</strong>.  Total audience interaction. The ULTIMATE engagement metric.</li>
+                    <li><strong>SoundOn Engagement:</strong>  Percentile ranking vs. <strong>5K+ VIEW TRACKS</strong>.  Relative power ratings.  Know the VIRAL potential:
+                        <ul>
+                            <li><strong>Excellent:</strong> Top 10% - VIRAL EXPLOSION</li>
+                            <li><strong>Great:</strong> Top 20% - MASSIVE REACH</li>
+                            <li><strong>Good:</strong> Top 30% - HIGH ENGAGEMENT</li>
+                            <li><strong>OK:</strong> Top 50% - SOLID PERFORMANCE</li>
+                            <li><strong>Fair:</strong> Bottom 50% - AVOID</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <p>SOUNDON SCORE™ ALGORITHM: INTELLIGENT. PREDICTIVE. YOUR SECRET WEAPON.</p>
+        </div>
+    </div>
 
 
     <!-- Footer Section -->
