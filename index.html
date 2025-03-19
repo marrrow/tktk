@@ -1,428 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WouldLiker - TikTok Viral Sound Domination</title>
-    <!-- External Styles -->
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Inter&display=swap" rel="stylesheet" />
-    <script defer src="app.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Confession Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="game-container">
+        <div id="counter-display">Confessions: 0</div>
+        <button id="calculator-button">Open Calculator</button> <!-- Added calculator button -->
+    </div>
 
-    <!-- Stats Section - Dark, Bold Stats -->
-    <section id="stats" class="stats-section">
-        <div class="stats-container">
-            <h2>Dominate TikTok. Data Doesn't Lie.</h2>
-            <p>Join thousands of creators seeing real results. WouldLiker: Data-Driven Sound Power.</p>
-            <!-- Stats Screenshots - Horizontal, Wider -->
-            <div style="display: flex; justify-content: space-around; margin-bottom: 1.6rem; flex-wrap: wrap; align-items: center;">
-                <img src="https://raw.githubusercontent.com/marrrow/tktk/main/stats-screenshot-1.png" alt="Total Views Stats" style="max-width: 49%; max-height: 320px; border-radius: 14px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-                <img src="https://raw.githubusercontent.com/marrrow/tktk/main/stats-screenshot-2.png" alt="Engagement Stats" style="max-width: 49%; max-height: 320px; border-radius: 14px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-            </div>
-            <div class="view-counter-area">
-                <p><strong style="color: var(--secondary-color); font-size: 1.3em;">150,000,000+</strong> TikTok Views Tracked</p>
-                <span class="view-start-date">Since August 2024 - Views Exploding Daily!</span>
-                <div class="view-growth-graph">
-                    <!-- Placeholder for view growth graph -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-     <!-- SoundOn Calculator Section - Dark, Bold Calculator -->
-     <section id="calculator" class="soundon-calculator">
-        <div class="container">
-            <h2>SoundOn Score™ Calculator - Viral Sound Predictor</h2>
-            <p>Stop guessing. Know your sound's potential. Real-time SoundOn Score™ – instant viral insights.  Maximize your TikTok impact, NOW.</p>
-            <div class="calculator-container">
-                <div class="calculator-inputs">
-                    <div class="slider-group">
-                        <label for="avg-view-time">Average View Time: <span id="view-time-display" class="slider-display">15 SECONDS</span></label>
-                        <input type="range" id="avg-view-time" min="1" max="60" value="15" class="slider">
-                    </div>
-                    <div class="slider-group">
-                        <label for="completion-rate">Completion Rate: <span id="completion-display" class="slider-display">40%</span></label>
-                        <input type="range" id="completion-rate" min="1" max="100" value="40" class="slider">
-                    </div>
-                    <div class="slider-group">
-                        <label for="engagement-rate">Engagement Rate: <span id="engagement-display" class="slider-display">5.5%</span></label>
-                        <input type="range" id="engagement-rate" min="0.1" max="100" value="5.5" step="0.1" class="slider">
-                    </div>
-                    <div class="slider-group">
-                        <label for="trend-factor">Trend Growth Factor: <span id="trend-display" class="slider-display">3/10</span></label>
-                        <input type="range" id="trend-factor" min="1" max="10" value="3" class="slider">
-                    </div>
-                </div>
-                <div class="calculator-result">
-                    <div class="score-display">
-                        <span id="soundon-score">--</span>
-                    </div>
-                    <p class="score-label">SoundOn Score™</p>
-                    <p class="score-explanation">Score 80+ = Viral Alert. 90+ = Exploding Sound. Don't Miss Out.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Header -->
-    <header>
-        <div class="logo-container">
-            <div class="logo">
-                <i class="fab fa-tiktok"></i>
-                <span>WouldLiker</span>
-            </div>
-            <p class="tagline">TIKTOK VIRAL SOUND DOMINATION</p>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#trending-sounds">Top Sounds</a></li>
-                <li><a href="#about">Why It Works</a></li>
-                <li><a href="#categories">Categories</a></li>
-                <li><a href="#next-stars">Next Stars</a></li>
-                <li><a href="#calculator">Score Calculator</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content">
-            <h1>TIKTOK GROWTH HACK: VIRAL SOUNDS.</h1>
-            <p>Stop Wasting Time on Trends That Don't Deliver. WouldLiker: Data-Driven Sounds That EXPLODE Your TikTok Views and Engagement. Get Started. FREE.</p>
-            <div class="cta-buttons">
-                <button class="cta-primary" onclick="scrollToSection('categories')">FIND VIRAL SOUNDS</button>
-                <button class="cta-secondary" onclick="scrollToSection('about')">UNLOCK THE SECRET</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container about-content">
-            <div class="about-text">
+    <!-- The Modal (Popup) -->
+    <div id="wouldliker-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <div class="tiktok-header">
+                <img src="assets/tiktok-logo.png" alt="TikTok Logo" id="tiktok-logo">
                 <h2>WOULDLIKER: DATA-DRIVEN SOUNDS. VIRAL RESULTS.</h2>
-                <p>Generic trends = TikTok graveyard. WouldLiker = strategic advantage. <strong>Curated, high-potential sounds. Niche-focused engagement.</strong> Data-backed. Guaranteed to boost YOUR views.</p>
-
-                <h3>WHY WOULDLIKER IS YOUR TIKTOK ADVANTAGE:</h3>
-                <ul>
-                    <li><strong><strong>SOUNDON SCORE™ - VIRAL PREDICTION UNLOCKED</strong></strong> – Algorithm-powered. Predicts viral sounds BEFORE they explode. Data-driven. No more guesswork.</li>
-                    <li><strong>NICHE-TARGETED SOUNDS - YOUR AUDIENCE, AMPLIFIED</strong> – Stop chasing irrelevant trends. Sounds categorized for YOUR content niche. Laser-focus on YOUR viewers.</li>
-                    <li><strong>ANALYTICS-VALIDATED - REAL RESULTS, GUARANTEED</strong> – Proven strategies from TikTok's top creators. Real-world data. Not just theories.</li>
-                    <li><strong>FIRST-MOVER ADVANTAGE -  BEAT THE TREND, START IT</strong> - "Next Star Sounds" - yours FIRST. TikTok algorithm rewards originality. Explode your initial views.</li>
-                    <li><strong>REGIONAL TRENDS - GLOBAL REACH, LOCAL IMPACT</strong> – <span class="coming-soon">COMING SOON!</span> – Dominate local & global TikTok. Tap into regional viral waves.</li>
-                </ul>
-
-                <div class="engagement-definitions">
-                    <h4>UNDERSTAND SOUND ENGAGEMENT: DATA THAT DRIVES VIRALITY</h4>
-                    <p>WouldLiker uses KEY metrics to power YOUR sound choices:</p>
+                <p>Generic trends = TikTok graveyard. WouldLiker = strategic advantage. Curated, high-potential sounds. Niche-focused engagement. Data-backed. Guaranteed to boost YOUR views.</p>
+            </div>
+            
+            <div class="modal-sections">
+               <div class="section">
+                   <h3>WHY WOULDLIKER IS YOUR TIKTOK ADVANTAGE:</h3>
                     <ul>
-                        <li><strong>TRACK ENGAGEMENT:</strong>  <strong>(LIKES + SHARES + COMMENTS + FAVORITES) / VIEWS</strong>.  Total audience interaction. The ULTIMATE engagement metric.</li>
-                        <li><strong>SOUNDON ENGAGEMENT:</strong>  Percentile ranking vs. <strong>5K+ VIEW TRACKS</strong>.  Relative power ratings.  Know the VIRAL potential:
-                            <ul>
-                                <li><strong>EXCELLENT:</strong> TOP 10% - VIRAL EXPLOSION</li>
-                                <li><strong>GREAT:</strong> TOP 20% - MASSIVE REACH</li>
-                                <li><strong>GOOD:</strong> TOP 30% - HIGH ENGAGEMENT</li>
-                                <li><strong>OK:</strong> TOP 50% - SOLID PERFORMANCE</li>
-                                <li><strong>FAIR:</strong> BOTTOM 50% - AVOID</li>
-                            </ul>
-                        </li>
+                       <li><strong>SOUNDON SCORE™ - VIRAL PREDICTION UNLOCKED</strong><br>Algorithm-powered. Predicts viral sounds BEFORE they explode. Data-driven. No more guesswork.</li>
+                       <li><strong>NICHE-TARGETED SOUNDS - YOUR AUDIENCE, AMPLIFIED</strong><br>Stop chasing irrelevant trends. Sounds categorized for YOUR content niche. Laser-focus on YOUR viewers.</li>
+                       <li><strong>ANALYTICS-VALIDATED - REAL RESULTS, GUARANTEED</strong><br>Proven strategies from TikTok's top creators. Real-world data. Not just theories.</li>
+                       <li><strong>FIRST-MOVER ADVANTAGE - BEAT THE TREND, START IT</strong><br>"Next Star Sounds" - yours FIRST. TikTok algorithm rewards originality. Explode your initial views.</li>
+                       <li><strong>REGIONAL TRENDS - GLOBAL REACH, LOCAL IMPACT</strong><br>COMING SOON! – Dominate local & global TikTok. Tap into regional viral waves.</li>
                     </ul>
-                    <p>SOUNDON SCORE™ ALGORITHM: INTELLIGENT. PREDICTIVE. YOUR SECRET WEAPON.</p>
+               </div>
+
+                <div class="section">
+                   <h3>Up to 400% Boost!</h3>
+                    <p>Use WouldLiker sounds with Shoppable Videos or product links in your videos for up to a 400% increase in views!</p>
                 </div>
 
-            </div>
-            <div class="about-image">
-                <svg width="300" height="200" viewBox="0 0 300 200">
-                    <rect width="300" height="200" fill="#333333" rx="14" ry="14"/>
-                    <path d="M150,40 C90,40 40,90 40,150 L40,160 L260,160 L260,150 C260,90 210,40 150,40 Z" fill="#555555" opacity="0.5"/>
-                    <circle cx="150" cy="80" r="35" fill="url(#iconGradient)"/>
-                    <rect x="120" y="120" width="60" height="80" fill="url(#iconGradient)" rx="10" ry="10"/>
-                     <defs>
-                        <linearGradient id="iconGradient" gradientUnits="userSpaceOnUse" x1="120" y1="80" x2="180" y2="80">
-                          <stop offset="0%" stop-color="#ff0050"/>
-                          <stop offset="100%" stop-color="#f5be1c"/>
-                        </linearGradient>
-                      </defs>
-                </svg>
-            </div>
-        </div>
-    </section>
-
-    <!-- Categories Section -->
-    <section id="categories" class="categories-section">
-        <div class="container">
-            <h2>EXPLORE SOUND CATEGORIES - FIND YOUR VIRAL SOUND NOW</h2>
-            <p class="section-intro">Stop endless scrolling. Targeted categories. Niche-perfect sounds.  Boost YOUR content.  Start here. FREE.</p>
-            <div class="category-filters">
-                <button class="category-filter active" data-filter="all">ALL SOUNDS</button>
-                <button class="category-filter" data-filter="core">CORE SOUNDS</button>
-                <button class="category-filter" data-filter="presentation">PRESENTATION</button>
-                <button class="category-filter" data-filter="sports">SPORTS</button>
-                <button class="category-filter" data-filter="comedy">COMEDY</button>
-                <button class="category-filter" data-filter="romance">ROMANCE</button>
-            </div>
-            <div class="category-sounds">
-                <!-- Sound items will be dynamically populated here by JavaScript -->
-                <div class="sound-item" data-category="core">
-                    <div class="sound-icon"><i class="fas fa-music"></i></div>
-                    <div class="sound-details">
-                        <h3>CORE SOUND 2025</h3>
-                        <p class="sound-stat">Predicted Views: 145K+ in week 1</p>
-                        <p class="sound-category">Category: CORE</p>
+                <div class="section">
+                   <h3>Sound Selection (150 Million+)</h3>
+                   <p>Explore over 150,000,000 sounds!</p> <!-- Static display for now -->
+                   <div class="song-list">
+                       <ul>
+                           <li>Song 1</li>
+                           <li>Song 2</li>
+                           <li>Song 3</li>
+                           <li>Song 4</li>
+                           <li>Song 5</li>
+                           <li>Song 6</li>
+                           <li>Song 7</li>
+                           <li>Song 8</li>
+                           <li>Song 9</li>
+                           <li>Song 10</li>
+                            <li>Song 11</li>
+                            <li>Song 12</li>
+                            <li>Song 13</li>
+                            <li>Song 14</li>
+                            <li>Song 15</li>
+                            <li>Song 16</li>
+                            <!-- Add many more songs here -->
+                        </ul>
                     </div>
                 </div>
-                <div class="sound-item" data-category="transition">
-                    <div class="sound-icon"><i class="fas fa-music"></i></div>
-                    <div class="sound-details">
-                        <h3>TRANSITION <span class="hot-sound-label">HOT</span> <span class="gaining-popularity-label">TRENDING</span></h3>
-                        <p class="sound-stat">SoundOn Score: 95/100</p>
-                        <p class="sound-category">Category: TRANSITION</p>
-                    </div>
-                </div>
-                <div class="sound-item" data-category="future">
-                    <div class="sound-icon"><i class="fas fa-music"></i></div>
-                    <div class="sound-details">
-                        <h3>FUTURE <span class="hot-sound-label">HOT</span> <span class="gaining-popularity-label">TRENDING</span></h3>
-                        <p class="sound-stat">SoundOn Score: 94/100</p>
-                        <p class="sound-category">Category: FUTURE</p>
-                    </div>
-                </div>
-                 <div class="sound-item" data-category="taste">
-                    <div class="sound-icon"><i class="fas fa-music"></i></div>
-                    <div class="sound-details">
-                        <h3>TASTE <span class="hot-sound-label">HOT</span> <span class="gaining-popularity-label">TRENDING</span></h3>
-                        <p class="sound-stat">SoundOn Score: 92/100</p>
-                        <p class="sound-category">Category: TASTE</p>
-                    </div>
-                </div>
-                <!-- Add more sound items here -->
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Next Stars Section -->
-    <section id="next-stars" class="next-stars">
-        <div class="container">
-            <h2>NEXT STAR SOUNDS - GO VIRAL FIRST.</h2>
-            <p class="section-intro">Beat the algorithm. "Next Star" sounds = early viral wave.  First to use = massive view spike.  Act NOW.</p>
-            <div class="next-star-cards">
-                <div class="next-star-card">
-                    <div class="star-preview">
-                        <i class="fas fa-play-circle"></i>
-                    </div>
-                    <div class="star-info">
-                        <h3>TRANSITION <span class="hot-sound-label">HOT</span></h3>
-                        <div class="star-metrics">
-                            <span class="prediction">Predicted Views: 200K+ WEEK 1</span>
-                            <span class="category">Category: TRANSITION</span>
-                        </div>
-                        <div class="prediction-meter">
-                            <div class="prediction-bar">
-                                <div class="prediction-fill" data-value="95"></div>
-                            </div>
-                            <div class="prediction-label">95% VIRAL POTENTIAL</div>
-                        </div>
-                        <a href="https://www.tiktok.com/t/ZT2pqWXvE/" class="sound-link" target="_blank">USE THIS SOUND</a>
-                    </div>
-                </div>
-                <div class="next-star-card">
-                    <div class="star-preview">
-                        <i class="fas fa-play-circle"></i>
-                    </div>
-                    <div class="star-info">
-                        <h3>FUTURE <span class="hot-sound-label">HOT</span></h3>
-                        <div class="star-metrics">
-                            <span class="prediction">Predicted Views: 190K+ WEEK 1</span>
-                            <span class="category">Category: FUTURE</span>
-                        </div>
-                        <div class="prediction-meter">
-                            <div class="prediction-bar">
-                                <div class="prediction-fill" data-value="94"></div>
-                            </div>
-                            <div class="prediction-label">94% VIRAL POTENTIAL</div>
-                        </div>
-                        <a href="https://www.tiktok.com/t/ZT2pqERLS/" class="sound-link" target="_blank">USE THIS SOUND</a>
-                    </div>
-                </div>
-                 <div class="next-star-card">
-                    <div class="star-preview">
-                        <i class="fas fa-play-circle"></i>
-                    </div>
-                    <div class="star-info">
-                        <h3>TASTE <span class="hot-sound-label">HOT</span></h3>
-                        <div class="star-metrics">
-                            <span class="prediction">Predicted Views: 180K+ WEEK 1</span>
-                            <span class="category">Category: TASTE</span>
-                        </div>
-                        <div class="prediction-meter">
-                            <div class="prediction-bar">
-                                <div class="prediction-fill" data-value="92"></div>
-                            </div>
-                            <div class="prediction-label">92% VIRAL POTENTIAL</div>
-                        </div>
-                        <a href="https://www.tiktok.com/t/ZT2pbMbKJ/" class="sound-link" target="_blank">USE THIS SOUND</a>
-                    </div>
-                </div>
-                <!-- Add more Next Star Sound cards here -->
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Footer Section -->
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-logo">
-                <i class="fab fa-tiktok"></i>
-                <span>WouldLiker</span>
-            </div>
-            <p>UNLOCK TIKTOK VIRAL POTENTIAL - DATA-DRIVEN SOUNDS. GET STARTED FREE.</p>
-            <div class="social-links">
-                <a href="https://www.tiktok.com/@wouldliker" target="_blank">
-                    <i class="fab fa-tiktok"></i> @wouldliker
-                </a>
-            </div>
-        </div>
-        <div class="container footer-bottom">
-            <p>© 2025 WouldLiker. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // --- Persistent View Counter Animation --- (No changes needed in JS for counter persistence)
-            const viewCounterElement = document.getElementById('view-counter');
-            let currentViews = localStorage.getItem('currentViews');
-            let lastUpdateTime = localStorage.getItem('lastUpdateTime');
-            const weeklyViewIncrease = 10000000;
-            const targetViews = 150000000 + (weeklyViewIncrease * 52);
-
-            if (!currentViews) {
-                currentViews = 150000000;
-            } else {
-                currentViews = parseInt(currentViews, 10);
-            }
-
-            if (!lastUpdateTime) {
-                lastUpdateTime = Date.now();
-            } else {
-                lastUpdateTime = parseInt(lastUpdateTime, 10);
-            }
-
-            const timeDiff = Date.now() - lastUpdateTime;
-            const viewsToAddBasedOnTime = Math.floor((timeDiff / (7 * 24 * 3600 * 1000)) * weeklyViewIncrease);
-            currentViews += viewsToAddBasedOnTime;
-
-
-            const minIncrement = 1000;
-            const maxIncrement = 5000;
-            const updateInterval = 75;
-
-            function updateViewCount() {
-                if (currentViews < targetViews) {
-                    const randomIncrement = Math.floor(Math.random() * (maxIncrement - minIncrement + 1)) + minIncrement;
-                    currentViews += randomIncrement;
-                    viewCounterElement.textContent = currentViews.toLocaleString() + "+";
-                    localStorage.setItem('currentViews', currentViews);
-                    localStorage.setItem('lastUpdateTime', Date.now());
-                    setTimeout(updateViewCount, updateInterval);
-                } else {
-                    viewCounterElement.textContent = targetViews.toLocaleString() + "+";
-                    localStorage.removeItem('lastUpdateTime');
-                }
-            }
-
-            updateViewCount();
-
-
-            // --- SoundOn Score Calculator --- (No changes needed in calculator JS)
-            const avgViewTimeSlider = document.getElementById('avg-view-time');
-            const completionRateSlider = document.getElementById('completion-rate');
-            const engagementRateSlider = document.getElementById('engagement-rate');
-            const trendFactorSlider = document.getElementById('trend-factor');
-
-            const viewTimeDisplay = document.getElementById('view-time-display');
-            const completionDisplay = document.getElementById('completion-display');
-            const engagementDisplay = document.getElementById('engagement-display');
-            const trendDisplay = document.getElementById('trend-display');
-            const soundonScoreDisplay = document.getElementById('soundon-score');
-
-
-            function calculateSoundOnScore() {
-                const viewTime = parseInt(avgViewTimeSlider.value);
-                const completion = parseInt(completionRateSlider.value);
-                const engagement = parseFloat(engagementRateSlider.value);
-                const trend = parseInt(trendFactorSlider.value);
-
-                let score = (viewTime * 0.15) + (completion * 0.25) + (engagement * 0.3) + (trend * 0.3);
-                score = Math.max(0, Math.min(100, Math.round(score)));
-
-                soundonScoreDisplay.textContent = isNaN(score) ? "--" : score;
-            }
-
-
-            avgViewTimeSlider.addEventListener('input', function() {
-                viewTimeDisplay.textContent = this.value + " SECONDS";
-                calculateSoundOnScore();
-            });
-
-            completionRateSlider.addEventListener('input', function() {
-                completionDisplay.textContent = this.value + "%";
-                calculateSoundOnScore();
-            });
-
-            engagementRateSlider.addEventListener('input', function() {
-                engagementDisplay.textContent = this.value + "%";
-                calculateSoundOnScore();
-            });
-
-            trendFactorSlider.addEventListener('input', function() {
-                trendDisplay.textContent = this.value + "/10";
-                calculateSoundOnScore();
-            });
-
-            calculateSoundOnScore();
-
-
-             // --- Smooth Scrolling for Navigation Links --- (No changes needed in smooth scrolling JS)
-             document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-
-                    let targetElement = document.querySelector(this.getAttribute('href'));
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - (document.querySelector('header').offsetHeight),
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-
-            // --- Scroll to Section Function for CTA Buttons --- (No changes needed in scroll to section function)
-            window.scrollToSection = function(sectionId) {
-                let targetSection = document.getElementById(sectionId);
-                if (targetSection) {
-                    window.scrollTo({
-                        top: targetSection.offsetTop - (document.querySelector('header').offsetHeight),
-                        behavior: 'smooth'
-                    });
-                }
-            };
-
-            // --- Prediction Bar Animation on Load --- (No changes needed in prediction bar animation)
-            const predictionFills = document.querySelectorAll('.prediction-fill');
-            predictionFills.forEach(fill => {
-                const value = fill.getAttribute('data-value');
-                fill.style.width = value + '%';
-            });
-
-
-        });
-    </script>
+    <script src="assetLoader.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
