@@ -548,12 +548,9 @@ nav ul li a.active::after {
     color: var(--text-muted);
 }
 
-/* Style for the "Use This Sound" Button - QR CODE INTEGRATION */
+/* Style for the "Use This Sound" Button - QR CODE REMOVED FROM BUTTON */
 .sound-link {
-  display: flex; /* Use flexbox for button content */
-  align-items: center; /* Vertically align items */
-  justify-content: center; /* Center text and QR code horizontally */
-  gap: 0.5rem; /* Spacing between QR code and text */
+  display: block; /* Full width button */
   margin-top: 0.6rem;
   padding: 0.7rem 1.4rem;
   border-radius: var(--border-radius);
@@ -575,20 +572,6 @@ nav ul li a.active::after {
     border-color: var(--secondary-color);
     transform: translateY(-1px);
     box-shadow: 0 4px 8px var(--shadow-color);
-}
-
-/* Style for QR code inside the button */
-.sound-link .button-qr-code {
-    display: inline-block; /* Ensure it behaves like inline content in flexbox */
-    height: 1.3em; /* Adjust size as needed relative to font size */
-    width: 1.3em;  /* Make it square */
-}
-
-.sound-link .button-qr-code img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    vertical-align: middle; /* Align with text */
 }
 
 
