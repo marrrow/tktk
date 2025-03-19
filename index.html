@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Inter&display=swap" rel="stylesheet" />
+    <!-- Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Buy Me a Coffee Widget -->
     <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="wouldliker" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
     <script defer src="app.js"></script>
@@ -15,24 +17,20 @@
 <body>
 
     <!-- Stats Section -->
-    <section id="stats" class="stats-section">
+    <section id="stats" class="stats-section" style="padding-top: 4rem; padding-bottom: 4rem; text-align: center;">
         <div class="stats-container">
-            <h2>Dominate TikTok. Data Doesn't Lie.</h2>
-            <p>Trusted by thousands of creators seeing real results. WouldLiker: Data-Driven Sound Power. <strong style="color: var(--secondary-color);">Up to 400% Video Boost with Shoppable Content!</strong></p>
-            <div class="view-counter-area">
-                <p><strong style="color: var(--secondary-color); font-size: 1.3em;"><span id="view-counter">236,670,943+</span></strong> TikTok Views Tracked</p>
-                <span class="view-start-date">Since August 2024 - Views Exploding Daily!</span>
-                <div class="view-growth-graph">
-                    <!-- Placeholder for view growth graph - Future Enhancement -->
-                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">*(Small graph showing view growth over time - Coming Soon)*</p>
+            <h2 style="font-size: 2.8rem; margin-bottom: 0.6rem;">UNLOCK TIKTOK VIRAL POTENTIAL</h2>
+            <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 1.2rem;">Data-Driven Sounds. Real Results Guaranteed.</p>
+            <div class="view-counter-area" style="margin-bottom: 2rem;">
+                <p style="font-size: 3.5rem; font-weight: 900; line-height: 1;"><strong style="color: var(--secondary-color);"><span id="view-counter">236,670,943+</span></strong></p>
+                <p style="font-size: 1.1rem; color: var(--text-muted);">TikTok Views Tracked & Growing Rapidly</p>
+                <span class="view-start-date" style="font-size: 0.9rem;">Since August 2024 - Views Exploding Daily!</span>
+                <div class="view-growth-graph" style="margin-top: 2rem;">
+                    <!-- Graph Canvas -->
+                    <canvas id="viewGrowthChart" width="400" height="150"></canvas>
                 </div>
             </div>
-            <!-- Stats Screenshots - Moved Below View Counter -->
-            <div style="display: flex; justify-content: space-around; margin-top: 1.6rem; flex-wrap: wrap; align-items: center;">
-                <img src="https://raw.githubusercontent.com/marrrow/tktk/main/stats-screenshot-1.png" alt="Total Views Stats" style="max-width: 49%; max-height: 320px; border-radius: 14px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-               
-            </div>
-
+            <!-- REMOVED STATS SCREENSHOTS -->
         </div>
     </section>
 
@@ -71,50 +69,100 @@
     <!-- Categories Section - Moved Higher, Below Hero -->
     <section id="categories" class="categories-section">
         <div class="container">
-            <h2>EXPLORE SOUND CATEGORIES - FIND YOUR VIRAL SOUND NOW</h2>
-            <p class="section-intro">Stop endless scrolling. Targeted categories. Niche-perfect sounds.  Boost YOUR content.  Start here. FREE.</p>
+            <h2>EXPLORE SOUNDS BY CATEGORY - BOOST YOUR NICHE.</h2>
+            <p class="section-intro">Target your audience. Niche-perfect sounds for maximum engagement. Find your category, find your viral sound, FREE.</p>
             <div class="category-filters">
                 <button class="category-filter active" data-filter="all">ALL SOUNDS</button>
-                <button class="category-filter" data-filter="core">CORE SOUNDS</button>
-                <button class="category-filter" data-filter="presentation">PRESENTATION</button>
-                <button class="category-filter" data-filter="sports">SPORTS</button>
-                <button class="category-filter" data-filter="comedy">COMEDY</button>
-                <button class="category-filter" data-filter="romance">ROMANCE</button>
+                <button class="category-filter" data-filter="shoppable">SHOPPABLE VIDEO</button>
+                <button class="category-filter" data-filter="tech">TECH VIDEO</button>
+                <button class="category-filter" data-filter="podcast">PODCAST/TALKING VIDEO</button>
+                <button class="category-filter" data-filter="sport">SPORT VIDEO</button>
+                <button class="category-filter" data-filter="meditation">MEDITATION VIDEO</button>
             </div>
             <div class="category-sounds">
                 <!-- These would ideally be loaded dynamically with JavaScript -->
-                <div class="sound-item" data-category="core">
-                    <div class="sound-icon"><i class="fas fa-music"></i></div>
+                <div class="sound-item" data-category="shoppable">
+                    <div class="sound-icon"><i class="fas fa-shopping-cart"></i></div>
                     <div class="sound-details">
                         <h3>CORE SOUND 2025</h3>
-                        <p class="sound-stat">Predicted Views: 145K+ in week 1</p>
-                        <p class="sound-category">Category: CORE</p>
+                        <p class="sound-stat">Category: SHOPPABLE VIDEO</p>
+                        <a href="https://www.tiktok.com/t/ZT2CQthcY/" class="sound-link-category" target="_blank">USE THIS SOUND</a>
                     </div>
                 </div>
-                <div class="sound-item" data-category="presentation">
+                <div class="sound-item" data-category="shoppable">
+                    <div class="sound-icon"><i class="fas fa-heart"></i></div>
+                    <div class="sound-details">
+                        <h3>ROMANTIC LOVER</h3>
+                        <p class="sound-stat">Category: SHOPPABLE VIDEO</p>
+                        <a href="https://www.tiktok.com/t/ZT2CCd57A/" class="sound-link-category" target="_blank">USE THIS SOUND</a>
+                    </div>
+                </div>
+                <div class="sound-item" data-category="shoppable">
                     <div class="sound-icon"><i class="fas fa-music"></i></div>
                     <div class="sound-details">
-                        <h3>PRESENTATION <span class="hot-sound-label">HOT</span> <span class="gaining-popularity-label">TRENDING</span></h3>
-                        <p class="sound-stat">SoundOn Score: 95/100</p>
-                        <p class="sound-category">Category: PRESENTATION</p>
+                        <h3>MOM PLEASE</h3>
+                        <p class="sound-stat">Category: SHOPPABLE VIDEO</p>
+                        <a href="https://www.tiktok.com/t/ZT2shsyLC/" class="sound-link-category" target="_blank">USE THIS SOUND</a>
+                    </div>
+                </div>
+                 <div class="sound-item" data-category="tech">
+                    <div class="sound-icon"><i class="fas fa-microchip"></i></div>
+                    <div class="sound-details">
+                        <h3>CORE SOUND 2025</h3>
+                        <p class="sound-stat">Category: TECH VIDEO</p>
+                         <a href="https://www.tiktok.com/t/ZT2CQthcY/" class="sound-link-category" target="_blank">USE THIS SOUND</a>
+                    </div>
+                </div>
+                 <div class="sound-item" data-category="tech">
+                    <div class="sound-icon"><i class="fas fa-users"></i></div>
+                    <div class="sound-details">
+                        <h3>PLEASE PEOPLE</h3>
+                        <p class="sound-stat">Category: TECH VIDEO</p>
+                        <a href="https://www.tiktok.com/t/ZT2shqWRQ/" class="sound-link-category" target="_blank">USE THIS SOUND</a>
+                    </div>
+                </div>
+                 <div class="sound-item" data-category="podcast">
+                    <div class="sound-icon"><i class="fas fa-podcast"></i></div>
+                    <div class="sound-details">
+                        <h3>PRESENTATION</h3>
+                        <p class="sound-stat">Category: PODCAST/TALKING VIDEO</p>
+                        <a href="https://www.tiktok.com/t/ZT2CQE8NK/" class="sound-link-category" target="_blank">USE THIS SOUND</a>
                     </div>
                 </div>
                 <div class="sound-item" data-category="sports">
-                    <div class="sound-icon"><i class="fas fa-music"></i></div>
+                    <div class="sound-icon"><i class="fas fa-futbol"></i></div>
                     <div class="sound-details">
-                        <h3>SPORTS <span class="hot-sound-label">HOT</span> <span class="gaining-popularity-label">TRENDING</span></h3>
-                        <p class="sound-stat">SoundOn Score: 94/100</p>
-                        <p class="sound-category">Category: SPORTS</p>
+                        <h3>HALA MADRID!</h3>
+                        <p class="sound-stat">Category: SPORT VIDEO</p>
+                        <a href="https://www.tiktok.com/t/ZT2CQvGB9/" class="sound-link-category" target="_blank">USE THIS SOUND</a>
                     </div>
                 </div>
-                 <div class="sound-item" data-category="romance">
-                    <div class="sound-icon"><i class="fas fa-music"></i></div>
+                <div class="sound-item" data-category="sports">
+                    <div class="sound-icon"><i class="fas fa-futbol"></i></div>
                     <div class="sound-details">
-                        <h3>ROMANCE <span class="hot-sound-label">HOT</span> <span class="gaining-popularity-label">TRENDING</span></h3>
-                        <p class="sound-stat">SoundOn Score: 92/100</p>
-                        <p class="sound-category">Category: ROMANCE</p>
+                        <h3>BARCELONA</h3>
+                        <p class="sound-stat">Category: SPORT VIDEO</p>
+                        <a href="https://www.tiktok.com/t/none/" class="sound-link-category" target="_blank">USE THIS SOUND</a>  <!-- Replace with Barcelona link if available -->
                     </div>
                 </div>
+                 <div class="sound-item" data-category="sports">
+                    <div class="sound-icon"><i class="fas fa-futbol"></i></div>
+                    <div class="sound-details">
+                        <h3>GLORY GLORY MAN UNITED</h3>
+                        <p class="sound-stat">Category: SPORT VIDEO</p>
+                        <a href="https://www.tiktok.com/t/ZT2CCNWN6/" class="sound-link-category" target="_blank">USE THIS SOUND</a>
+                    </div>
+                </div>
+                 <div class="sound-item" data-category="meditation">
+                    <div class="sound-icon"><i class="fas fa-spa"></i></div>
+                    <div class="sound-details">
+                        <h3>AFFIRMATION</h3>
+                        <p class="sound-stat">Category: MEDITATION VIDEO</p>
+                        <a href="https://www.tiktok.com/t/none/" class="sound-link-category" target="_blank">USE THIS SOUND</a> <!-- Replace with Affirmation link if available -->
+                    </div>
+                </div>
+
+
                 <!-- Add more sound items here -->
             </div>
         </div>
@@ -142,7 +190,7 @@
                             </div>
                             <div class="prediction-label">95% VIRAL POTENTIAL</div>
                         </div>
-                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.3rem;">Be among the first to use this sound.<br>TikTok users often check original videos, giving early adopters a view boost.</p>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.3rem;">Be a First-Mover - Use This Sound NOW!<br>Early adopters get a BIG view boost as TikTok users seek original videos.</p>
                         <a href="https://www.tiktok.com/t/ZT2pqWXvE/" class="sound-link" target="_blank">
                             USE THIS SOUND
                         </a>
@@ -164,7 +212,7 @@
                             </div>
                             <div class="prediction-label">94% Viral Potential</div>
                         </div>
-                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.3rem;">Be among the first to use this sound.<br>TikTok users often check original videos, giving early adopters a view boost.</p>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.3rem;">Be a First-Mover - Use This Sound NOW!<br>Early adopters get a BIG view boost as TikTok users seek original videos.</p>
                         <a href="https://www.tiktok.com/t/ZT2pqERLS/" class="sound-link" target="_blank">
                             USE THIS SOUND
                         </a>
@@ -186,7 +234,7 @@
                             </div>
                             <div class="prediction-label">92% Viral Potential</div>
                         </div>
-                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.3rem;">Be among the first to use this sound.<br>TikTok users often check original videos, giving early adopters a view boost.</p>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.3rem;">Be a First-Mover - Use This Sound NOW!<br>Early adopters get a BIG view boost as TikTok users seek original videos.</p>
                         <a href="https://www.tiktok.com/t/ZT2pbMbKJ/" class="sound-link" target="_blank">
                             USE THIS SOUND
                         </a>
