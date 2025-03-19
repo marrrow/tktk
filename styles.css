@@ -1,26 +1,26 @@
-/* Updated Styles - UX-Friendly, TikTok Vibe, Cleaner Layout */
+/* Updated Styles - Pornhub Meets TikTok Vibe - BOLD & ATTENTION-GRABBING */
 :root {
-    /* Refined Color Palette - Softer Whites, More Contrast Accents */
-    --primary-color: #00f2ea; /* TikTok Blue */
-    --secondary-color: #ff0050; /* TikTok Pink/Red */
-    --accent-color: #f5be1c; /* TikTok Yellow */
-    --bg-body: #f9f9f9; /* Softer Off-White Body */
-    --bg-card: #ffffff; /* White Cards - Keep Bright but cleaner */
-    --bg-card-light: #fefefe; /* Lighter shade for subtle card backgrounds */
-    --text-dark: #222222; /* Dark Grey - Readable and less harsh than black */
-    --text-muted: #666666; /* Muted Grey - Softer secondary text */
-    --border-color: #e5e5e5; /* Lighter Grey Border */
-    --border-radius: 14px; /* Even More Rounded - Softer TikTok Feel */
+    /* High Contrast, Bold Color Palette */
+    --primary-color: #ff0050; /* TikTok Pink/Red - Dominant Accent */
+    --secondary-color: #f5be1c; /* TikTok Yellow - Strong Highlight */
+    --accent-color: #00f2ea; /* TikTok Blue - Secondary Accent */
+    --bg-body: #121212; /* Dark Grey Body Background - Pornhub Influence */
+    --bg-card: #1e1e1e; /* Slightly Lighter Card Background - Dark Theme */
+    --bg-card-light: #252525; /* Even Lighter Card Background - Subtle Variation */
+    --text-light: #ffffff; /* White Text - High Contrast on Dark Background */
+    --text-muted: #aaaaaa; /* Muted Grey Text - Secondary Info */
+    --border-color: #333333; /* Dark Border Color */
+    --border-radius: 16px; /* Even More Rounded - Bold & Modern */
     --transition-speed: 0.2s;
-    --hot-color: #ff4d4d;
-    --shadow-color: rgba(0, 0, 0, 0.06); /* Subtle shadow definition */
+    --hot-color: #ff4d4d; /* Hot Label - Bright Red */
+    --shadow-color: rgba(255, 255, 255, 0.08); /* Light Shadow on Dark Background */
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    color: var(--text-dark);
-    background-color: var(--bg-body);
-    line-height: 1.7;
+    color: var(--text-light); /* White text on dark */
+    background-color: var(--bg-body); /* Dark body background */
+    line-height: 1.6;
     font-size: 1rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -32,34 +32,37 @@ body {
     padding: 0 20px;
 }
 
-/* Typography - Improved Readability, Spacing */
+/* Typography - Bold, Large, Clear */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    line-height: 1.2; /* Tighter line height for headings */
-    margin-bottom: 0.6rem; /* Reduced margin below headings */
-    color: var(--text-dark);
+    font-weight: 800; /* Very Bold Headings */
+    line-height: 1.1; /* Even Tighter Heading Line Height */
+    margin-bottom: 0.5rem; /* Reduced Heading Margin */
+    color: var(--text-light); /* White Headings */
+    text-transform: uppercase; /* Uppercase Headings - Stronger Statement */
+    letter-spacing: 0.03em; /* Slight Letter Spacing for Impact */
 }
 
 h1 {
-    font-size: 2.6rem; /* Slightly smaller h1 */
+    font-size: 3rem; /* Larger h1 */
 }
 
 h2 {
-    font-size: 2.1rem;
+    font-size: 2.4rem; /* Larger h2 */
 }
 
 h3 {
-    font-size: 1.7rem;
+    font-size: 2rem; /* Larger h3 */
 }
 
 h4 {
-    font-size: 1.4rem;
+    font-size: 1.6rem; /* Larger h4 */
 }
 
 p {
-    margin-bottom: 0.9rem; /* Reduced paragraph margin */
+    margin-bottom: 0.8rem; /* Reduced Paragraph Margin */
     color: var(--text-muted);
-    letter-spacing: 0.01em; /* Subtle letter-spacing for cleaner text */
+    font-size: 1.05rem; /* Slightly Larger Paragraph Font */
+    letter-spacing: 0.02em;
 }
 
 a {
@@ -73,17 +76,18 @@ a:hover {
 }
 
 strong {
-    font-weight: 600;
+    font-weight: 700; /* Bolder Strong Text */
+    color: var(--text-light); /* White Strong Text */
 }
 
-/* Header & Navigation - Cleaner, Less Obtrusive */
+/* Header & Navigation - Dark, Bold, Minimal */
 header {
-    background-color: var(--bg-card-light); /* Lighter header background */
+    background-color: var(--bg-body); /* Dark Header Background */
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 0.8rem 0; /* Reduced header padding */
-    border-bottom: 1px solid var(--border-color);
+    padding: 0.7rem 0; /* Reduced Header Padding */
+    border-bottom: 2px solid var(--border-color); /* Thicker Border */
 }
 
 .logo-container {
@@ -94,23 +98,23 @@ header {
 }
 
 .logo {
-    font-size: 1.7rem; /* Slightly smaller logo font */
-    font-weight: 700;
-    color: var(--text-dark);
+    font-size: 2rem; /* Larger Logo Font */
+    font-weight: 900; /* Extremely Bold Logo */
+    color: var(--text-light); /* White Logo Text */
     display: flex;
     align-items: center;
-    gap: 0.4rem; /* Reduced logo icon spacing */
+    gap: 0.3rem; /* Reduced Logo Icon Spacing */
 }
 
 .logo i.fab.fa-tiktok {
     color: var(--primary-color);
-    font-size: 1.2em; /* Slightly smaller logo icon */
+    font-size: 1.4em; /* Slightly Larger Logo Icon */
 }
 
 .tagline {
     font-size: 0.9rem;
     color: var(--text-muted);
-    margin-left: 1rem; /* Reduced tagline margin */
+    margin-left: 0.8rem; /* Reduced Tagline Margin */
 }
 
 nav ul {
@@ -119,54 +123,57 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 1rem; /* Reduced nav item margin */
+    margin-left: 1rem;
 }
 
 nav ul li a {
-    color: var(--text-dark);
-    font-weight: 500;
-    padding: 0.4rem 0; /* Reduced nav link padding */
+    color: var(--text-light);
+    font-weight: 600; /* Bolder Nav Links */
+    padding: 0.3rem 0; /* Reduced Nav Link Padding */
     position: relative;
+    font-size: 1.05rem; /* Slightly Larger Nav Link Font */
 }
 
 nav ul li a:hover, nav ul li a.active {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 nav ul li a.active::after {
     content: '';
     position: absolute;
     width: 100%;
-    height: 2px;
-    background-color: var(--primary-color);
+    height: 3px; /* Thicker Active Underline */
+    background-color: var(--secondary-color); /* Yellow Active Underline */
     bottom: -2px;
     left: 0;
-    border-radius: 1px;
+    border-radius: 2px;
 }
 
-/* Hero Section - Softer Background, Clearer Message */
+/* Hero Section - Dark Background, Strong Contrast, "Screaming" Style */
 .hero {
-    background-color: var(--bg-body); /* Solid off-white hero background */
-    padding: 4rem 0; /* Reduced hero padding */
+    background-color: var(--bg-body); /* Dark Hero Background */
+    padding: 4rem 0;
     text-align: center;
+    border-bottom: 3px solid var(--border-color); /* Thicker Hero Border */
 }
 
 .hero-content {
-    max-width: 850px; /* Slightly narrower hero content */
+    max-width: 900px;
     margin: 0 auto;
 }
 
 .hero h1 {
-    font-size: 2.7rem; /* Slightly smaller hero h1 */
-    margin-bottom: 1rem; /* Reduced hero h1 margin */
-    color: var(--text-dark);
+    font-size: 3.5rem; /* Even Larger Hero h1 - "Screaming" */
+    margin-bottom: 1rem;
+    color: var(--secondary-color); /* Yellow Hero Heading - Attention Grabber */
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.2); /* Stronger Text Shadow */
 }
 
 .hero p {
-    font-size: 1.1rem;
-    margin-bottom: 1.8rem; /* Reduced hero paragraph margin */
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
     color: var(--text-muted);
-    max-width: 700px; /* Narrower hero paragraph */
+    max-width: 750px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -174,56 +181,58 @@ nav ul li a.active::after {
 .cta-buttons {
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    margin-top: 1.2rem; /* Reduced cta button margin */
+    gap: 1.2rem;
+    margin-top: 1rem;
 }
 
 .cta-primary, .cta-secondary {
-    padding: 0.7rem 1.8rem; /* Slightly smaller cta buttons */
+    padding: 0.9rem 2.2rem; /* Larger CTA Buttons */
     border-radius: var(--border-radius);
-    font-weight: 500;
-    font-size: 1rem;
+    font-weight: 700; /* Even Bolder CTA Text */
+    font-size: 1.15rem;
     cursor: pointer;
     transition: background-color var(--transition-speed), color var(--transition-speed), border-color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
-    box-shadow: 0 2px 4px var(--shadow-color); /* Subtle button shadow */
+    box-shadow: 0 6px 12px var(--shadow-color); /* Stronger Button Shadow */
+    text-transform: uppercase; /* Uppercase CTA Buttons */
+    letter-spacing: 0.04em; /* Slight Letter Spacing on Buttons */
 }
 
 .cta-primary {
     background-color: var(--primary-color);
     color: var(--bg-card);
-    border: 1px solid var(--primary-color); /* Thinner border */
+    border: 2px solid var(--primary-color); /* Thicker Button Border */
 }
 
 .cta-secondary {
-    background-color: var(--bg-card);
+    background-color: transparent;
     color: var(--primary-color);
-    border: 1px solid var(--primary-color); /* Thinner border */
+    border: 2px solid var(--primary-color); /* Thicker Button Border */
 }
 
 .cta-primary:hover, .cta-secondary:hover {
     background-color: var(--secondary-color);
     color: var(--bg-card);
     border-color: var(--secondary-color);
-    transform: translateY(-1px); /* Less hover lift */
-    box-shadow: 0 4px 8px var(--shadow-color); /* Slightly stronger shadow on hover */
+    transform: translateY(-2px); /* More Hover Lift */
+    box-shadow: 0 8px 16px var(--shadow-color); /* Even Stronger Shadow on Hover */
 }
 
 
-/* About Section - Cleaner, More Concise */
+/* About Section - Dark Card, High Contrast */
 .about {
-    padding: 3.5rem 0; /* Reduced about section padding */
-    background-color: var(--bg-card-light); /* Lighter about background */
-    border-bottom: 1px solid var(--border-color);
+    padding: 3rem 0;
+    background-color: var(--bg-card); /* Dark Card Background */
+    border-bottom: 2px solid var(--border-color); /* Thicker Border */
 }
 
 .about-content {
     display: flex;
-    align-items: flex-start; /* Align items to top */
-    gap: 2rem; /* Reduced about content gap */
+    align-items: flex-start;
+    gap: 2rem;
 }
 
 .about-text {
-    flex: 1.3; /* Slightly wider text area */
+    flex: 1.4; /* Slightly Wider Text Area */
 }
 
 .about-image {
@@ -231,95 +240,98 @@ nav ul li a.active::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0.9; /* Slightly faded image */
+    opacity: 0.8; /* More Faded Image */
 }
 
 .about h2 {
-    margin-bottom: 1.2rem; /* Reduced about h2 margin */
-    font-size: 2rem; /* Slightly smaller about h2 */
+    margin-bottom: 1rem;
+    font-size: 2.2rem; /* Larger About h2 */
+    color: var(--secondary-color); /* Yellow About Heading */
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.2); /* Text Shadow on About Heading */
 }
 
 .about h3 {
-    margin-top: 1rem; /* Reduced about h3 margin */
-    font-size: 1.3rem;
-    color: var(--primary-color); /* Primary color for advantage titles */
-    font-weight: 600;
+    margin-top: 0.8rem;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: 700; /* Bolder About h3 */
 }
 
 .about p {
     color: var(--text-muted);
-    margin-bottom: 1rem; /* Reduced about p margin */
-    line-height: 1.7;
+    margin-bottom: 0.9rem;
+    line-height: 1.6;
 }
 
 .engagement-definitions {
-    margin-top: 1.5rem; /* Reduced definitions margin */
-    padding: 1rem; /* Reduced definitions padding */
-    background-color: var(--bg-card); /* Solid white definitions background */
+    margin-top: 1.2rem;
+    padding: 1.1rem;
+    background-color: var(--bg-card-light); /* Lighter Definitions Card */
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
-    box-shadow: 0 2px 4px var(--shadow-color); /* Subtle shadow for definitions */
+    box-shadow: 0 3px 6px var(--shadow-color); /* Stronger Definitions Shadow */
 }
 
 .engagement-definitions h4 {
-    font-size: 1.1rem; /* Smaller definition h4 */
-    margin-bottom: 0.7rem; /* Reduced definition h4 margin */
-    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+    color: var(--secondary-color); /* Yellow Definitions Heading */
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.2); /* Text Shadow on Definitions Heading */
 }
 
 .engagement-definitions ul {
     list-style: none;
     padding-left: 0;
-    margin-top: 0.4rem; /* Reduced definition ul margin */
+    margin-top: 0.3rem;
 }
 
 .engagement-definitions li {
-    margin-bottom: 0.5rem; /* Reduced definition li margin */
+    margin-bottom: 0.4rem;
     display: flex;
     align-items: baseline;
 }
 
 .engagement-definitions li::before {
-    content: '📊'; /* Bar Chart Icon for Engagement */
-    color: var(--accent-color);
-    margin-right: 0.5rem;
-    font-size: 0.8rem;
+    content: '🔥'; /* Flame Icon for Engagement - "Hot" Vibe */
+    color: var(--hot-color); /* Red Flame */
+    margin-right: 0.4rem;
+    font-size: 0.9rem;
 }
 
 .engagement-definitions strong {
-    color: var(--secondary-color);
-    font-weight: 600;
+    color: var(--primary-color); /* Pink/Red Rating Names */
+    font-weight: 700;
     margin-right: 0.2rem;
 }
 
 .about ul {
     list-style: none;
     padding-left: 0;
-    margin-top: 0.6rem; /* Reduced about ul margin */
+    margin-top: 0.5rem;
 }
 
 .about ul li {
-    margin-bottom: 0.6rem; /* Reduced about li margin */
+    margin-bottom: 0.5rem;
     display: flex;
     align-items: flex-start;
-    padding-left: 1rem; /* Reduced about li padding */
+    padding-left: 1rem;
     position: relative;
 }
 
 .about ul li::before {
-    content: '✨'; /* Sparkle Icon for Advantage */
-    color: var(--primary-color);
+    content: '🚀'; /* Rocket Icon for Advantage - "Boost" Vibe */
+    color: var(--secondary-color); /* Yellow Rocket */
     position: absolute;
     left: 0;
-    top: 2px; /* Slightly adjusted icon position */
+    top: 2px;
     font-weight: bold;
-    margin-right: 0.4rem;
+    margin-right: 0.3rem;
 }
 
 .coming-soon {
     background-color: var(--accent-color);
     color: var(--text-dark);
-    padding: 0.15rem 0.3rem; /* Smaller coming soon label */
+    padding: 0.2rem 0.4rem;
     border-radius: var(--border-radius);
     font-size: 0.7rem;
     font-weight: 500;
@@ -327,131 +339,138 @@ nav ul li a.active::after {
 }
 
 
-/* Categories Section - More Compact, Cleaner Filters */
+/* Categories Section - Dark Cards, Bold Filters */
 .categories-section {
-    padding: 3.5rem 0; /* Reduced categories section padding */
-    background-color: var(--bg-body);
+    padding: 3rem 0;
+    background-color: var(--bg-body); /* Dark Categories Section Background */
+    border-bottom: 2px solid var(--border-color); /* Thicker Border */
 }
 
 .section-intro {
     text-align: center;
-    margin-bottom: 2rem; /* Reduced section intro margin */
+    margin-bottom: 1.8rem;
     color: var(--text-muted);
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 0.95rem; /* Slightly smaller section intro font */
+    font-size: 0.95rem;
 }
 
 .category-filters {
     display: flex;
     justify-content: center;
-    gap: 0.6rem; /* Reduced category filter gap */
-    margin-bottom: 1.2rem; /* Reduced category filter margin */
+    gap: 0.5rem;
+    margin-bottom: 1.1rem;
 }
 
 .category-filter {
     background-color: var(--bg-card);
-    color: var(--text-dark);
-    border: 1px solid var(--border-color);
-    padding: 0.5rem 1rem; /* Smaller filter buttons */
+    color: var(--text-light);
+    border: 2px solid var(--primary-color); /* Bold Filter Border */
+    padding: 0.6rem 1.1rem;
     border-radius: var(--border-radius);
     cursor: pointer;
-    font-size: 0.9rem; /* Smaller filter button font */
-    font-weight: 500;
+    font-size: 0.9rem;
+    font-weight: 600; /* Bolder Filter Text */
     transition: background-color var(--transition-speed), color var(--transition-speed), border-color var(--transition-speed), box-shadow var(--transition-speed);
-    box-shadow: 0 1px 2px var(--shadow-color); /* More subtle filter shadow */
+    box-shadow: 0 3px 6px var(--shadow-color); /* Stronger Filter Shadow */
+    text-transform: uppercase; /* Uppercase Filter Buttons */
+    letter-spacing: 0.03em;
 }
 
 .category-filter.active, .category-filter:hover {
     background-color: var(--primary-color);
     color: var(--bg-card);
     border-color: var(--primary-color);
-    box-shadow: 0 2px 4px var(--shadow-color); /* Slightly stronger shadow on hover/active */
+    box-shadow: 0 5px 10px var(--shadow-color); /* Even Stronger Shadow on Hover/Active */
 }
 
 
 .categories-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); /* Slightly narrower category cards */
-    gap: 1.2rem; /* Reduced category grid gap */
-    margin-top: 1.2rem; /* Reduced category grid margin */
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Even Narrower Category Cards */
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .category-card {
     background-color: var(--bg-card);
     border-radius: var(--border-radius);
-    padding: 1.2rem; /* Reduced category card padding */
+    padding: 1.1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
     cursor: pointer;
     border: 1px solid var(--border-color);
-    box-shadow: 0 1px 2px var(--shadow-color); /* More subtle card shadow */
+    box-shadow: 0 3px 6px var(--shadow-color); /* Stronger Card Shadow */
 }
 
 .category-card:hover {
-    transform: translateY(-2px); /* Less hover lift */
-    box-shadow: 0 4px 8px var(--shadow-color); /* Slightly stronger shadow on hover */
+    transform: translateY(-3px); /* More Hover Lift */
+    box-shadow: 0 6px 12px var(--shadow-color); /* Even Stronger Shadow on Hover */
 }
 
 .category-card .icon {
-    width: 55px; /* Smaller category icon */
-    height: 55px;
+    width: 60px; /* Slightly Larger Category Icon */
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    margin-bottom: 0.8rem; /* Reduced category icon margin */
+    margin-bottom: 0.7rem; /* Reduced Category Icon Margin */
 }
 
 .category-card .icon svg {
-    width: 28px; /* Smaller category icon svg */
-    height: 28px;
+    width: 30px; /* Slightly Larger Category Icon SVG */
+    height: 30px;
     color: var(--bg-card);
 }
 
 .category-card h3 {
     font-size: 1.2rem;
-    margin-bottom: 0.4rem; /* Reduced category card h3 margin */
-    color: var(--text-dark);
-    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: var(--text-light);
+    font-weight: 700; /* Bolder Category Card h3 */
     text-align: center;
+    text-transform: uppercase; /* Uppercase Category Card Headings */
+    letter-spacing: 0.02em;
 }
 
 .category-card p {
     color: var(--text-muted);
     text-align: center;
-    font-size: 0.85rem; /* Smaller category card p font */
+    font-size: 0.85rem;
 }
 
 
-/* Next Star Sounds -  More Compact Cards */
+/* Next Star Sounds - Dark Cards, Prominent "Hot" Labels */
 .next-stars {
-    padding: 3.5rem 0; /* Reduced next stars section padding */
-    background-color: var(--bg-card-light); /* Lighter next stars background */
-    border-bottom: 1px solid var(--border-color);
+    padding: 3rem 0;
+    background-color: var(--bg-card-light); /* Lighter Next Stars Background */
+    border-bottom: 2px solid var(--border-color); /* Thicker Border */
 }
 
 .next-stars .section-intro {
-    margin-bottom: 1.6rem; /* Reduced next stars intro margin */
-    font-size: 0.95rem; /* Smaller next stars intro font */
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    text-align: center; /* Center intro text */
 }
 
 .next-star-cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.2rem; /* Reduced next star cards gap */
-    margin-top: 1.2rem; /* Reduced next star cards margin */
+    gap: 1.2rem;
+    margin-top: 1.2rem;
     justify-content: center;
 }
 
 .next-star-card {
     flex: 0 1 calc(33% - 1.2rem);
-    min-width: 240px; /* Narrower next star cards */
-    max-width: 340px; /* Narrower max width */
+    min-width: 260px; /* Slightly Wider Next Star Cards */
+    max-width: 360px;
     background-color: var(--bg-card);
     border-radius: var(--border-radius);
     overflow: hidden;
@@ -459,8 +478,8 @@ nav ul li a.active::after {
     flex-direction: column;
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
     border: 1px solid var(--border-color);
-    box-shadow: 0 1px 2px var(--shadow-color); /* More subtle card shadow */
-    margin-bottom: 1.2rem; /* Reduced next star card margin */
+    box-shadow: 0 3px 6px var(--shadow-color); /* Stronger Card Shadow */
+    margin-bottom: 1.2rem;
 }
 
 @media (max-width: 992px) {
@@ -477,14 +496,14 @@ nav ul li a.active::after {
 
 
 .next-star-card:hover {
-    transform: translateY(-2px); /* Less hover lift */
-    box-shadow: 0 4px 8px var(--shadow-color); /* Slightly stronger shadow on hover */
+    transform: translateY(-3px); /* More Hover Lift */
+    box-shadow: 0 6px 12px var(--shadow-color); /* Even Stronger Shadow on Hover */
 }
 
 .star-preview {
     position: relative;
-    height: 150px; /* Smaller next star preview */
-    background-color: #f0f0f0;
+    height: 160px; /* Slightly Taller Next Star Preview */
+    background-color: #333333; /* Darker Preview Background */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -492,16 +511,18 @@ nav ul li a.active::after {
 }
 
 .star-preview .fa-play-circle {
-    font-size: 2.8rem; /* Smaller next star play icon */
+    font-size: 3rem;
     color: var(--text-muted);
     position: relative;
     z-index: 2;
     transition: transform var(--transition-speed), color var(--transition-speed);
+    opacity: 0.7; /* Slightly Faded Play Icon */
 }
 
 .next-star-card:hover .star-preview .fa-play-circle {
     transform: scale(1.1);
-    color: var(--primary-color);
+    color: var(--secondary-color); /* Yellow Play Icon on Hover */
+    opacity: 1; /* Icon Fully Opaque on Hover */
 }
 
 .glow-effect {
@@ -509,43 +530,48 @@ nav ul li a.active::after {
 }
 
 .star-info {
-    padding: 1.2rem; /* Reduced star info padding */
+    padding: 1.3rem;
 }
 
 .star-info h3 {
-    margin-bottom: 0.5rem; /* Reduced star info h3 margin */
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--text-dark);
+    margin-bottom: 0.4rem;
+    font-size: 1.2rem;
+    font-weight: 700; /* Bolder Star Info h3 */
+    color: var(--text-light);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    text-transform: uppercase; /* Uppercase Star Info Headings */
+    letter-spacing: 0.02em;
 }
 
+
 .hot-sound-label, .gaining-popularity-label {
-    padding: 0.25rem 0.5rem; /* Smaller hot/gaining popularity labels */
+    padding: 0.3rem 0.7rem; /* Slightly Larger Hot/Gaining Labels */
     border-radius: var(--border-radius);
-    font-size: 0.7rem; /* Smaller hot/gaining popularity label font */
-    font-weight: 600;
-    margin-left: 0.4rem; /* Reduced label margin */
+    font-size: 0.75rem;
+    font-weight: 700; /* Bolder Hot/Gaining Label Font */
+    margin-left: 0.4rem;
     vertical-align: middle;
-    box-shadow: 0 1px 2px var(--shadow-color); /* More subtle label shadow */
+    box-shadow: 0 3px 6px var(--shadow-color); /* Stronger Label Shadow */
+    text-transform: uppercase; /* Uppercase Hot/Gaining Labels */
+    letter-spacing: 0.03em;
 }
 .hot-sound-label {
     background-color: var(--hot-color);
-    color: var(--bg-card);
+    color: var(--text-light);
 }
 .gaining-popularity-label {
-    background-color: var(--accent-color);
-    color: var(--text-dark);
+    background-color: var(--secondary-color); /* Yellow "Gaining Popularity" */
+    color: var(--bg-card);
 }
 
 
 .star-metrics {
     display: flex;
     flex-direction: column;
-    gap: 0.4rem; /* Reduced star metrics gap */
-    margin-bottom: 0.8rem; /* Reduced star metrics margin */
+    gap: 0.4rem;
+    margin-bottom: 0.7rem; /* Reduced Star Metrics Margin */
 }
 
 .star-metrics span {
@@ -554,15 +580,15 @@ nav ul li a.active::after {
 }
 
 .prediction-meter {
-    margin: 0.9rem 0; /* Reduced prediction meter margin */
+    margin: 0.8rem 0; /* Reduced Prediction Meter Margin */
 }
 
 .prediction-bar {
-    height: 7px; /* Smaller prediction bar height */
+    height: 8px; /* Slightly Taller Prediction Bar */
     background-color: var(--border-color);
     border-radius: var(--border-radius);
     overflow: hidden;
-    margin-bottom: 0.3rem; /* Reduced prediction bar margin */
+    margin-bottom: 0.3rem;
 }
 
 .prediction-fill {
@@ -582,70 +608,75 @@ nav ul li a.active::after {
 
 .sound-link {
     display: block;
-    margin-top: 0.8rem; /* Reduced sound link margin */
-    padding: 0.7rem 1.3rem; /* Smaller sound link button */
+    margin-top: 0.7rem; /* Reduced Sound Link Margin */
+    padding: 0.8rem 1.6rem; /* Slightly Larger Sound Link Button */
     border-radius: var(--border-radius);
     background-color: var(--primary-color);
     color: var(--bg-card);
-    font-weight: 500;
+    font-weight: 700; /* Bolder Sound Link Button Text */
     text-align: center;
     transition: background-color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
-    border: 1px solid var(--primary-color); /* Thinner border */
-    box-shadow: 0 2px 4px var(--shadow-color); /* More subtle button shadow */
-    font-size: 0.95rem; /* Smaller sound link button font */
+    border: 2px solid var(--primary-color); /* Thicker Button Border */
+    box-shadow: 0 4px 8px var(--shadow-color); /* Stronger Button Shadow */
+    font-size: 1rem; /* Slightly Larger Sound Link Button Font */
+    text-transform: uppercase; /* Uppercase Sound Link Buttons */
+    letter-spacing: 0.04em;
 }
 
 .sound-link:hover {
     background-color: var(--secondary-color);
     color: var(--bg-card);
     border-color: var(--secondary-color);
-    transform: translateY(-1px); /* Less hover lift */
-    box-shadow: 0 4px 8px var(--shadow-color); /* Slightly stronger shadow on hover */
+    transform: translateY(-2px); /* More Hover Lift */
+    box-shadow: 0 8px 16px var(--shadow-color); /* Even Stronger Shadow on Hover */
 }
 
 
-/* SoundOn Calculator -  Cleaner, Less Gradient */
+/* SoundOn Calculator - Dark Card, High Contrast, Bold Score */
 .soundon-calculator {
-    padding: 3.5rem 0; /* Reduced calculator section padding */
-    background-color: var(--bg-body);
+    padding: 3rem 0;
+    background-color: var(--bg-body); /* Dark Calculator Section Background */
+    border-bottom: 2px solid var(--border-color); /* Thicker Border */
 }
 
 .calculator-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.8rem; /* Reduced calculator container gap */
-    margin-top: 1.2rem; /* Reduced calculator container margin */
+    gap: 1.6rem;
+    margin-top: 1.1rem;
     align-items: flex-start;
 }
 
 .calculator-inputs {
     flex: 1;
-    min-width: 280px; /* Narrower calculator inputs */
+    min-width: 300px;
 }
 
 .slider-group {
-    margin-bottom: 1.2rem; /* Reduced slider group margin */
+    margin-bottom: 1.1rem;
 }
 
 .slider-group label {
     display: block;
-    margin-bottom: 0.4rem;
-    font-weight: 500;
-    color: var(--text-dark);
-    font-size: 1rem; /* Smaller slider label font */
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+    color: var(--text-light); /* White Slider Labels */
+    font-size: 1rem;
+    text-transform: uppercase; /* Uppercase Slider Labels */
+    letter-spacing: 0.02em;
 }
 
 .slider-display {
     font-size: 0.9rem;
-    color: var(--primary-color);
-    font-weight: 500;
-    margin-left: 0.5rem;
+    color: var(--secondary-color); /* Yellow Slider Display Values */
+    font-weight: 600;
+    margin-left: 0.4rem;
 }
 
 
 .slider {
     width: 100%;
-    height: 8px; /* Smaller slider height */
+    height: 9px; /* Slightly Taller Slider */
     -webkit-appearance: none;
     background-color: var(--border-color);
     border-radius: 4px;
@@ -655,14 +686,14 @@ nav ul li a.active::after {
 
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 18px; /* Smaller slider thumb */
-    height: 18px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background-color: var(--primary-color);
     cursor: pointer;
     border: none;
     transition: transform var(--transition-speed);
-    box-shadow: 0 1px 2px var(--shadow-color); /* More subtle thumb shadow */
+    box-shadow: 0 3px 6px var(--shadow-color); /* Stronger Thumb Shadow */
 }
 
 .slider::-webkit-slider-thumb:hover {
@@ -672,116 +703,124 @@ nav ul li a.active::after {
 
 .calculator-result {
     flex: 1;
-    min-width: 260px; /* Narrower calculator result */
+    min-width: 260px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: var(--bg-card);
-    padding: 1.5rem; /* Reduced calculator result padding */
+    background-color: var(--bg-card); /* Dark Calculator Result Card */
+    padding: 1.6rem;
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
-    box-shadow: 0 1px 2px var(--shadow-color); /* More subtle card shadow */
+    box-shadow: 0 3px 6px var(--shadow-color); /* Stronger Result Card Shadow */
 }
 
 .score-display {
-    width: 150px; /* Smaller score display */
-    height: 150px;
-    background-color: var(--bg-card-light); /* Light solid background for score */
+    width: 170px; /* Larger Score Display */
+    height: 170px;
+    background-color: var(--bg-body); /* Dark Score Display Background */
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1rem; /* Reduced score display margin */
-    border: 2px solid var(--primary-color); /* Solid border, no gradient */
+    margin-bottom: 1.1rem;
+    border: 3px solid var(--secondary-color); /* Yellow Score Display Border - Bold */
+    box-shadow: 0 4px 8px var(--shadow-color); /* Stronger Score Display Shadow */
 }
 
 #soundon-score {
-    font-size: 3rem; /* Smaller score font */
-    font-weight: 700; /* Slightly lighter score font weight */
-    color: var(--primary-color); /* Primary color score text */
-    text-shadow: none; /* Removed score text shadow */
+    font-size: 3.3rem; /* Slightly Larger Score Font */
+    font-weight: 900; /* Extremely Bold Score Font */
+    color: var(--secondary-color); /* Yellow Score Text - Attention Grabbing */
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.3); /* Stronger Score Text Shadow */
 }
 
 .score-label {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--text-dark);
-    margin-bottom: 0.3rem; /* Reduced score label margin */
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-light); /* White Score Label Text */
+    margin-bottom: 0.3rem;
+    text-transform: uppercase; /* Uppercase Score Label */
+    letter-spacing: 0.03em;
 }
 
 .score-explanation {
     color: var(--text-muted);
-    max-width: 280px; /* Narrower score explanation */
+    max-width: 300px;
     font-size: 0.9rem;
     line-height: 1.6;
 }
 
 
-/* Blog Section - More Compact Previews */
+/* Blog Section - Dark Previews */
 .blog-index {
     max-width: 850px;
     margin: 0 auto;
-    padding: 2.8rem 1.5rem; /* Reduced blog index padding */
-    background-color: var(--bg-body);
+    padding: 2.6rem 1.5rem;
+    background-color: var(--bg-body); /* Dark Blog Index Background */
+    border-bottom: 2px solid var(--border-color); /* Thicker Border */
 }
 
 .blog-index h1 {
-    margin-bottom: 0.8rem; /* Reduced blog index h1 margin */
+    margin-bottom: 0.7rem;
     text-align: center;
-    color: var(--text-dark);
-    font-size: 2rem; /* Smaller blog index h1 */
+    color: var(--secondary-color); /* Yellow Blog Index Heading */
+    font-size: 2.1rem; /* Slightly Larger Blog Index h1 */
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.2); /* Text Shadow on Blog Index Heading */
 }
 
 .blog-index > p {
     text-align: center;
     color: var(--text-muted);
-    margin-bottom: 2rem; /* Reduced blog index p margin */
-    font-size: 0.95rem; /* Smaller blog index p font */
+    margin-bottom: 1.8rem;
+    font-size: 0.95rem;
 }
 
 .blog-preview {
     background-color: var(--bg-card);
     border-radius: var(--border-radius);
-    padding: 1.4rem; /* Reduced blog preview padding */
-    margin-bottom: 1.2rem; /* Reduced blog preview margin */
+    padding: 1.5rem;
+    margin-bottom: 1.2rem;
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
     border: 1px solid var(--border-color);
-    box-shadow: 0 1px 2px var(--shadow-color); /* More subtle card shadow */
+    box-shadow: 0 3px 6px var(--shadow-color); /* Stronger Blog Preview Shadow */
 }
 
 .blog-preview:hover {
-    transform: translateY(-1px); /* Less hover lift */
-    box-shadow: 0 3px 6px var(--shadow-color); /* Slightly stronger shadow on hover */
+    transform: translateY(-2px); /* More Hover Lift */
+    box-shadow: 0 6px 12px var(--shadow-color); /* Even Stronger Shadow on Hover */
 }
 
 .blog-preview h2 {
-    margin-bottom: 0.6rem; /* Reduced blog preview h2 margin */
-    line-height: 1.3;
-    font-size: 1.4rem; /* Smaller blog preview h2 font */
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    font-size: 1.5rem; /* Slightly Larger Blog Preview h2 */
+    text-transform: uppercase; /* Uppercase Blog Preview Headings */
+    letter-spacing: 0.03em;
 }
 
 .blog-preview h2 a {
-    color: var(--text-dark);
+    color: var(--text-light);
     transition: color var(--transition-speed);
 }
 
 .blog-preview h2 a:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .blog-preview p {
     color: var(--text-muted);
-    margin-bottom: 0.9rem; /* Reduced blog preview p margin */
-    font-size: 0.9rem; /* Smaller blog preview p font */
+    margin-bottom: 0.8rem;
 }
 
 .read-more {
     display: inline-block;
-    margin-top: 0.7rem; /* Reduced read more margin */
+    margin-top: 0.6rem;
     color: var(--primary-color);
-    font-weight: 500;
-    font-size: 0.9rem; /* Smaller read more font */
+    font-weight: 600; /* Bolder Read More Text */
+    font-size: 0.9rem;
+    text-transform: uppercase; /* Uppercase Read More Text */
+    letter-spacing: 0.03em;
 }
 
 .read-more:hover {
@@ -799,7 +838,7 @@ nav ul li a.active::after {
 
 .blog-post h1 {
     margin-bottom: 1.2rem;
-    color: var(--text-dark);
+    color: var(--text-light);
 }
 
 .post-meta {
@@ -816,7 +855,7 @@ nav ul li a.active::after {
     margin-bottom: 0.9rem;
     position: relative;
     padding-bottom: 0.4rem;
-    color: var(--text-dark);
+    color: var(--text-light);
 }
 
 .blog-post h2::after {
@@ -852,12 +891,12 @@ nav ul li a.active::after {
 }
 
 
-/* Sound Item Styling - More Compact List */
+/* Sound Item Styling - Dark List Items, Prominent "Use This Sound" Button */
 .category-sounds {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem; /* Reduced sound item gap */
-    margin-top: 1.2rem; /* Reduced sound items margin */
+    gap: 0.7rem;
+    margin-top: 1.1rem;
 }
 
 .sound-item {
@@ -869,29 +908,30 @@ nav ul li a.active::after {
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
     cursor: pointer;
     border: 1px solid var(--border-color);
-    box-shadow: 0 1px 2px var(--shadow-color); /* More subtle card shadow */
-    padding: 0.9rem; /* Reduced sound item padding */
+    box-shadow: 0 3px 6px var(--shadow-color); /* Stronger Sound Item Shadow */
+    padding: 0.8rem;
 }
 
 .sound-item:hover {
-    transform: translateY(-1px); /* Less hover lift */
-    box-shadow: 0 3px 6px var(--shadow-color); /* Slightly stronger shadow on hover */
+    transform: translateY(-2px); /* More Hover Lift */
+    box-shadow: 0 6px 12px var(--shadow-color); /* Even Stronger Shadow on Hover */
 }
 
-.sound-icon {
-    width: 60px; /* Smaller sound icon */
-    height: 60px;
+.sound-item .sound-icon {
+    width: 55px; /* Smaller Sound Icon */
+    height: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f0f0f0;
+    background-color: #444444; /* Darker Sound Icon Background */
     border-radius: var(--border-radius);
-    margin-right: 1rem; /* Reduced sound icon margin */
+    margin-right: 1rem;
 }
 
-.sound-icon i {
-    font-size: 1.4rem; /* Smaller sound icon i font */
+.sound-item .sound-icon i {
+    font-size: 1.3rem;
     color: var(--text-muted);
+    opacity: 0.8; /* Slightly Faded Sound Icon */
 }
 
 
@@ -901,24 +941,26 @@ nav ul li a.active::after {
 }
 
 .sound-details h3 {
-    margin-bottom: 0.2rem; /* Reduced sound details h3 margin */
+    margin-bottom: 0.1rem;
     font-size: 1rem;
-    font-weight: 600;
-    color: var(--text-dark);
+    font-weight: 700; /* Bolder Sound Details h3 */
+    color: var(--text-light);
+    text-transform: uppercase; /* Uppercase Sound Details Headings */
+    letter-spacing: 0.02em;
 }
 
 .sound-stat, .sound-category {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--text-muted);
     margin-bottom: 0;
 }
 
 
-/* Footer - More Compact Footer */
+/* Footer - Dark Footer, Bold Text */
 footer {
-    background-color: var(--bg-card-light); /* Lighter footer background */
-    padding: 2.4rem 0 1rem; /* Reduced footer padding */
-    border-top: 1px solid var(--border-color);
+    background-color: var(--bg-body); /* Dark Footer Background */
+    padding: 2.2rem 0 1rem;
+    border-top: 2px solid var(--border-color); /* Thicker Border */
 }
 
 .footer-content {
@@ -926,43 +968,43 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom: 1.2rem; /* Reduced footer content margin */
+    margin-bottom: 1rem;
 }
 
 .footer-logo {
-    font-size: 1.7rem; /* Smaller footer logo font */
-    font-weight: 700;
-    margin-bottom: 0.7rem; /* Reduced footer logo margin */
+    font-size: 1.8rem;
+    font-weight: 900; /* Extremely Bold Footer Logo */
+    margin-bottom: 0.7rem;
     display: flex;
     align-items: center;
-    gap: 0.3rem; /* Reduced footer logo gap */
-    color: var(--text-dark);
+    gap: 0.2rem;
+    color: var(--text-light);
 }
 
 .footer-logo i.fab.fa-tiktok {
     color: var(--primary-color);
-    font-size: 1.1em; /* Smaller footer logo i font */
+    font-size: 1.2em;
 }
 
 
 .social-links {
-    margin-top: 0.8rem; /* Reduced social links margin */
+    margin-top: 0.7rem;
 }
 
 .social-links a {
-    color: var(--text-dark);
-    font-size: 0.95rem; /* Smaller social links a font */
+    color: var(--text-light);
+    font-size: 0.9rem;
     margin: 0 0.4rem;
     transition: color var(--transition-speed);
 }
 
 .social-links a:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .footer-bottom {
     text-align: center;
-    padding-top: 0.8rem; /* Reduced footer bottom padding */
+    padding-top: 0.8rem;
     border-top: 1px solid var(--border-color);
 }
 
@@ -972,30 +1014,30 @@ footer {
 }
 
 
-/* Stats Section - More Compact Stats */
+/* Stats Section - Dark Stats, Bold Numbers */
 .stats-section {
-    padding: 2.8rem 0; /* Reduced stats section padding */
-    background-color: var(--bg-body);
-    text-align: center;
-    border-bottom: 1px solid var(--border-color);
+    padding: 2.6rem 0;
+    background-color: var(--bg-card); /* Dark Stats Section Background */
+    border-bottom: 2px solid var(--border-color); /* Thicker Border */
 }
 
 .stats-container {
-    max-width: 850px; /* Narrower stats container */
+    max-width: 850px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 .stats-section h2 {
-    margin-bottom: 0.7rem; /* Reduced stats h2 margin */
-    font-size: 1.9rem; /* Smaller stats h2 font */
-    color: var(--text-dark);
+    margin-bottom: 0.6rem;
+    font-size: 2rem; /* Larger Stats h2 */
+    color: var(--secondary-color); /* Yellow Stats Heading */
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.2); /* Text Shadow on Stats Heading */
 }
 
 .stats-section p {
     color: var(--text-muted);
-    margin-bottom: 1.5rem; /* Reduced stats p margin */
-    font-size: 1rem; /* Smaller stats p font */
+    margin-bottom: 1.4rem;
+    font-size: 1rem;
     line-height: 1.6;
 }
 
@@ -1004,41 +1046,43 @@ footer {
 }
 
 .view-counter {
-    font-size: 1.1rem; /* Smaller view counter font */
-    font-weight: 600;
-    color: var(--secondary-color);
-    margin-left: 0.4rem; /* Reduced view counter margin */
+    font-size: 1.2rem; /* Slightly Larger View Counter Font */
+    font-weight: 800; /* Very Bold View Counter */
+    color: var(--primary-color); /* Pink/Red View Counter - Attention Grabbing */
+    margin-left: 0.3rem;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.2); /* Text Shadow on View Counter */
 }
 
 .view-start-date {
-    font-size: 0.85rem; /* Smaller view start date font */
+    font-size: 0.85rem;
     color: var(--text-muted);
     display: block;
-    margin-top: 0.2rem; /* Reduced view start date margin */
+    margin-top: 0.2rem;
 }
 
 .view-growth-graph {
     width: 100%;
-    height: 50px; /* Smaller graph height */
-    background-color: rgba(var(--primary-color-rgb), 0.08);
+    height: 50px;
+    background-color: var(--border-color); /* Dark Graph Background */
     border-radius: var(--border-radius);
-    margin-top: 0.8rem; /* Reduced graph margin */
-    border: 1px solid var(--border-color);
+    margin-top: 0.7rem;
+    border: 2px solid var(--border-color); /* Thicker Graph Border */
+    opacity: 0.7; /* Faded Graph */
 }
 
 
-/* Responsive Design - Adjusted for Compact Layout */
+/* Responsive Design - Adjusted for Bold Layout */
 @media (max-width: 992px) {
     h1 {
-        font-size: 2.4rem;
+        font-size: 2.5rem;
     }
 
     h2 {
-        font-size: 1.9rem;
+        font-size: 2rem;
     }
 
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .about-content {
@@ -1047,8 +1091,8 @@ footer {
     }
 
     .about-image {
-        margin-top: 1.8rem; /* Reduced about image margin */
-        max-height: 250px; /* Limit image height on medium screens */
+        margin-top: 1.6rem;
+        max-height: 230px; /* Limit Image Height on Medium Screens */
     }
 
     .calculator-container {
@@ -1057,34 +1101,34 @@ footer {
     }
 
     .calculator-result {
-        margin-top: 1.8rem; /* Reduced calculator result margin */
+        margin-top: 1.6rem;
     }
 }
 
 @media (max-width: 768px) {
     .logo-container {
         flex-direction: column;
-        padding: 0.6rem; /* Reduced logo container padding */
+        padding: 0.5rem;
         text-align: center;
     }
 
     .tagline {
         margin-left: 0;
-        margin-top: 0.3rem; /* Reduced tagline margin */
+        margin-top: 0.2rem;
     }
 
     nav ul {
-        margin-top: 0.6rem; /* Reduced nav ul margin */
+        margin-top: 0.6rem;
         flex-wrap: wrap;
         justify-content: center;
     }
 
     nav ul li {
-        margin: 0 0.5rem; /* Reduced nav li margin */
+        margin: 0 0.4rem;
     }
 
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2.3rem;
     }
 
     .hero p {
@@ -1093,11 +1137,11 @@ footer {
 
     .cta-buttons {
         flex-direction: column;
-        gap: 0.6rem;
+        gap: 0.5rem;
     }
 
     .about-image {
-        display: none; /* Hide about image on small screens */
+        display: none; /* Hide About Image on Small Screens */
     }
 }
 
@@ -1123,7 +1167,7 @@ footer {
     }
 
     .star-preview {
-        height: 130px; /* Smaller preview on mobile */
+        height: 140px; /* Smaller Preview on Mobile */
     }
 
     .sound-icon {
@@ -1132,11 +1176,11 @@ footer {
     }
 
     .score-display {
-        width: 130px; /* Smaller score display */
-        height: 130px;
+        width: 140px; /* Smaller Score Display on Mobile */
+        height: 140px;
     }
 
     #soundon-score {
-        font-size: 2.6rem;
+        font-size: 2.7rem;
     }
 }
