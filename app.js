@@ -3,11 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const viewCounterElement = document.getElementById('view-counter');
     let currentViews = localStorage.getItem('currentViews');
     let lastUpdateTime = localStorage.getItem('lastUpdateTime');
-    const weeklyViewIncrease = 11000000; // 11 Million Weekly Increase (Adjusted)
-    const targetViews = 151000000 + (weeklyViewIncrease * 52);
+    const weeklyViewIncrease = 11000000; // 11 Million Weekly Increase
+    const targetViews = 250000000 + (weeklyViewIncrease * 52); // Increased Target for longer animation
 
     if (!currentViews) {
-        currentViews = 151000000; // Start at 151 Million (Adjusted)
+        currentViews = 236670943; // Start at current reported view count (Adjusted)
     } else {
         currentViews = parseInt(currentViews, 10);
     }
@@ -23,9 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
     currentViews += viewsToAddBasedOnTime;
 
 
-    const minIncrement = 2000;
-    const maxIncrement = 7000;
-    const updateInterval = 50;
+    const minIncrement = 10000; // Increased minIncrement
+    const maxIncrement = 30000; // Increased maxIncrement
+    const updateInterval = 3000; // Increased updateInterval to 3 seconds (from 50ms) - SLOWER COUNT
 
     function updateViewCount() {
         if (currentViews < targetViews) {
