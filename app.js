@@ -99,6 +99,27 @@ document.addEventListener('DOMContentLoaded', function() {
     updateViewGrowthChart(); // Initial chart render
 
 
+    // --- Category Filtering ---
+    const categoryFilters = document.querySelectorAll('.category-filter');
+    const soundItems = document.querySelectorAll('.sound-item');
+
+    categoryFilters.forEach(filter => {
+        filter.addEventListener('click', function() {
+            categoryFilters.forEach(f => f.classList.remove('active')); // Deactivate other filters
+            this.classList.add('active'); // Activate clicked filter
+            const filterValue = this.getAttribute('data-filter');
+
+            soundItems.forEach(item => {
+                if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                    item.style.display = 'block'; // Show item
+                } else {
+                    item.style.display = 'none';  // Hide item
+                }
+            });
+        });
+    });
+
+
     // --- Smooth Scrolling for Navigation Links ---
     document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
